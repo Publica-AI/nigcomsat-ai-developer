@@ -1,0 +1,68 @@
+*** SYNTHETIC DOCUMENT - FOR TRAINING USE ONLY - NOT A REAL NIGCOMSAT RECORD ***
+
+MONITORING, COMPLIANCE AND ENFORCEMENT (MCE)
+NOTICE OF NON-COMPLIANCE
+
+Notice reference:       MCE-CN-2026-031
+Date of notice:         2026-03-09
+Issued by:              Head, Compliance Monitoring
+Addressed to:           The Managing Director
+                        Sahel Link Networks Ltd
+Licence number:         VSAT-OP-0192
+Licence category:       VSAT Service Operator (Class B)
+
+------------------------------------------------------------
+1. NATURE OF NON-COMPLIANCE
+------------------------------------------------------------
+Our records show that Sahel Link Networks Ltd has not submitted its
+Quarterly Service Quality Report for the fourth quarter of 2025
+(1 October 2025 to 31 December 2025). The report was due on 30
+January 2026.
+
+This is a breach of Licence Condition 7.2 (Quarterly Reporting),
+which requires every VSAT Service Operator to submit a Quarterly
+Service Quality Report within 30 days after the end of each quarter.
+
+------------------------------------------------------------
+2. REQUIRED ACTION
+------------------------------------------------------------
+Sahel Link Networks Ltd is required to:
+
+(a) submit the complete Quarterly Service Quality Report for Q4
+    2025 to the Compliance Monitoring Unit within 21 days of the
+    date of this notice, that is, on or before 2026-03-30; and
+
+(b) confirm in writing the name of the officer responsible for
+    future quarterly submissions.
+
+------------------------------------------------------------
+3. REPRESENTATIONS
+------------------------------------------------------------
+The operator may submit written representations explaining the
+failure within 7 days of the date of this notice. Representations
+do not extend the deadline in section 2 unless the Compliance
+Monitoring Unit confirms an extension in writing.
+
+------------------------------------------------------------
+4. CONSEQUENCES OF CONTINUED DEFAULT
+------------------------------------------------------------
+If the report is not received by the deadline, an administrative
+penalty of NGN 2,500,000 will apply for each full week of continued
+default, up to a maximum of NGN 10,000,000. Repeated or prolonged
+default may be referred for enforcement action under the MCE
+enforcement procedure.
+
+------------------------------------------------------------
+5. CONTACT
+------------------------------------------------------------
+Queries on this notice should be addressed to the Compliance
+Monitoring Unit, quoting reference MCE-CN-2026-031.
+
+------------------------------------------------------------
+REVISION NOTICE (issued 2026-03-20)
+------------------------------------------------------------
+Following a written request from Sahel Link Networks Ltd dated
+2026-03-16, the Compliance Monitoring Unit has agreed to extend the
+deadline in section 2(a) to 2026-04-13. All other requirements of
+this notice remain unchanged. This revision supersedes the deadline
+stated in section 2(a).

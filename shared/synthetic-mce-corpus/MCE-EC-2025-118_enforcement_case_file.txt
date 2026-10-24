@@ -1,0 +1,62 @@
+*** SYNTHETIC DOCUMENT - FOR TRAINING USE ONLY - NOT A REAL NIGCOMSAT RECORD ***
+
+MONITORING, COMPLIANCE AND ENFORCEMENT (MCE)
+ENFORCEMENT CASE FILE
+
+Case number:            MCE-EC-2025-118
+Respondent:             Delta Coast Broadband Ltd
+Respondent licence:     VSAT-OP-0077
+Case officer:           A. Yusuf, Enforcement Officer
+Date opened:            2025-08-14
+Current status:         OPEN - awaiting remediation
+
+------------------------------------------------------------
+1. ALLEGED BREACH
+------------------------------------------------------------
+During a site inspection on 2025-08-14, inspectors found six VSAT
+terminals operating at the Warri Industrial Park site that were not
+registered with the licensing register, contrary to Licence
+Condition 4.5 (Terminal Registration).
+
+------------------------------------------------------------
+2. CASE TIMELINE
+------------------------------------------------------------
+2025-08-14   Inspection carried out. Case opened.
+2025-08-28   Notice of Violation issued to the respondent,
+             requiring a written response within 14 days.
+2025-09-19   Written response received from the respondent (after
+             the 14-day period). The respondent admitted the
+             terminals were unregistered and cited an internal
+             administrative error.
+2025-11-05   Enforcement hearing held. The respondent was
+             represented by its Regulatory Affairs Manager.
+2025-11-26   Decision issued (see section 3).
+2026-01-20   Respondent reported that all six terminals had been
+             registered. Verified by the case officer.
+2026-02-02   Case closed as compliant.
+
+------------------------------------------------------------
+3. DECISION
+------------------------------------------------------------
+On 2025-11-26 the enforcement panel decided that:
+
+(a) the respondent pays an administrative penalty of NGN
+    5,000,000; and
+
+(b) the respondent registers all unregistered terminals within 60
+    days of the date of the decision, that is, on or before
+    2026-01-25.
+
+------------------------------------------------------------
+4. PAYMENT RECORD
+------------------------------------------------------------
+2025-12-10   NGN 3,000,000 received.
+2026-01-15   Balance of NGN 2,000,000 outstanding.
+2026-01-28   NGN 2,000,000 received. Penalty paid in full.
+
+------------------------------------------------------------
+5. CASE OFFICER NOTES
+------------------------------------------------------------
+The respondent's late response on 2025-09-19 was taken into account
+at the hearing but did not change the outcome. No further breaches
+by this respondent have been recorded since closure.

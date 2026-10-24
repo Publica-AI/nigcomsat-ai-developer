@@ -1,0 +1,74 @@
+*** SYNTHETIC DOCUMENT - FOR TRAINING USE ONLY - NOT A REAL NIGCOMSAT RECORD ***
+
+NETWORK OPERATIONS CENTRE (NOC)
+INCIDENT REPORT
+
+Incident ID:            NOC-INC-2026-0417
+Report status:          Final
+Prepared by:            T. Okafor, Shift Engineer (Night Shift B)
+Reviewed by:            M. Danjuma, NOC Duty Manager
+Report date:            2026-04-17
+
+------------------------------------------------------------
+1. SUMMARY
+------------------------------------------------------------
+Loss of carrier on the Ku-band link between Hub 1 and Gateway 3
+caused a service outage for three enterprise customers in the early
+hours of 17 April 2026. Service was restored after the failed
+uplink power amplifier was bypassed and traffic was moved to the
+backup carrier. The outage lasted approximately two hours.
+
+------------------------------------------------------------
+2. INCIDENT DETAILS
+------------------------------------------------------------
+Affected link:          KU-HUB1-GW3
+Service type:           Ku-band enterprise VSAT backhaul
+Severity:               P2 - High
+Customers affected:     3 (Harmattan Telecom Ltd, Savanna Rural
+                        Connect, Rivers Basin Logistics)
+Terminals affected:     41
+
+------------------------------------------------------------
+3. TIMELINE (all times WAT, 24-hour clock)
+------------------------------------------------------------
+2026-04-17 02:14   Loss-of-carrier alarm raised on KU-HUB1-GW3.
+                   Detected by the monitoring system (alarm ref
+                   ALM-88231).
+2026-04-17 02:31   Escalated by shift engineer to the RF Systems
+                   on-call engineer and the NOC Duty Manager.
+2026-04-17 03:05   Mitigation applied: traffic moved to backup
+                   carrier KU-HUB1-GW3-B. Backup capacity is 60
+                   percent of the primary, so service was partly
+                   restored with reduced throughput.
+2026-04-17 03:52   Full service restored after the uplink power
+                   amplifier (HPA-2) was bypassed and the primary
+                   carrier returned to normal levels.
+
+------------------------------------------------------------
+4. ROOT CAUSE
+------------------------------------------------------------
+Hardware fault in uplink power amplifier HPA-2 at Hub 1, causing
+loss of the transmitted carrier. The unit was found to have a failed
+cooling fan and had shut down on over-temperature. HPA-2 was
+bypassed pending replacement.
+
+------------------------------------------------------------
+5. ACTIONS TAKEN
+------------------------------------------------------------
+- Alarm acknowledged and triaged by the night shift engineer.
+- RF Systems on-call engineer confirmed the amplifier fault by
+  remote inspection.
+- Traffic moved to backup carrier to reduce customer impact.
+- HPA-2 bypassed and primary carrier restored.
+- The three affected customers were notified by the service desk at
+  03:20 and again at 04:00 when full service was confirmed.
+
+------------------------------------------------------------
+6. FOLLOW-UP
+------------------------------------------------------------
+- Replace HPA-2 cooling fan and return HPA-2 to service.
+  Owner: RF Systems. Target date: 2026-04-24.
+- Post-incident review to be held by 2026-04-24. Owner: NOC Duty
+  Manager.
+- Review over-temperature alarm thresholds on all Hub 1 amplifiers.
+  Owner: RF Systems. Target date: 2026-05-08.
