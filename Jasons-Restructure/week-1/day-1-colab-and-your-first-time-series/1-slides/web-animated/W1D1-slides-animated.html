@@ -427,7 +427,8 @@ function next(){const st=steps(slides[cur]).filter(x=>!x.classList.contains('on'
 function prev(){const st=steps(slides[cur]).filter(x=>x.classList.contains('on'));
   if(st.length){const n=st[st.length-1].dataset.step;st.filter(x=>x.dataset.step===n).forEach(x=>x.classList.remove('on'));return}
   if(cur>0){slides[cur-1].dataset.entered='';show(cur-1,true)}}
-if(q.has('print')){document.body.classList.add('print');slides.forEach(s=>{s.classList.add('active');finalState(s)});return}
+if(q.has('print')){document.body.classList.add('print');const a=(+q.get('from')||1)-1,b=(+q.get('to')||slides.length)-1;
+  slides.forEach((s,k)=>{if(k<a||k>b){s.style.display='none'}else{s.classList.add('active');finalState(s)}});return}
 if(q.has('shot')){document.body.classList.add('shot');const n=(+q.get('shot')||1)-1;slides.forEach((s,k)=>{s.classList.toggle('active',k===n)});finalState(slides[n]);
   document.getElementById('stars').style.display='block';drawStars(true);return}
 addEventListener('resize',fit);fit();

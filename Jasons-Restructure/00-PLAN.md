@@ -106,7 +106,7 @@ Plus a shared **toolkit** for the whole course:
 |---|---|---|
 | **0** ✅ | Research, review of originals, this plan, branch `jasons-restructure` | This plan |
 | **1** ✅ | Brand + folder structure for all 18 days, toolkit (README, Colab guide, glossary, fact sheet), **final-project requirements PDF**, and **Day 1 complete in every format** as the pilot | The look and feel. This sets the template for the other 17 |
-| **2** | Sessions 2–6 (Weeks 1–2: understanding a series) | Kits + test run |
+| **2** ✅ | Days 2–6 (Weeks 1–2: understanding a series), incl. Quiz 1 with shuffled answers and the final-project kickoff worksheet | Kits + test run |
 | **3** | Sessions 7–10 (Weeks 3–4: anomaly detection) | Kits + test run |
 | **4** | Sessions 11–13 (Weeks 4–5: machine learning). This includes rebuilding the Week 5 detector so it really does catch the hidden faults (the original doesn't, see review) | Kits + test run |
 | **5** | Sessions 14–18 (Weeks 5–6: forecasting, RUL, capstone) | Kits + test run |

@@ -59,6 +59,8 @@ The originals were made by someone who really knows the subject. The synthetic d
 | 10 | Week 3, *B5 / B3* | weekly ticket mean ≈ 38; utilisation reaches "the low 80s" | mean **36.4**; utilisation peaks at **77.6%** |
 | 11 | Week 3, *A1. Bus power* | "Four injected events" | lists **three** (matches the Week 4 label file) |
 | 12 | Week 6, throughout | — | **38 lines of garbled characters** (`â€"` instead of `—`), an encoding accident |
+| 12a | Week 3, *B6. VSAT uptime* | South South "starts lowest **and** falls furthest" | South South does start lowest, but indexed to week 1 **South East** falls furthest (98.2 vs South West 98.3, South South 98.5) |
+| 12b | Week 3, *B1. Ka-band daily* | trend ≈ +0.05 points a year | about **+0.08** a year |
 
 ### Traps in the data files
 
@@ -73,6 +75,7 @@ The originals were made by someone who really knows the subject. The synthetic d
 | # | Issue | Our fix |
 |---|---|---|
 | 16 | **89 of 120 correct answers are option B (74%).** Anyone who always picks B scores about 74%. | Shuffled-option versions for Google Forms (originals kept) |
+| 16a | **Week 3 quiz, autocorrelation topic, last question**: says the amplifier-temperature vs RF-drive correlation "largely collapses" after differencing | On the real file it only drops from 0.59 to 0.40. The idea is still taught (W2D2 uses a clear made-up example), and the instructor notes flag the question |
 | 17 | The repo is **public**, and the answer keys (label CSVs, "answer key" notes in the code books) are in it. Participants who browse the repo can see them. | Keep in mind when setting graded exercises |
 
 ---

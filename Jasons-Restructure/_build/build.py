@@ -99,10 +99,11 @@ def build_day(code: str):
 
     # 1. animated web slides + PDF of them
     html_path = f / SUB["web"] / f"{code}-slides-animated.html"
-    write(html_path, webdeck.render(code, d.title, mod.web_slides()))
+    slides = mod.web_slides()
+    write(html_path, webdeck.render(code, d.title, slides))
     pdf_path = f / SUB["slides_pdf"] / f"{code}-slides.pdf"
     pdf_path.parent.mkdir(parents=True, exist_ok=True)
-    pdfdoc.html_to_pdf(html_path, pdf_path, "?print")
+    pdfdoc.deck_to_pdf(html_path, pdf_path, len(slides))
 
     # 2. PowerPoint
     spec_path = BUILD / ".cache" / f"{code}-pptx.json"
@@ -142,7 +143,7 @@ def build_day(code: str):
 
 # ----------------------------------------------------------------------------- toolkit & project
 def build_master_glossary():
-    entries = []
+    entries: dict = {}          # term -> [first block, [day codes]]
     for d in DAYS:
         md = d.folder / SUB["glossary"] / f"{d.code}-glossary.md"
         if not md.exists():
@@ -151,9 +152,14 @@ def build_master_glossary():
         for block in re.split(r"\n(?=### )", text):
             if block.startswith("### "):
                 term = block.splitlines()[0][4:].strip()
-                entries.append((re.sub(r"^[^\w]+", "", term).lower(), block.strip() + f"\n\n<span class=\"pill\">{d.code}</span>"))
-    entries.sort()
-    body = "\n\n".join(e[1] for e in entries)
+                key = re.sub(r"[^a-z0-9]+", " ", re.sub(r"^[^\w]+", "", term).lower()).strip()
+                block = block.split("\n## ")[0].strip()     # don't drag the next section heading along
+                if key in entries:
+                    entries[key][1].append(d.code)
+                else:
+                    entries[key] = [block, [d.code]]
+    body = "\n\n".join(blk + "\n\n" + " ".join(f'<span class="pill">{c}</span>' for c in codes)
+                       for _, (blk, codes) in sorted(entries.items()))
     write(ROOT / "toolkit" / "master-glossary.md",
           "# Master Glossary\n\nEvery new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it was introduced. "
           "This file is rebuilt automatically from the daily glossaries.\n\n" + body + "\n")

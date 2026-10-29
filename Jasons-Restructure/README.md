@@ -40,11 +40,11 @@ Jasons-Restructure/
 | Week | Day | Session | Original topic | Status |
 |---|---|---|---|---|
 | 1 | 1 | [Colab Bootcamp + Your First Time Series](week-1/day-1-colab-and-your-first-time-series/) | Week 3 · 3.1 Structure of time-series data | ✅ ready |
-| 1 | 2 | [Charts That Don't Lie](week-1/day-2-charts-that-dont-lie/) | Week 3 · 3.2 Visualising and data storytelling | 🚧 Step 2 |
-| 1 | 3 | [Calm Down the Noise: Rolling Windows](week-1/day-3-rolling-windows/) | Week 3 · 3.3 Rolling windows and smoothing | 🚧 Step 2 |
-| 2 | 1 | [Take It Apart: Trend, Season and Noise](week-2/day-1-trend-season-noise/) | Week 3 · 3.4 Decomposition | 🚧 Step 2 |
-| 2 | 2 | [Does Today Remember Yesterday?](week-2/day-2-does-today-remember-yesterday/) | Week 3 · 3.5 Autocorrelation | 🚧 Step 2 |
-| 2 | 3 | [Lab Day + Quiz 1 + Pick Your Project](week-2/day-3-lab-day-quiz-1-and-project-kickoff/) | Week 3 review + capstone kickoff | 🚧 Step 2 |
+| 1 | 2 | [Charts That Don't Lie](week-1/day-2-charts-that-dont-lie/) | Week 3 · 3.2 Visualising and data storytelling | ✅ ready |
+| 1 | 3 | [Calm Down the Noise: Rolling Windows](week-1/day-3-rolling-windows/) | Week 3 · 3.3 Rolling windows and smoothing | ✅ ready |
+| 2 | 1 | [Take It Apart: Trend, Season and Noise](week-2/day-1-trend-season-noise/) | Week 3 · 3.4 Decomposition | ✅ ready |
+| 2 | 2 | [Does Today Remember Yesterday?](week-2/day-2-does-today-remember-yesterday/) | Week 3 · 3.5 Autocorrelation | ✅ ready |
+| 2 | 3 | [Lab Day + Quiz 1 + Pick Your Project](week-2/day-3-lab-day-quiz-1-and-project-kickoff/) | Week 3 review + capstone kickoff | ✅ ready |
 | 3 | 1 | [Alarms That Cry Wolf](week-3/day-1-alarms-that-cry-wolf/) | Week 4 · 4.1 What your alarm software already does | 🚧 Step 3 |
 | 3 | 2 | [Control Charts and Residuals](week-3/day-2-control-charts-and-residuals/) | Week 4 · 4.2 SPC, 4.3 Residual-based detection | 🚧 Step 3 |
 | 3 | 3 | [The Slow Creep: Drift and CUSUM](week-3/day-3-drift-and-cusum/) | Week 4 · 4.4 Change points and drift | 🚧 Step 3 |

@@ -92,14 +92,38 @@ def md_to_pdf(md_path: Path, pdf_path: Path, *, kicker: str, title: str, subtitl
     Path(tmp).unlink()
 
 
-def html_to_pdf(html_path: Path, pdf_path: Path, query: str = "") -> None:
+def html_to_pdf(html_path: Path, pdf_path: Path, query: str = "", tries: int = 3) -> None:
+    """Print a page to PDF with headless Chrome. Chrome sometimes exits 0 without writing
+    the file, so we check, retry with a fresh profile, and fail loudly."""
     url = html_path.resolve().as_uri() + query
-    subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--no-pdf-header-footer", "--hide-scrollbars",
-                    "--virtual-time-budget=4000", f"--print-to-pdf={pdf_path}", url],
-                   check=True, capture_output=True)
+    pdf_path = Path(pdf_path)
+    pdf_path.unlink(missing_ok=True)
+    for _ in range(tries):
+        with tempfile.TemporaryDirectory(prefix="chrome-") as profile:
+            subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--no-pdf-header-footer", "--hide-scrollbars",
+                            f"--user-data-dir={profile}", "--virtual-time-budget=4000",
+                            f"--print-to-pdf={pdf_path}", url], capture_output=True)
+        if pdf_path.exists() and pdf_path.stat().st_size > 0:
+            return
+    raise RuntimeError(f"Chrome did not write {pdf_path}")
+
+
+def deck_to_pdf(html_path: Path, pdf_path: Path, n_slides: int, chunk: int = 5) -> None:
+    """Long, emoji-heavy decks make Chrome's printer give up, so print a few slides at a time and stitch."""
+    from pypdf import PdfWriter
+    writer = PdfWriter()
+    with tempfile.TemporaryDirectory(prefix="deck-") as tmp:
+        for a in range(1, n_slides + 1, chunk):
+            part = Path(tmp) / f"part{a:03d}.pdf"
+            html_to_pdf(html_path, part, f"?print&from={a}&to={min(a + chunk - 1, n_slides)}")
+            writer.append(str(part))
+        with open(pdf_path, "wb") as f:
+            writer.write(f)
 
 
 def screenshot(html_path: Path, png_path: Path, query: str, size=(1600, 900)) -> None:
     url = html_path.resolve().as_uri() + query
-    subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--hide-scrollbars", f"--window-size={size[0]},{size[1]}",
-                    "--virtual-time-budget=3000", f"--screenshot={png_path}", url], check=True, capture_output=True)
+    with tempfile.TemporaryDirectory(prefix="chrome-") as profile:
+        subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--hide-scrollbars", f"--window-size={size[0]},{size[1]}",
+                        f"--user-data-dir={profile}", "--virtual-time-budget=3000", f"--screenshot={png_path}", url],
+                       check=True, capture_output=True)
