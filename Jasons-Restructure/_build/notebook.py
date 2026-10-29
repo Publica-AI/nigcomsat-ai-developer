@@ -39,12 +39,18 @@ IN_COLAB = "google.colab" in sys.modules
 RAW = "%(raw)s"
 DATA_HOME = %(home)r
 
-def data_path(name):
+def data_path(name, week=None):
     """Download a course CSV once and return where it is saved.
+    week: which original folder to use, e.g. "week-03" (two files exist in both week-03 and week-04).
     If you uploaded the file yourself (Files panel), that copy is used instead."""
-    local = Path(f"{name}.csv")
+    uploaded = Path(f"{name}.csv")
+    if uploaded.exists():
+        return uploaded
+    week = week or DATA_HOME[name]
+    local = Path("course_data") / week / f"{name}.csv"
     if not local.exists():
-        urlretrieve(f"{RAW}/{DATA_HOME[name]}/data/{name}.csv", local)
+        local.parent.mkdir(parents=True, exist_ok=True)
+        urlretrieve(f"{RAW}/{week}/data/{name}.csv", local)
     return local
 
 ___ = None          # this is "the blank". Replace every ___ with your answer.

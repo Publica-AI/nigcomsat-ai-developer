@@ -23,7 +23,8 @@ import notebook  # noqa: E402
 import pdfdoc  # noqa: E402
 import webdeck  # noqa: E402
 
-BUILT = {"W1D1": "days.w1d1"}          # grows as each step is finished
+# every finished day is a module in days/ named like w1d2.py
+BUILT = {p.stem.upper(): f"days.{p.stem}" for p in sorted((Path(__file__).parent / "days").glob("w[0-9]d[0-9].py"))}
 
 
 def write(path: Path, text: str):
@@ -132,6 +133,10 @@ def build_day(code: str):
         md = f / SUB[sub] / f"{code}-{name}.md"
         if md.exists():
             pdfdoc.md_to_pdf(md, md.with_suffix(".pdf"), kicker=kick, title=d.title, subtitle=sub_t, foot=foot, cards=cards)
+
+    # 5. anything special to this day (quizzes, worksheets, ...)
+    if hasattr(mod, "extra"):
+        mod.extra(d, foot)
     print("built", code)
 
 

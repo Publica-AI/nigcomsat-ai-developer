@@ -175,7 +175,17 @@ const R = {
   chart(s) {
     const sl = pres.addSlide({ masterName: "LIGHT_CONTENT" });
     sl.addText(s.title, { placeholder: "title" });
-    lineChart(sl, s.labels, s.values, M, 1.5, W - 2 * M, 4.5, HEX.accent1, { ymin: s.ymin, ymax: s.ymax, freq: 3, name: "availability %" });
+    if (s.series) {   // several lines: [{name, values, color}]
+      sl.addChart(pres.charts.LINE, s.series.map((x) => ({ name: x.name, labels: s.labels, values: x.values })), {
+        x: M, y: 1.5, w: W - 2 * M, h: 4.5, chartColors: s.series.map((x) => x.color || HEX.accent1),
+        lineSize: 2, lineDataSymbol: "none", showLegend: true, legendPos: "t", legendFontSize: 12, legendFontFace: "+mn-lt",
+        showTitle: false, catAxisLabelColor: "5B6B7D", valAxisLabelColor: "5B6B7D", catAxisLabelFontSize: 10, valAxisLabelFontSize: 10,
+        catAxisLabelFontFace: "+mn-lt", valAxisLabelFontFace: "+mn-lt", valGridLine: { color: "E3E9F0", size: 0.75 }, catGridLine: { style: "none" },
+        valAxisMinVal: s.ymin, valAxisMaxVal: s.ymax, valAxisLabelFormatCode: s.fmt || "0.0", catAxisLineShow: false, valAxisLineShow: false, objectName: "line chart",
+      });
+    } else {
+      lineChart(sl, s.labels, s.values, M, 1.5, W - 2 * M, 4.5, s.color || HEX.accent1, { ymin: s.ymin, ymax: s.ymax, freq: s.freq || 3, name: s.name || "value", fmt: s.fmt });
+    }
     sl.addText(s.caption, { x: M, y: 6.15, w: W - 2 * M, h: 0.5, fontSize: 16, color: C.accent6, italic: true, margin: 0, isTextBox: true });
     return sl;
   },
@@ -184,9 +194,9 @@ const R = {
     sl.addText(s.title, { placeholder: "title" });
     [s.left, s.right].forEach((c, i) => {
       const w = (W - 2 * M - 0.5) / 2, x = M + i * (w + 0.5);
-      card(sl, x, 1.55, w, 4.95, i ? "shuffled card" : "ordered card");
-      sl.addText(c.label, { x: x + 0.3, y: 1.7, w: w - 0.6, h: 0.6, fontSize: 18, bold: true, color: i ? C.accent5 : C.accent2, margin: 0, isTextBox: true });
-      lineChart(sl, c.labels, c.values, x + 0.2, 2.35, w - 0.4, 3.95, i ? HEX.accent5 : HEX.accent1, { ymin: 97.5, ymax: 100.2, freq: 6, objectName: i ? "shuffled chart" : "ordered chart" });
+      card(sl, x, 1.55, w, 4.95, i ? "right card" : "left card");
+      sl.addText(c.label, { x: x + 0.3, y: 1.7, w: w - 0.6, h: 0.6, fontSize: 18, bold: true, color: c.good ? C.accent2 : (i ? C.accent5 : C.accent2), margin: 0, isTextBox: true });
+      lineChart(sl, c.labels, c.values, x + 0.2, 2.35, w - 0.4, 3.95, c.color || (i ? HEX.accent5 : HEX.accent1), { ymin: c.ymin ?? 97.5, ymax: c.ymax ?? 100.2, freq: c.freq || 6, fmt: c.fmt, objectName: i ? "right chart" : "left chart" });
     });
     return sl;
   },
@@ -209,6 +219,38 @@ const R = {
       sl.addText(st[0], { x: x + 0.2, y: 2.6, w: w - 0.4, h: 1.5, fontSize: st[0].length > 7 ? 30 : 48, bold: true, color: TINTS[i], align: "center", valign: "middle", margin: 0, isTextBox: true, fontFace: THEME.headFontFace });
       sl.addText(st[1], { x: x + 0.25, y: 4.2, w: w - 0.5, h: 1.0, fontSize: 16, color: C.accent6, align: "center", valign: "top", margin: 0, isTextBox: true });
     });
+    return sl;
+  },
+  statement(s) {   // one big message: emoji + headline + sub
+    const sl = pres.addSlide({ masterName: "LIGHT_CONTENT" });
+    sl.addText(s.title, { placeholder: "title" });
+    emojiDot(sl, s.icon, W / 2 - 1.1, 1.6, 2.2, C.accent1, "big icon");
+    sl.addText(s.big, { x: M + 0.5, y: 4.0, w: W - 2 * M - 1, h: 1.1, fontSize: 30, bold: true, color: C.text1, align: "center", valign: "middle", margin: 0, isTextBox: true, fontFace: THEME.headFontFace });
+    if (s.sub) sl.addText(s.sub, { x: M + 1, y: 5.15, w: W - 2 * M - 2, h: 0.9, fontSize: 18, color: C.accent6, align: "center", valign: "top", margin: 0, isTextBox: true });
+    return sl;
+  },
+  bar(s) {   // native bar chart: labels, values, optional highlight index list
+    const sl = pres.addSlide({ masterName: "LIGHT_CONTENT" });
+    sl.addText(s.title, { placeholder: "title" });
+    const colors = s.labels.map((_, i) => ((s.highlight || []).includes(i) ? HEX.accent3 : HEX.accent1));
+    sl.addChart(pres.charts.BAR, [{ name: s.name || "value", labels: s.labels, values: s.values }], {
+      x: M, y: 1.5, w: W - 2 * M, h: 4.5, barDir: "col", chartColors: colors.length > 1 ? colors : [HEX.accent1], invertedColors: colors,
+      showValue: true, dataLabelPosition: "outEnd", dataLabelFontSize: 12, dataLabelColor: "0B1622", dataLabelFormatCode: s.fmt || "0.0",
+      showLegend: false, showTitle: false, catAxisLabelColor: "5B6B7D", valAxisLabelColor: "5B6B7D", catAxisLabelFontSize: 12, valAxisLabelFontSize: 10,
+      catAxisLabelFontFace: "+mn-lt", valAxisLabelFontFace: "+mn-lt", dataLabelFontFace: "+mn-lt",
+      valGridLine: { color: "E3E9F0", size: 0.75 }, catGridLine: { style: "none" }, valAxisMinVal: s.ymin ?? 0, valAxisMaxVal: s.ymax,
+      valAxisLabelFormatCode: s.fmt || "0.0", barGapWidthPct: 60, objectName: "bar chart",
+    });
+    if (s.caption) sl.addText(s.caption, { x: M, y: 6.15, w: W - 2 * M, h: 0.5, fontSize: 16, color: C.accent6, italic: true, margin: 0, isTextBox: true });
+    return sl;
+  },
+  table(s) {   // header: [..], rows: [[..], ..]
+    const sl = pres.addSlide({ masterName: "LIGHT_CONTENT" });
+    sl.addText(s.title, { placeholder: "title" });
+    const head = s.header.map((h) => ({ text: h, options: { bold: true, color: "FFFFFF", fill: { color: HEX.dk1 }, fontSize: 16 } }));
+    const rows = s.rows.map((r, k) => r.map((c, j) => ({ text: String(c), options: { fontSize: 16, color: HEX.dk1, bold: j === 0, fill: { color: k % 2 ? "FFFFFF" : HEX.lt2 } } })));
+    sl.addTable([head, ...rows], { x: M, y: 1.6, w: W - 2 * M, colW: s.colW, border: { type: "solid", pt: 0.75, color: "DCE4EC" }, margin: 0.08, valign: "middle", objectName: "table" });
+    if (s.caption) sl.addText(s.caption, { x: M, y: 6.15, w: W - 2 * M, h: 0.5, fontSize: 16, color: C.accent6, italic: true, margin: 0, isTextBox: true });
     return sl;
   },
   steps(s) {
