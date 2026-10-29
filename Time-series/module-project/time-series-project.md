@@ -1,0 +1,118 @@
+# Operational Time-Series Capstone — From Real NIGCOMSAT Data to a Deployed Monitor
+
+**Course:** nigcomsat_developer_track
+**Module:** Time-Series Analysis, Anomaly Detection and Forecasting
+**Submission format:** deployed_streamlit_app_or_scheduled_report
+
+---
+
+You are building one working analytical tool for your own unit, on your own unit's data. Across Weeks 3 to 6 you learned to read a time series, detect when it goes wrong, and forecast where it is heading — all on synthetic teaching data. This capstone is where that changes: you now apply the same methods to **real, accessible NIGCOMSAT data**, tied to a **named process in your unit**, and deploy the result where your colleagues can use it.
+
+This is an **individual** project. Each participant submits their own capstone.
+
+---
+
+### The Data — Read This First
+
+**No dataset is provided for this project.** As NIGCOMSAT staff you have access to operational data that the course cannot ship. You must source your own.
+
+1. **Use real, accessible NIGCOMSAT data.** Telemetry exports, RF or carrier logs, NOC ticket records, site status logs, capacity reports — whatever your unit genuinely produces and you are permitted to use.
+2. **Tie it to a named process in your unit.** Not "satellite data" in general, but a specific process with an owner — for example "the weekly battery-health review on the bus subsystem" or "VSAT site fault escalation in the NOC".
+3. **Agree the scope with your unit head before you start.** Get written agreement (an email is enough) on the process, the data you will use, and who the output is for. Include it in your submission.
+4. **Respect the data restrictions from Week 2.** Real NIGCOMSAT telemetry, RF records and network logs are restricted. Check what you may paste into an AI assistant before you do it. If in doubt, describe the data's shape to the assistant instead of pasting it.
+5. **Keep raw data off GitHub.** Commit your code, not the export. Load data from a path on the training server set in a config or `.env` file.
+
+The synthetic files and code books from Weeks 3–6 remain available for building and testing your pipeline before you point it at real data.
+
+---
+
+### Choose One Brief
+
+Pick **one** of the five briefs, drawn from the NIGCOMSAT needs assessment. Each maps onto techniques you have already used.
+
+| Brief | The operational question | Weeks it draws on |
+|---|---|---|
+| **Telemetry anomaly detection** | Which hours of subsystem telemetry are abnormal, and why? | 3, 4, 5 |
+| **Power and battery degradation** | When will battery (or array) health cross its operational limit? | 3, 4, 6 |
+| **RF link-quality prediction** | Will link margin fall below threshold in the coming hours or days? | 3, 5, 6 |
+| **Carrier and capacity monitoring** | Is utilisation or throughput drifting, and when will capacity run short? | 3, 4, 6 |
+| **Site-downtime prediction** | Which sites or regions are likely to go down, and how many tickets should the NOC expect? | 3, 5, 6 |
+
+If your unit's process does not fit one of these exactly, you may adapt one with your unit head's agreement — state the adaptation in your write-up.
+
+---
+
+### What You Must Build
+
+#### Stage 1 — Understand the Series (Week 3)
+
+1. Load your export into pandas with a proper `DatetimeIndex`, declared frequency (`.asfreq()`), and a single time zone.
+2. Profile it: rows, date range, gaps, duplicated timestamps, sampling-rate changes. Report what you found and what you did about it.
+3. Plot it honestly — sensible axis, the operational threshold drawn on the chart, a title that states a finding.
+4. Establish the seasonal period **from a correlogram**, not by assumption, and decompose the series with that period.
+
+#### Stage 2 — Build the Method (Weeks 4–6)
+
+Build the method your brief needs. At minimum:
+
+- **Anomaly briefs:** a statistical baseline (control chart, residual or CUSUM detector) **and**, if the brief involves several channels, a multivariate detector on engineered, trailing-only features.
+- **Degradation and capacity briefs:** a trend-to-threshold estimate giving a crossing date **and** a window (not a single day), with the assumptions behind it.
+- **Prediction briefs:** at least one baseline forecast (naive or seasonal naive) **and** a regression with engineered features, each with a prediction interval.
+
+Every feature must pass the leak test: *could I have computed this at the moment the prediction was needed?*
+
+#### Stage 3 — Evaluate It Honestly (Weeks 4–6)
+
+1. Split by time, never at random. Assert that every training timestamp precedes every test timestamp, with an embargo at least as long as your longest feature window.
+2. Score your method **against the simple baseline on the same period with the same scorer**:
+   - detection: event-level precision and recall, with your scoring conventions written down first;
+   - forecasting: walk-forward backtest, reporting the spread across folds, not just the mean;
+   - degradation: repeat the call from several origins and report how the date and the warning time change.
+3. If you have no labelled events, say so, and agree a substitute with your unit (for example, the maintenance log or ticket history as ground truth).
+4. Check interval coverage on held-out data, if you produced intervals.
+
+If the simple method wins, say so and recommend it. That is a legitimate result.
+
+#### Stage 4 — Deploy It
+
+Deploy on the **training server** as **either**:
+
+- a **Streamlit dashboard** your unit can open, showing the series, the threshold, the current flags or forecast with its range, and a one-paragraph plain-language summary; **or**
+- a **scheduled report** (for example a script run daily by cron or Task Scheduler) that writes a dated chart and summary to a shared location.
+
+**Server access is rostered.** No more than five participants may work on the training server at the same time. Book your slot on the roster, develop and test locally first, and use the server for deployment and final checks only.
+
+---
+
+### Deliverables
+
+1. A repository (or folder) containing your code, a `requirements.txt`, and a `README.md` explaining how to run it. **No raw NIGCOMSAT data committed.**
+2. The deployed dashboard or scheduled report running on the training server, with its URL or schedule stated in the README.
+3. A short written report (2–4 pages, Markdown or PDF) covering:
+   - the unit, the named process, the brief chosen, and the unit head's agreement;
+   - the data: source, span, cadence, quality issues found and how they were handled;
+   - the method, and why it suits this process;
+   - the evaluation table against the baseline, with conventions stated;
+   - a recommendation for the unit in four sentences: situation, observation, implication, recommendation;
+   - limitations: what it will miss, how late it will be, and what was assumed to be normal.
+4. A one-paragraph note on AI-assistant use: what you used it for, and how you verified its output without exposing restricted data.
+5. A five-minute demo to your cohort and, where possible, your unit head.
+
+---
+
+## Grading Notes
+
+This is an individual capstone on real NIGCOMSAT data, so there is no reference solution and no single correct number — grade the reasoning, the honesty of the evaluation and whether the tool is usable by the named unit. No dataset is supplied by the course; a submission built only on the synthetic Week 3–6 files does not meet the brief unless the unit head has explicitly agreed that no real data could be made accessible, and that agreement is included. Check that the unit head's agreement is present and that it names the process. Raw NIGCOMSAT data must not be committed to the repository; treat committed restricted data as a serious failure regardless of the quality of the rest of the work, and flag it to the programme lead. Do not penalise a submission whose model fails to beat the simple baseline, provided the comparison is fair (same period, same scorer) and the write-up recommends the simpler method — recommending against one's own model is an explicitly taught, legitimate outcome. Do penalise any random train/test split, any feature that uses future information, and any accuracy figure reported for rare-event detection, since all three were taught as invalid. A degradation estimate given as a single date with no window or stated assumptions should lose most of the evaluation marks. Where no labelled events exist, accept a reasoned substitute such as maintenance or ticket logs, provided it is agreed with the unit and stated. Deployment must actually run on the training server, within the rostered access limit of five concurrent participants; a tool that only runs on the participant's laptop earns at most half of the deployment marks. Accept either a Streamlit dashboard or a scheduled report — neither is preferred. Credit beyond the rubric, at grader discretion, for a tool the unit adopts in practice.
+
+---
+
+## Rubric (100 points total)
+
+| Criterion | Description | Points |
+|---|---|---|
+| problem_framing_and_data | The unit, a named process and one of the five briefs are stated, with the unit head's agreement included. Real, accessible NIGCOMSAT data is used and its source, span and cadence are described. Data restrictions are respected and no raw data is committed. | 15 |
+| series_understanding | Stage 1: the series is loaded with a proper DatetimeIndex, declared frequency and one time zone. Gaps, duplicates and sampling changes are profiled and handled. The plot is honest and annotated with the threshold. The seasonal period is established from a correlogram and used in a decomposition. | 15 |
+| method | Stage 2: the method suits the brief — a statistical baseline plus a multivariate detector, a trend-to-threshold estimate with a window, or a baseline plus a regression forecast with intervals. All features pass the leak test, using trailing windows and positive shifts only. | 20 |
+| honest_evaluation | Stage 3: the split is temporal with an assertion and embargo. The method is compared with the simple baseline on the same period with the same scorer — event-level precision and recall, a walk-forward backtest with the spread reported, or repeated RUL calls from several origins. Interval coverage is checked where relevant. The conclusion follows the evidence, including recommending the simpler method if it wins. | 25 |
+| deployment | Stage 4: a Streamlit dashboard or scheduled report runs on the training server within the rostered access arrangement, showing the series, threshold, current flags or forecast with its range, and a plain-language summary. The README explains how to run it. | 15 |
+| communication_and_ai_use | The written report gives a four-sentence recommendation, states limitations — blind spots, detection delay and the assumed normal period — and is readable by the unit head. The AI-use note explains what the assistant was used for and how its output was verified without exposing restricted data. The demo is delivered. | 10 |

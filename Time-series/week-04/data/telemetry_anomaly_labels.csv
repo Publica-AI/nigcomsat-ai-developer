@@ -1,0 +1,7 @@
+event_id,source_file,column,start,end,type,severity,operational_cause
+EV01,bus_power_telemetry_hourly.csv,solar_array_current_a,2025-08-18T09:00,2025-08-18T09:00,spike,minor,Partial solar array string dropout
+EV02,bus_power_telemetry_hourly.csv,solar_array_current_a,2025-09-28T14:00,2025-09-28T15:00,spike,major,Array string dropout with thermal excursion
+EV03,bus_power_telemetry_hourly.csv,solar_array_current_a,2025-10-31T03:00,2025-10-31T03:00,spike,minor,Partial solar array string dropout
+EV04,twta_thermal_daily.csv,twta_temp_c,2024-09-03,2024-09-04,spike,minor,Transient thermal excursion, cause not recorded
+EV05,twta_thermal_daily.csv,twta_temp_c,2025-05-12,2025-12-30,level_shift,major,Cooling loop partial blockage - sustained +1.8 C offset
+EV06,battery_health_daily.csv,est_capacity_ah,2025-04-01,2025-12-31,drift,major,Fade rate roughly doubles - accelerated capacity loss

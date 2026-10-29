@@ -1,0 +1,6 @@
+event_id,start,end,type,channels_involved,detectable_univariately,operational_cause
+EV01,2025-02-19T11:00,2025-02-19T11:00,point,solar_array_current_a;battery_temp_c,yes,Partial array string dropout
+EV02,2025-05-02T01:00,2025-05-02T12:00,correlation_break,solar_array_current_a;battery_soc_pct,no,Charge controller fault - battery not accepting charge
+EV03,2025-06-30T00:00,2025-06-30T00:00,point,solar_array_current_a;battery_temp_c,yes,Partial array string dropout
+EV04,2025-09-03T00:00,2025-09-30T23:00,thermal_decoupling,twta_temp_c;rf_drive_pct,no,Cooling path degradation - amplifier hot for its drive level
+EV05,2025-11-17T20:00,2025-11-18T19:00,correlation_break,solar_array_current_a;battery_soc_pct,no,Charge controller fault recurrence

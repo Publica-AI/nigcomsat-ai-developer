@@ -1,0 +1,272 @@
+[
+    {
+        "title": "forecasting baselines",
+        "description": "Naive forecast",
+        "type": "multiple choice",
+        "question": "What does the naive forecast predict for every future week?",
+        "options": "The overall average|The last observed value|The value 52 weeks ago|Zero",
+        "answer": "The last observed value",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "forecasting baselines",
+        "description": "Seasonal naive",
+        "type": "multiple choice",
+        "question": "For weekly ticket data with a yearly pattern, what does seasonal naive copy?",
+        "options": "The previous week|The same week one year (52 weeks) ago|The mean of the last 8 weeks|The highest week on record",
+        "answer": "The same week one year (52 weeks) ago",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "forecasting baselines",
+        "description": "MAE in words",
+        "type": "multiple choice",
+        "question": "A forecast has an MAE of 11.25 tickets per week. What does that mean?",
+        "options": "It was right 11.25% of the time|On a typical week it was off by about 11 tickets|It predicted 11.25 tickets|Its error grew by 11.25 each week",
+        "answer": "On a typical week it was off by about 11 tickets",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "forecasting baselines",
+        "description": "Seasonal naive came last",
+        "type": "multiple choice",
+        "question": "Ticket data is clearly seasonal, yet seasonal naive scored worst (MAE 15.25). Why?",
+        "options": "The season was misaligned by a week|It repeated last year, when the network was much smaller|It cannot handle December|MAE penalises seasonal methods",
+        "answer": "It repeated last year, when the network was much smaller",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "forecasting baselines",
+        "description": "Alpha in exponential smoothing",
+        "type": "multiple choice",
+        "question": "In simple exponential smoothing, what does an alpha close to 1 do?",
+        "options": "Makes the forecast follow the latest week closely|Makes the forecast very smooth and slow|Adds a trend|Doubles the horizon",
+        "answer": "Makes the forecast follow the latest week closely",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "forecasting baselines",
+        "description": "Keeping a baseline",
+        "type": "True or False",
+        "question": "A model that only ties the best baseline has earned its place and should be deployed.",
+        "options": "True|False",
+        "answer": "False",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "regression-based forecasting",
+        "description": "The leak rule",
+        "type": "multiple choice",
+        "question": "What is the one rule every forecasting feature must obey?",
+        "options": "It must be numeric|It must be known at the moment the forecast is made|It must correlate with the target|It must be scaled",
+        "answer": "It must be known at the moment the forecast is made",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "regression-based forecasting",
+        "description": "shift direction",
+        "type": "multiple choice",
+        "question": "Which pandas call correctly creates last week's ticket count as a feature?",
+        "options": "df[\"tickets_raised\"].shift(1)|df[\"tickets_raised\"].shift(-1)|df[\"tickets_raised\"].rolling(1).mean()|df[\"tickets_raised\"].diff(-1)",
+        "answer": "df[\"tickets_raised\"].shift(1)",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "regression-based forecasting",
+        "description": "Rows lost to lag 52",
+        "type": "multiple choice",
+        "question": "Why do 104 weeks become 52 usable rows in the feature table?",
+        "options": "Duplicates are removed|The 52-week lag does not exist for the first year|Half the weeks are in the test set|Weekends are dropped",
+        "answer": "The 52-week lag does not exist for the first year",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "regression-based forecasting",
+        "description": "sin and cos",
+        "type": "multiple choice",
+        "question": "Why encode week of year as sin52 and cos52?",
+        "options": "To remove the trend|So week 52 sits next to week 1 as a smooth cycle, using two columns instead of 52|Because linear regression needs angles|To scale the target",
+        "answer": "So week 52 sits next to week 1 as a smooth cycle, using two columns instead of 52",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "regression-based forecasting",
+        "description": "Like with like",
+        "type": "multiple choice",
+        "question": "The regression scores MAE 5.85 using last week's real count. Made the same way, what does naive score?",
+        "options": "11.25|15.25|6.75|2.84",
+        "answer": "6.75",
+        "difficulty": "advanced"
+    },
+    {
+        "title": "regression-based forecasting",
+        "description": "Coefficient sanity",
+        "type": "True or False",
+        "question": "If the terminals coefficient came out negative, it should be treated as a warning sign to investigate.",
+        "options": "True|False",
+        "answer": "True",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "uncertainty and prediction intervals",
+        "description": "Prediction interval",
+        "type": "multiple choice",
+        "question": "What is a prediction interval?",
+        "options": "The time between forecasts|A range the true value should fall inside a stated share of the time|The forecast horizon|The training period",
+        "answer": "A range the true value should fall inside a stated share of the time",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "uncertainty and prediction intervals",
+        "description": "Building the band",
+        "type": "multiple choice",
+        "question": "How does the code book build the 90% band?",
+        "options": "forecast plus and minus 1.645 times the residual standard deviation|forecast times 0.9|the minimum and maximum of the training data|forecast plus and minus 10%",
+        "answer": "forecast plus and minus 1.645 times the residual standard deviation",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "uncertainty and prediction intervals",
+        "description": "Coverage",
+        "type": "multiple choice",
+        "question": "The 90% band covered 5 of 8 held-out weeks. What is the correct conclusion?",
+        "options": "The interval is honest|The interval is too narrow for a 90% claim|The forecast is perfect|Coverage does not matter",
+        "answer": "The interval is too narrow for a 90% claim",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "uncertainty and prediction intervals",
+        "description": "Why too narrow",
+        "type": "multiple choice",
+        "question": "Training residual sd was 2.84 but held-out error sd was about 7. Why?",
+        "options": "A coding error|The model was scored on weeks it had already been fitted to|The test set was too large|z was too big",
+        "answer": "The model was scored on weeks it had already been fitted to",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "uncertainty and prediction intervals",
+        "description": "Turning up z",
+        "type": "True or False",
+        "question": "Increasing z until the held-out coverage looks right is the honest fix for an overconfident interval.",
+        "options": "True|False",
+        "answer": "False",
+        "difficulty": "advanced"
+    },
+    {
+        "title": "uncertainty and prediction intervals",
+        "description": "Communicating",
+        "type": "multiple choice",
+        "question": "Which statement communicates uncertainty honestly?",
+        "options": "Next week will have 71 tickets|We are 90% confident it will be 66 to 75, though the band was never checked|Most likely around 71, plausibly 63 to 79; expect bigger misses at season changes|The model is accurate to within 3 tickets",
+        "answer": "Most likely around 71, plausibly 63 to 79; expect bigger misses at season changes",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "trend-to-threshold and remaining useful life",
+        "description": "Framing RUL",
+        "type": "multiple choice",
+        "question": "In trend-to-threshold analysis, what is the remaining useful life?",
+        "options": "The age of the satellite|The time until the trend crosses its operational limit|The value predicted for tomorrow|The slope of the trend",
+        "answer": "The time until the trend crosses its operational limit",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "trend-to-threshold and remaining useful life",
+        "description": "np.polyfit",
+        "type": "multiple choice",
+        "question": "What does np.polyfit(x, y, 1) return?",
+        "options": "The crossing date|The slope and intercept of the best straight line|A smoothed series|The residuals",
+        "answer": "The slope and intercept of the best straight line",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "trend-to-threshold and remaining useful life",
+        "description": "Battery call",
+        "type": "multiple choice",
+        "question": "Using only the first three years of data, when did the straight line predict battery capacity would cross 80%?",
+        "options": "1 March 2025|1 May 2025|14 May 2025|5 May 2033",
+        "answer": "1 May 2025",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "trend-to-threshold and remaining useful life",
+        "description": "Long reach",
+        "type": "multiple choice",
+        "question": "The amplifier call reaches about 9 years past the data. What should be reported?",
+        "options": "A precise date|A planning figure with a range, re-estimated every year|Nothing until it fails|The battery date instead",
+        "answer": "A planning figure with a range, re-estimated every year",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "trend-to-threshold and remaining useful life",
+        "description": "Propellant shape",
+        "type": "multiple choice",
+        "question": "Why is a straight line an approximation for propellant?",
+        "options": "It rises over time|It falls in discrete steps at each station-keeping burn|It has no trend|It is measured in percent",
+        "answer": "It falls in discrete steps at each station-keeping burn",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "trend-to-threshold and remaining useful life",
+        "description": "Time to intervention",
+        "type": "True or False",
+        "question": "Engineers should plan to act before the predicted crossing, not on the crossing date.",
+        "options": "True|False",
+        "answer": "True",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "backtesting",
+        "description": "What backtesting is",
+        "type": "multiple choice",
+        "question": "What is backtesting?",
+        "options": "Scoring a model on its training data|Forecasting from past dates using only what was known then, and scoring against what came next|Running the code twice|Reversing the time order",
+        "answer": "Forecasting from past dates using only what was known then, and scoring against what came next",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "backtesting",
+        "description": "Walk-forward",
+        "type": "multiple choice",
+        "question": "In a walk-forward backtest, what happens at each fold?",
+        "options": "The data is shuffled|The model is refit on everything before the cut and forecasts the next few weeks|Only the test set is changed|The oldest data is deleted",
+        "answer": "The model is refit on everything before the cut and forecasts the next few weeks",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "backtesting",
+        "description": "Report the spread",
+        "type": "multiple choice",
+        "question": "Fold MAEs range from 1.27 to 7.67 with mean 4.01. What should you report?",
+        "options": "Only the best fold|Only the mean|The spread across folds and when the bad folds occur|Only the last fold",
+        "answer": "The spread across folds and when the bad folds occur",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "backtesting",
+        "description": "Baseline backtest",
+        "type": "multiple choice",
+        "question": "Backtested on the same six folds, how did one-step naive compare with the regression?",
+        "options": "Regression won all six folds|Naive won five of six folds with lower mean error|They tied every fold|Seasonal naive won",
+        "answer": "Naive won five of six folds with lower mean error",
+        "difficulty": "advanced"
+    },
+    {
+        "title": "backtesting",
+        "description": "Battery check",
+        "type": "multiple choice",
+        "question": "The three-year battery call was 1 May 2025. The real crossing was 14 May 2025. How far off was it?",
+        "options": "13 days early|13 days late|74 days early|Exactly right",
+        "answer": "13 days early",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "backtesting",
+        "description": "Accuracy versus lead time",
+        "type": "multiple choice",
+        "question": "As more data is used, the battery call gets more accurate. What is the trade-off?",
+        "options": "The model becomes biased late|The warning time left to act shrinks|The data has more gaps|The threshold changes",
+        "answer": "The warning time left to act shrinks",
+        "difficulty": "intermediate"
+    }
+]

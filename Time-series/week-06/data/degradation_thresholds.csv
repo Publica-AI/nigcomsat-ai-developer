@@ -1,0 +1,4 @@
+asset,channel,unit,threshold,direction,description
+BATT-A,battery_capacity_pct,%,80.0,falls_below,End-of-life capacity floor for safe eclipse-season depth of discharge
+TWTA-A,twta_gain_db,dB,-2.0,falls_below,Minimum gain before link budget margin is lost
+PROP-A,propellant_kg,kg,5.0,falls_below,Reserve floor that must be preserved for the end-of-mission de-orbit burn
