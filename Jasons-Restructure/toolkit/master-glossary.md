@@ -9,12 +9,33 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W2D2</span>
 
+### ✖️ 1.4826
+- **Plain English:** The number that converts MAD into the same size as a standard deviation, so "3 robust σ" means what you expect.
+- **Naija analogy:** The exchange rate between two currencies, so both prices mean the same thing.
+- **Example:** `robust_sigma = MAD * 1.4826`
+
+<span class="pill">W3D2</span>
+
 ### 1️⃣ Lag-1 autocorrelation
 - **Plain English:** How much today matches yesterday.
 - **Naija analogy:** If it rained heavily today, there's a good chance it rains tomorrow too in July.
 - **Example:** `s.autocorr(lag=1)` gives 0.58 for throughput.
 
 <span class="pill">W2D2</span>
+
+### 3️⃣ 3-sigma rule
+- **Plain English:** On normal data, only about 0.27% of readings fall outside ±3σ by chance.
+- **Naija analogy:** Someone who is never more than 15 minutes late suddenly arriving 2 hours late: that's not chance, something happened.
+- **Example:** About 8 chance alarms in 2,880 normal hours.
+
+<span class="pill">W3D2</span>
+
+### 🎯 3σ band (three-sigma)
+- **Plain English:** Average ± 3 standard deviations. Readings outside it are rare if everything is normal.
+- **Naija analogy:** "Normal fare is ₦500, give or take ₦100". ₦1,000 means something is up.
+- **Example:** Sunlit 3σ band: 26.43 to 29.99 A. Only the 4 dropout hours fall outside.
+
+<span class="pill">W3D1</span>
 
 ### 3️⃣ Three-cycle rule
 - **Plain English:** Have at least three full cycles of data before you trust a seasonal pattern.
@@ -30,6 +51,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W1D2</span>
 
+### 🙅🏾 Accuracy (and why it lies)
+- **Plain English:** The fraction of all readings a detector got "right". Useless when real events are rare.
+- **Naija analogy:** Ade the guard sleeps all night and is "97% accurate", because most nights there's no thief.
+- **Example:** A detector that never fires scores 99.87% on last week's 4,706 readings.
+
+<span class="pill">W4D1</span>
+
 ### ➕ Additive model
 - **Plain English:** observed = trend + seasonal + residual. The seasonal swing stays the same size even when the level rises.
 - **Naija analogy:** December transport fare goes up by a fixed ₦100 every year, whatever the normal fare is.
@@ -44,6 +72,20 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W1D1</span>
 
+### 😴 Alarm fatigue
+- **Plain English:** When there are so many false alarms that people stop paying attention, even to the real ones.
+- **Naija analogy:** After the 10th "thief!" shout from the mai-guard, nobody comes out anymore.
+- **Example:** A NOC that sees 46 useless solar-array alarms a season learns to ignore that channel.
+
+<span class="pill">W3D1</span> <span class="pill">W4D1</span>
+
+### 🔔 Alarm (limit check)
+- **Plain English:** A rule that shouts when a reading crosses a fixed number.
+- **Naija analogy:** The smoke detector in the kitchen: it doesn't know you're frying plantain, it just sees smoke.
+- **Example:** `bus["solar_array_current_a"] < 20` fires an alarm.
+
+<span class="pill">W3D1</span>
+
 ### 🚨 Alert line (threshold)
 - **Plain English:** A value that, once crossed, means someone should act. Real ones are set by engineers.
 - **Naija analogy:** The fuel light on your car's dashboard.
@@ -57,6 +99,20 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 - **Example:** alpha 0.5 hugs the daily line; alpha 0.05 is very calm.
 
 <span class="pill">W1D3</span>
+
+### 🚨 Anomaly
+- **Plain English:** A reading that doesn't fit what normally happens.
+- **Naija analogy:** Your quiet neighbour suddenly playing loud music at 3am. Something is off.
+- **Example:** The solar-array current suddenly dropping to about half while the sun is shining.
+
+<span class="pill">W3D1</span>
+
+### 🔑 Answer key (labels / ground truth)
+- **Plain English:** A list of the real events: what happened, where, and when. It turns "my detector seems fine" into a score.
+- **Naija analogy:** The WAEC marking scheme. Without it, every student says "I passed".
+- **Example:** `telemetry_anomaly_labels.csv`: 6 events, EV01 to EV06.
+
+<span class="pill">W4D1</span>
 
 ### 📏 .asfreq()
 - **Plain English:** Declares the rhythm of your data (e.g. daily) and creates an empty slot for any missing period.
@@ -100,6 +156,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W2D3</span>
 
+### 📶 C/N (carrier-to-noise ratio)
+- **Plain English:** How strong the signal is compared to the background hiss, in dB. Higher is better.
+- **Naija analogy:** How clearly you can hear your friend on the phone in a noisy bus park.
+- **Example:** About 14.2 dB in clear sky; it falls in heavy rain.
+
+<span class="pill">W3D1</span>
+
 ### 🥁 Cadence (frequency)
 - **Plain English:** How often a reading is recorded: hourly, daily, weekly, monthly.
 - **Naija analogy:** How often your landlord comes for rent: monthly? yearly? (Hopefully not weekly 😅)
@@ -114,12 +177,26 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W2D3</span>
 
+### ✅ Catch (true positive)
+- **Plain English:** A real event the detector flagged.
+- **Naija analogy:** The mai-guard shouts and there really is a thief at the gate.
+- **Example:** The sunlit control chart catches all 3 solar-array dropouts.
+
+<span class="pill">W4D1</span>
+
 ### 🧱 Cell (code cell / text cell)
 - **Plain English:** One block in a notebook. A **code cell** runs Python; a **text cell** is just for reading.
 - **Naija analogy:** One stop on a danfo route. You can't jump to Oshodi without passing the stops before it.
 - **Example:** `print("Hello")` lives in a code cell. These instructions live in text cells.
 
 <span class="pill">W1D1</span>
+
+### ➖ Centre line
+- **Plain English:** The middle line of a control chart: the average of the quiet reference period.
+- **Naija analogy:** The "normal" fare for your usual bus route.
+- **Example:** 27.87 A for 1–15 August.
+
+<span class="pill">W3D2</span>
 
 ### 🔮 Centred window
 - **Plain English:** A window with today in the middle: half the days are in the past, half in the **future**.
@@ -128,12 +205,33 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W1D3</span>
 
+### 📍 Change point
+- **Plain English:** The moment a series switches to a new behaviour: a new level or a new speed.
+- **Naija analogy:** The day the fuel price changed at the pump. Before and after are two different worlds.
+- **Example:** 12 May 2025 for the amplifier; 1 April 2025 for the battery.
+
+<span class="pill">W3D3</span>
+
 ### 🚩 Checkpoint
 - **Plain English:** A short progress check at a fixed point in the course.
 - **Naija analogy:** Police checkpoints on the expressway, but these ones help you. 😄
 - **Example:** Week 3 · Day 3: bring your unit head's reply and your profiled data.
 
 <span class="pill">W2D3</span>
+
+### 🧼 Clean residual
+- **Plain English:** A residual you can trust: mean near zero, no autocorrelation left, and the same spread all year.
+- **Naija analogy:** A clean bill of health from the doctor before you start the race.
+- **Example:** After removing the 2 spike days, lag-1 autocorrelation fell from 0.33 to 0.06.
+
+<span class="pill">W3D2</span>
+
+### 🌊 Common-cause variation
+- **Plain English:** The everyday, built-in wobble of a stable process. Nothing to fix.
+- **Naija analogy:** Lagos traffic being a bit slower on Tuesday than Monday.
+- **Example:** Array current wobbling between 27.8 and 28.0 A.
+
+<span class="pill">W3D2</span>
 
 ### 🧩 Component
 - **Plain English:** One of the parts a decomposition produces.
@@ -142,12 +240,40 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W2D1</span>
 
+### 🌞 Conditioning on a known cause
+- **Plain English:** Only judging readings where a known, normal cause is absent, instead of widening the alarm band for everyone.
+- **Naija analogy:** You don't call an electrician when the lights go off during a scheduled NEPA load-shedding.
+- **Example:** Adding `eclipse_flag == 0` took the control chart from 46 false alarms to 0.
+
+<span class="pill">W4D1</span>
+
 ### 🟦 Confidence band
 - **Plain English:** The shaded area in a correlogram. Bars inside it could easily be chance.
 - **Naija analogy:** The "e no too matter" zone: small differences you shouldn't argue about.
 - **Example:** For 730 days of data the band is about ±0.07.
 
 <span class="pill">W2D2</span>
+
+### 🎭 Context (state-based limits)
+- **Plain English:** Checking which mode the system is in before deciding whether a reading is strange.
+- **Naija analogy:** A dark house at midnight is normal. A dark house at noon with the gen running is not.
+- **Example:** `floor_alarm & (bus["eclipse_flag"] == 0)` only checks the limit in sunlight.
+
+<span class="pill">W3D1</span>
+
+### 📏 Control chart
+- **Plain English:** A chart with a centre line and two limits that shows when a reading leaves its normal range.
+- **Naija analogy:** Mama Put's price sense: she knows the usual range for a basket of tomatoes, so one crazy price jumps out.
+- **Example:** Solar-array current with a band from 27.65 A to 28.09 A.
+
+<span class="pill">W3D2</span>
+
+### ↕️ Control limits (UCL / LCL)
+- **Plain English:** The upper and lower edges of "normal": centre ± 3σ. Outside them = unusual.
+- **Naija analogy:** The fare range where you don't argue. Above it, you ask the conductor, "Ehn?!"
+- **Example:** LCL 27.65 A, UCL 28.09 A.
+
+<span class="pill">W3D2</span>
 
 ### 🔗 Correlation
 - **Plain English:** A number from −1 to +1 showing how much two series move together. It does **not** tell you which one causes the other.
@@ -184,6 +310,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W1D1</span>
 
+### 🧾 CUSUM (cumulative sum)
+- **Plain English:** A detector that keeps a running total of small leftovers and alarms when the total gets too big.
+- **Naija analogy:** Your landlord's “small-small” rent increases. No single year shocks you, but add up the receipts and you've paid ₦415k extra.
+- **Example:** `S = max(0, S + leftover - k)` caught the amplifier's step on 12 May 2025.
+
+<span class="pill">W3D3</span>
+
 ### 🎢 Cycle
 - **Plain English:** Ups and downs that repeat, but **with no fixed length**.
 - **Naija analogy:** Business boom years and slow years. Nobody can tell you the exact date of the next boom.
@@ -219,6 +352,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W1D2</span>
 
+### 🚨 Decision limit (h)
+- **Plain English:** How big the running total must get before CUSUM raises the alarm.
+- **Naija analogy:** How many times your neighbour's generator must wake you before you go and knock.
+- **Example:** `h = 5 × σ` = 1.02 °C. Lower h = faster but noisier.
+
+<span class="pill">W3D3</span>
+
 ### 🔧 Decomposition
 - **Plain English:** Splitting one time series into separate parts: trend, seasonal and residual.
 - **Naija analogy:** Tasting the jollof and naming each ingredient: rice, tomato base, and that one pepper that surprised you.
@@ -233,12 +373,33 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W2D3</span>
 
+### ⏳ Detection delay
+- **Plain English:** How many days pass between the onset and the alarm.
+- **Naija analogy:** The time between “I don pay” and the bank alert landing.
+- **Example:** 3 days for the practice fault with h = 5σ; 6 days with h = 10σ.
+
+<span class="pill">W3D3</span> <span class="pill">W4D1</span>
+
+### 🧪 Detector (model)
+- **Plain English:** Any rule or method that decides "normal" or "not normal". Even a fixed limit is a simple one.
+- **Naija analogy:** A gateman deciding who looks suspicious. Some gatemen are better than others.
+- **Example:** The 20 A floor is a detector. So is mean − 3σ.
+
+<span class="pill">W3D1</span>
+
 ### ➖ Differencing (.diff())
 - **Plain English:** Replacing each value with the change since the previous step. It removes the trend.
 - **Naija analogy:** Instead of asking "how much money do you have?", asking "how much did you gain or lose this week?"
 - **Example:** Suya vs generators: 0.97 on levels, 0.06 on changes.
 
 <span class="pill">W2D2</span>
+
+### 🐢 Drift
+- **Plain English:** A slow, steady slide. No single day looks strange.
+- **Naija analogy:** Your eyesight getting a little worse every year until one day you can't read the danfo number.
+- **Example:** Battery capacity fading from 103 to 95.4 Ah over three years.
+
+<span class="pill">W3D1</span>
 
 ### ☝🏾 Dual axis (avoid it)
 - **Plain English:** Two different y-axes on one chart, one on each side. It lets you make any two lines look related.
@@ -253,6 +414,20 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 - **Example:** Two rows both saying `2024-03-06`.
 
 <span class="pill">W1D1</span>
+
+### 🧑🏾‍🔧 Duty engineer / page
+- **Plain English:** The engineer on shift who gets alerted (paged) when an alarm fires, and must check it.
+- **Naija analogy:** The one who gets the 2 a.m. "Oga, come and see" phone call.
+- **Example:** Every false alarm is one page to the duty engineer.
+
+<span class="pill">W4D1</span>
+
+### 🌘 Eclipse
+- **Plain English:** The hour when the Earth's shadow covers the satellite, so the solar panels give no power and the battery takes over.
+- **Naija analogy:** The satellite's own "NEPA has taken light". The battery is its inverter.
+- **Example:** 46 eclipse hours in this file, every one at 21:00 UTC (22:00 in Lagos).
+
+<span class="pill">W3D1</span>
 
 ### 🌘 Eclipse season
 - **Plain English:** The weeks around each equinox (March and September) when the Earth's shadow crosses the satellite's orbit for up to 72 minutes a day.
@@ -275,12 +450,61 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W2D3</span>
 
+### 📌 Event
+- **Plain English:** One real problem with a start and an end. It can last one hour or many months.
+- **Naija analogy:** One power outage. Whether NEPA takes light for 5 minutes or 5 days, it's one outage.
+- **Example:** EV05, the amplifier's cooling-loop blockage, lasts 233 days.
+
+<span class="pill">W4D1</span>
+
+### 🎯 Event-level scoring
+- **Plain English:** Scoring per event (caught or missed), not per row. A 233-day event is one thing to catch.
+- **Naija analogy:** A teacher marks "did you answer question 4?", not "how many lines did you write for question 4?".
+- **Example:** Flagging one day of EV05 counts as one catch, not 233.
+
+<span class="pill">W4D1</span>
+
+### 🧮 Expected value (model)
+- **Plain English:** What a reading *should* be, given what we already know (drive level, time of year…).
+- **Naija analogy:** Mama Put expects tomatoes to be dear in the scarce season. That's her model.
+- **Example:** On 3 Sep 2024 the recipe expected 63.1 °C.
+
+<span class="pill">W3D2</span>
+
 ### 📰 Exponential smoothing (`.ewm`)
 - **Plain English:** A smoother that gives the newest values the most weight and older values less and less.
 - **Naija analogy:** How you rate a footballer: last week's match counts most, matches from last season count a little.
 - **Example:** `s.ewm(alpha=0.3).mean()`
 
 <span class="pill">W1D3</span>
+
+### 📉 Fade rate
+- **Plain English:** How much capacity a battery loses per year.
+- **Naija analogy:** How fast your new phone's battery stops lasting the whole day.
+- **Example:** −2.24 Ah/yr before April 2025, −3.68 after.
+
+<span class="pill">W3D3</span>
+
+### 🐺 False alarm
+- **Plain English:** An alarm when nothing is actually wrong.
+- **Naija analogy:** The boy who cried wolf. Or the car alarm that goes off for every keke.
+- **Example:** The 46 eclipse-night alarms from the 20 A floor.
+
+<span class="pill">W3D1</span>
+
+### 🔕 False-alarm budget
+- **Plain English:** How many pointless alarms you can afford before people stop listening.
+- **Naija analogy:** The car alarm on your street that goes off for every keke. After a week, nobody even looks.
+- **Example:** ±2σ ≈ 131 false alarms per 2,880 hours; ±3σ ≈ 8.
+
+<span class="pill">W3D2</span>
+
+### 📟 False alarm (false positive)
+- **Plain English:** A flag when nothing was really wrong. Each one costs someone's time.
+- **Naija analogy:** Musa shouting "Thief!" at the neighbour's goat. Again.
+- **Example:** The SoC floor raised 18 false alarms, all on normal eclipse nights.
+
+<span class="pill">W4D1</span>
 
 ### 📝 Finding (4-sentence)
 - **Plain English:** A short write-up in four sentences: Situation, Observation, Implication, Recommendation.
@@ -324,6 +548,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W1D1</span>
 
+### ↕️ Hysteresis
+- **Plain English:** Switching the alarm ON at one level and OFF at a different level, so it doesn't flicker on and off.
+- **Naija analogy:** The air-conditioner that starts at 26 °C but only stops at 23 °C, instead of clicking on and off all night.
+- **Example:** Alarm on when margin drops below 2 dB, cleared only when it rises above 3 dB.
+
+<span class="pill">W3D1</span>
+
 ### 🧷 Index (DatetimeIndex)
 - **Plain English:** The row labels of a table. When they're dates, pandas can do time tricks with them.
 - **Naija analogy:** The page numbers of a book. Put dates there and you can jump straight to “August 2024.”
@@ -366,6 +597,20 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W1D3</span>
 
+### 🚰 Leaking the answer
+- **Plain English:** Giving a detector a column that is a reaction to the thing you're trying to detect, so it cheats without knowing.
+- **Naija analogy:** Judging who studied for the exam by who looks tired the next morning. You're measuring the after-effect, not the cause.
+- **Example:** `uplink_power_dbm` rises because it rains (correlation 0.97). Feed it in and you build a rain detector.
+
+<span class="pill">W3D1</span>
+
+### 🪜 Level shift
+- **Plain English:** The series jumps to a new normal and stays there.
+- **Naija analogy:** Rent goes up and never comes back down.
+- **Example:** The amplifier runs about 2 °C hotter from May 2025 onward.
+
+<span class="pill">W3D1</span> <span class="pill">W3D2</span>
+
 ### ⛽ Link margin (dB)
 - **Plain English:** How much signal is left above the minimum the receiver needs. Below 0 dB the link is down.
 - **Naija analogy:** Fuel above the reserve line. Positive: you can still drive. Zero: you're pushing the car. 🚗
@@ -387,12 +632,33 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W1D2</span>
 
+### 📐 MAD (median absolute deviation)
+- **Plain English:** The median distance from the median: a wobble measure that ignores a few wild points.
+- **Naija analogy:** Asking "how far do people usually live from the office?" without letting the one person who commutes from Ibadan spoil the answer.
+- **Example:** Robust σ stayed 0.09 A while ordinary σ jumped to 1.08 A after a dropout.
+
+<span class="pill">W3D2</span>
+
 ### 📏 MAE (mean absolute error)
 - **Plain English:** The average size of a forecast's mistakes, ignoring whether they were too high or too low.
 - **Naija analogy:** How many minutes late your friend usually is, on average. 😅
 - **Example:** `(s - s.shift(7)).abs().mean()`
 
 <span class="pill">W2D2</span>
+
+### 🎯 Median
+- **Plain English:** The middle value when you sort the numbers. Wild values can't drag it.
+- **Naija analogy:** The salary of the middle person in the office. The MD's big salary doesn't move it.
+- **Example:** The rolling median of the last 168 sunlit hours.
+
+<span class="pill">W3D2</span>
+
+### 🙈 Miss (false negative)
+- **Plain English:** A real event the detector never flagged.
+- **Naija analogy:** The guard was sleeping when the thief came.
+- **Example:** Every value-based detector missed EV06, the battery fade speeding up.
+
+<span class="pill">W4D1</span>
 
 ### 〰️ Moving average (centred)
 - **Plain English:** The average of a window of values around each point. Classic decomposition uses one to find the trend, so the trend is missing for half a window at each end.
@@ -464,6 +730,27 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W1D1</span>
 
+### 🏁 Onset (start date)
+- **Plain English:** The day a change really began, as opposed to the day the alarm rang.
+- **Naija analogy:** The day your tyre started leaking vs the day you noticed it was flat.
+- **Example:** The practice fault began 10 Feb 2025; the alarm rang 13 Feb 2025.
+
+<span class="pill">W3D3</span>
+
+### 🌗 Operating state
+- **Plain English:** A distinct mode the system runs in, each with its own normal behaviour.
+- **Naija analogy:** Your house on NEPA light vs on generator vs on inverter: different "normal" noise, different normal bills.
+- **Example:** eclipse (~0 A), recharge (~29.6 A), sunlit (~28.1 A).
+
+<span class="pill">W3D2</span>
+
+### ❌ Outage
+- **Plain English:** The link is actually down: link margin below 0 dB.
+- **Naija analogy:** Not "the network is slow", but "no network at all".
+- **Example:** 12 outage hours in August, each lasting one hour.
+
+<span class="pill">W3D1</span>
+
 ### 🐼 pandas
 - **Plain English:** The Python library for working with tables of data.
 - **Naija analogy:** Microsoft Excel, but you control it by typing instructions, so it never gets tired.
@@ -499,6 +786,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W2D2</span>
 
+### ⏳ Persistence rule
+- **Plain English:** Only alarm if the reading stays bad for N readings in a row.
+- **Naija analogy:** Not shouting "NEPA has taken light!" until the light has been off for a full minute.
+- **Example:** A 2-hours-in-a-row rule caught 0 of the 12 one-hour outages in August.
+
+<span class="pill">W3D1</span>
+
 ### 🔄 pivot
 - **Plain English:** The pandas command that reshapes long → wide.
 - **Naija analogy:** Rearranging wedding guests from one long queue into tables by family.
@@ -512,6 +806,20 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 - **Example:** `from statsmodels.graphics.tsaplots import plot_acf`
 
 <span class="pill">W2D2</span>
+
+### 🧪 Practice (injected) fault
+- **Plain English:** A small fault you add to clean data on purpose, so you know the right answer and can test your detector.
+- **Naija analogy:** A fire drill: you know there is no fire, but you learn exactly how fast everyone gets out.
+- **Example:** `practice_residuals()` hides +0.3 °C in the amplifier's calm leftovers.
+
+<span class="pill">W3D3</span>
+
+### 📟 Precision
+- **Plain English:** Of all the alarms, the fraction that were real. "When it pages me, is it real?"
+- **Naija analogy:** Of all the times Musa shouted "Thief!", how many were actual thieves?
+- **Example:** Musa: 9 ÷ 200 = 0.045. All-hours control chart: 0.06.
+
+<span class="pill">W4D1</span>
 
 ### 🚨 Priority-1 ticket
 - **Plain English:** The most urgent kind of fault ticket. Rare, but serious.
@@ -548,12 +856,61 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W2D2</span>
 
+### 🐘 Rare events (class imbalance)
+- **Plain English:** When the thing you're hunting is tiny compared with everything else, so "always say no" looks great.
+- **Naija analogy:** Looking for 6 fake ₦1,000 notes in a bag of 4,706 genuine ones.
+- **Example:** 6 events in 4,706 readings.
+
+<span class="pill">W4D1</span>
+
 ### 📦 Raw data
 - **Plain English:** The original export from a system, before you clean or summarise it.
 - **Naija analogy:** Unpeeled yam straight from the market.
 - **Example:** Never commit raw NIGCOMSAT exports to GitHub: commit only your code.
 
 <span class="pill">W2D3</span>
+
+### 🕸️ Recall
+- **Plain English:** Of all the real events, the fraction the detector caught. "Did we miss anything?"
+- **Naija analogy:** Of the 10 thieves who came this year, how many did the guard catch?
+- **Example:** Musa: 9 ÷ 10 = 0.90. Sunlit control chart: 3 ÷ 3 = 1.00.
+
+<span class="pill">W4D1</span>
+
+### ⚖️ Recall-first vs precision-first
+- **Plain English:** Deciding which number matters more for a system, based on what a miss costs vs what a false alarm costs.
+- **Naija analogy:** A smoke alarm should be recall-first (better a false alarm than a burnt house). A car alarm that screams at every keke is a precision problem.
+- **Example:** Battery and power: recall first. Rain-fade dashboards: precision first.
+
+<span class="pill">W4D1</span>
+
+### ⚡ Recharge hour
+- **Plain English:** The hour after an eclipse, when the panels push extra current to refill the battery and the battery warms up.
+- **Naija analogy:** When NEPA brings light back and every phone and power bank in the house charges at once.
+- **Example:** Battery temperature goes above 22 °C in the hour after every eclipse: normal.
+
+<span class="pill">W3D1</span>
+
+### 🔋 Recharge hours
+- **Plain English:** The hours just after an eclipse when the solar array works extra to refill the battery.
+- **Naija analogy:** Charging your phone to 100% the moment light comes back.
+- **Example:** 138 recharge hours in the bus-power file.
+
+<span class="pill">W3D2</span>
+
+### 🗓️ Reference period
+- **Plain English:** A calm, known-good stretch of data used to learn what normal looks like.
+- **Naija analogy:** Judging your new neighbour by a quiet fortnight, not by the night of their wedding party.
+- **Example:** 1–15 August 2025: sunlit, no eclipse yet, nothing strange.
+
+<span class="pill">W3D2</span>
+
+### 📈 Regression (line of best fit)
+- **Plain English:** A way to learn a recipe like "temp ≈ base + k × drive" from past data.
+- **Naija analogy:** Working out from past trips that every extra 10 km adds about the same to your fuel cost.
+- **Example:** temp ≈ 49.5 + 0.17 × drive + sun-angle wave.
+
+<span class="pill">W3D2</span>
 
 ### 🗂️ Repository (repo)
 - **Plain English:** A project folder tracked by Git, often stored on GitHub, holding your code and its history.
@@ -568,6 +925,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 - **Example:** `.resample("D").min()`
 
 <span class="pill">W1D2</span> <span class="pill">W1D3</span>
+
+### 🔄 Reset
+- **Plain English:** Setting the running total back to zero after someone has checked an alarm.
+- **Naija analogy:** Clearing the tab at the mama put after you've paid. You don't keep paying for last week.
+- **Example:** Without a reset, CUSUM alarms every single day after the real step.
+
+<span class="pill">W3D3</span>
 
 ### 🎲 Residual
 - **Plain English:** What's left after the trend and season are removed. Mostly noise, but big residuals are surprises worth investigating.
@@ -597,6 +961,20 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W2D1</span>
 
+### 🧭 Robust z-score
+- **Plain English:** How many robust σ a reading sits from the rolling median.
+- **Naija analogy:** "How many times more than usual is this bill?"
+- **Example:** The dropouts sat about 140 robust σ below normal.
+
+<span class="pill">W3D2</span>
+
+### 🏎️ Rolling slope
+- **Plain English:** The speed of change over the last N days, recalculated every day.
+- **Naija analogy:** Your car's speedometer: it tells you how fast you're going right now, not how far you've gone.
+- **Example:** `rolling_slope(cap, 90)` crossed −3.0 Ah/yr on 2 May 2025.
+
+<span class="pill">W3D3</span>
+
 ### 〽️ Rolling standard deviation
 - **Plain English:** How much the values jumped around inside the window. A measure of wobble.
 - **Naija analogy:** How much your neighbour's generator noise goes up and down in one evening.
@@ -611,6 +989,20 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W1D3</span>
 
+### 🪜 Run rules
+- **Plain English:** Extra alarm rules that look at patterns, not just single points. Rule 1: one point beyond 3σ. Rule 2: nine in a row on one side of the centre.
+- **Naija analogy:** One late payment is chance. Nine late payments in a row means something has changed.
+- **Example:** Rule 2 is best at catching level shifts.
+
+<span class="pill">W3D2</span>
+
+### ➕ Running total
+- **Plain English:** A number you keep adding to, day after day, instead of looking at each day alone.
+- **Naija analogy:** Your esusu/ajo contribution book: one day's ₦2,000 is small, the month's total is not.
+- **Example:** CUSUM's `S` is a running total of leftovers minus slack.
+
+<span class="pill">W3D3</span>
+
 ### 🔄 Runtime / session
 - **Plain English:** The live connection to Google's computer, plus everything it currently remembers.
 - **Naija analogy:** A phone call. Hang up (restart) and the other person forgets what you were saying.
@@ -624,6 +1016,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 - **Example:** *File → Save a copy in Drive*. Your copy lands in Drive → *Colab Notebooks*.
 
 <span class="pill">W1D1</span>
+
+### 🧑🏾‍⚖️ Scoring rules
+- **Plain English:** The agreement on what counts as a catch and what counts as a false alarm, written down **before** anyone computes a score.
+- **Naija analogy:** Agreeing the rules of the five-a-side match before kick-off, not after your team concedes.
+- **Example:** One flag inside an event = caught; many flags inside one event = one catch.
+
+<span class="pill">W4D1</span>
 
 ### 🔁 Seasonal component
 - **Plain English:** The pattern that repeats exactly every period: the same 12 numbers every year, or the same 7 numbers every week.
@@ -674,6 +1073,20 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W1D1</span>
 
+### ⏱️ Shift hours (the cost of false alarms)
+- **Plain English:** False alarms × minutes to check each one, turned into engineer hours. The number a manager can decide on.
+- **Naija analogy:** Counting how much fuel the generator wasted while nobody was home.
+- **Example:** 46 per season × 2 seasons × 20 minutes ≈ 31 hours a year, about 4 shifts.
+
+<span class="pill">W4D1</span>
+
+### 🤫 Silent degradation
+- **Plain English:** Something wearing out without any alarm firing.
+- **Naija analogy:** Tyres going bald slowly. No warning light, until the blow-out.
+- **Example:** A 95 Ah capacity limit fires 0 times in three years of fading.
+
+<span class="pill">W3D1</span>
+
 ### 📜 SLA (Service Level Agreement)
 - **Plain English:** The promise to a customer, e.g. “the link will be up 99.5% of the time”.
 - **Naija analogy:** The landlord's promise of “24 hours light and water” in the house advert. 😅
@@ -681,12 +1094,33 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W1D2</span> <span class="pill">W1D3</span>
 
+### 🤏 Slack (k)
+- **Plain English:** A small allowance taken away every day, so ordinary noise doesn't pile up.
+- **Naija analogy:** The “abeg, small change” the bus conductor never returns. Too small to fight over.
+- **Example:** `k = 0.5 × σ` = 0.10 °C for the amplifier.
+
+<span class="pill">W3D3</span>
+
+### 📐 Slope alarm (fade-rate alarm)
+- **Plain English:** An alarm on how **fast** something is changing, not on its value. It catches drifts that never cross a fixed line.
+- **Naija analogy:** Your fuel gauge says half a tank, but it was full an hour ago. The level is fine; the speed of dropping is the problem.
+- **Example:** Fade faster than −3 Ah a year → alarm. It catches EV06 with zero false alarms.
+
+<span class="pill">W4D1</span>
+
 ### 🐢 Slow decay
 - **Plain English:** Bars that start high and fade gently, lag after lag. It's the fingerprint of a trend.
 - **Naija analogy:** Lagos rent: this year looks like last year, which looked like the year before… all going one way.
 - **Example:** Transponder utilisation: 0.90, 0.81, 0.73, 0.64…
 
 <span class="pill">W2D2</span>
+
+### 🐢 Slow drift
+- **Plain English:** A gradual change, a little every day. No single day looks unusual.
+- **Naija analogy:** Your trousers getting tighter small-small since December. 😅
+- **Example:** A rolling "expected" follows a slow drift, so its residual never notices.
+
+<span class="pill">W3D2</span>
 
 ### 🖼️ Small multiples
 - **Plain English:** A grid of small, identical charts, one per group, sharing the same y-axis.
@@ -723,6 +1157,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W1D3</span>
 
+### 🚨 Special-cause variation
+- **Plain English:** A change with a real reason behind it: worth investigating.
+- **Naija analogy:** Traffic not moving at all because a tanker fell on the bridge.
+- **Example:** The array dropping to 15.3 A in full sun.
+
+<span class="pill">W3D2</span>
+
 ### 📈 Spike
 - **Plain English:** A bar much taller than its neighbours, sticking above the shaded band.
 - **Naija analogy:** The one day in the month when everyone rushes to the bank: salary day.
@@ -744,6 +1185,27 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W2D2</span>
 
+### 🥖 Stale reference
+- **Plain English:** Limits learned long ago that no longer match today's normal.
+- **Naija analogy:** Last year's price list at the market: everything looks "too expensive" now.
+- **Example:** 1,861 of 2,696 sunlit hours fall outside the August band by November.
+
+<span class="pill">W3D2</span>
+
+### 📐 Standard deviation (σ, "sigma")
+- **Plain English:** The typical size of the wobble around the average.
+- **Naija analogy:** How much your danfo fare moves around the usual price on a normal day.
+- **Example:** Sunlit array current has σ ≈ 0.59 A when all sunlit hours are counted.
+
+<span class="pill">W3D1</span> <span class="pill">W3D2</span>
+
+### 🔋 State of charge (SoC)
+- **Plain English:** How full the battery is, in percent.
+- **Naija analogy:** The battery bar on your phone.
+- **Example:** `battery_soc_pct` drops to 77.3% on the deepest eclipse night.
+
+<span class="pill">W3D1</span>
+
 ### 📦 statsmodels
 - **Plain English:** A Python library for statistics and time-series models. Already installed in Colab.
 - **Naija analogy:** The big toolbox in the mechanic's shop. pandas is the spanner; statsmodels has the special tools.
@@ -758,12 +1220,33 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W2D1</span>
 
+### 🌞 Sun-angle wave (sin / cos)
+- **Plain English:** A smooth yearly up-and-down added to the recipe so it knows the time of year.
+- **Naija analogy:** Knowing harmattan is cold and March is hot, without being told each year.
+- **Example:** `np.sin(2π × day_of_year / 365.25)` and its `cos` partner.
+
+<span class="pill">W3D2</span>
+
 ### 🧪 Synthetic data
 - **Plain English:** Made-up data designed to behave like the real thing. It's safe to share and safe to use with AI.
 - **Naija analogy:** A mock exam: same style as WAEC, no real stakes.
 - **Example:** All course datasets are synthetic, built to behave like NigComSat-1R.
 
 <span class="pill">W1D1</span>
+
+### 🙅🏾 Tampering
+- **Plain English:** Reacting to common-cause wobble as if it were special cause. It makes things worse.
+- **Naija analogy:** The driver who jams the brake for every small bump on the expressway: passengers suffer more, not less.
+- **Example:** "Correcting" after every reading made the spread about 39% bigger in the simulation.
+
+<span class="pill">W3D2</span>
+
+### 🎯 Target
+- **Plain English:** The value you expect when everything is normal. CUSUM measures how far each reading is from it.
+- **Naija analogy:** The fuel gauge level you expect after buying ₦20,000 of fuel.
+- **Example:** For leftovers (actual − expected), the target is 0.
+
+<span class="pill">W3D3</span>
 
 ### 🚧 Threshold line
 - **Plain English:** A line drawn at the level that matters (0 dB, the SLA target), so readers instantly see breaches.
@@ -792,6 +1275,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 - **Example:** `2025-08-01T21:00` = 1 August 2025, 9pm UTC.
 
 <span class="pill">W1D1</span>
+
+### ↔️ Tolerance
+- **Plain English:** A small grace window around an event, so a flag one step early or late still counts.
+- **Naija analogy:** "Service starts 10 a.m." but nobody is marked absent at 10:01.
+- **Example:** `tol="1h"` for hourly files, `tol="1D"` for daily files.
+
+<span class="pill">W4D1</span>
 
 ### ⬅️ Trailing window
 - **Plain English:** A window that ends today and only looks at the past. pandas does this by default.
@@ -826,7 +1316,7 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 - **Naija analogy:** Two people called “Emeka Okafor” in the same office: check the ID before you transfer money!
 - **Example:** `battery_health_daily.csv` in week-03 (clean) vs week-04 (planted faults).
 
-<span class="pill">W2D3</span>
+<span class="pill">W2D3</span> <span class="pill">W3D3</span>
 
 ### 🌡️ TWTA and RF drive
 - **Plain English:** The TWTA (travelling-wave tube amplifier) boosts the signal before it's sent down. RF drive is how hard it's being pushed.
@@ -835,12 +1325,26 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W2D2</span>
 
+### 📢 TWTA (travelling-wave tube amplifier)
+- **Plain English:** The satellite part that makes our signal strong enough to reach the ground. It runs hot.
+- **Naija analogy:** The loudspeaker at a party: bigger volume, more heat, and you notice when it starts overheating.
+- **Example:** `twta_thermal_daily.csv` tracks its daily temperature.
+
+<span class="pill">W3D3</span>
+
 ### 🏢 Unit head
 - **Plain English:** The head of your department. They agree your project's scope by email.
 - **Naija analogy:** Your HOD signing your project approval form.
 - **Example:** Their reply email goes into your final submission.
 
 <span class="pill">W2D3</span>
+
+### 🌧️ Unusual ≠ anomaly
+- **Plain English:** A reading can be statistically rare yet perfectly explained by known physics. Not everything rare is a fault.
+- **Naija analogy:** Heavy traffic on Third Mainland Bridge at 6 p.m. on a Friday is unusual compared with 3 a.m., but nobody calls it an emergency.
+- **Example:** Rain fade drops C/N below the naive line, but only 12 of the 18 flagged hours were real outages.
+
+<span class="pill">W4D1</span>
 
 ### 🔊 Uplink power
 - **Plain English:** How strongly the ground station transmits up to the satellite. It's turned up automatically when rain weakens the signal.
@@ -870,6 +1374,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W1D3</span>
 
+### 🚧 Warning line
+- **Plain English:** A limit you set on a speed or rate (not on the level) that triggers a check.
+- **Naija analogy:** The speed limit sign: you can still be far from your destination and be going too fast.
+- **Example:** −3.0 Ah per year on the battery's rolling slope.
+
+<span class="pill">W3D3</span>
+
 ### 🇳🇬 WAT
 - **Plain English:** West Africa Time, Nigeria's clock. Always **UTC + 1**, with no daylight saving.
 - **Naija analogy:** Lagos time is UTC time plus one hour. (“African time” is another matter 😄)
@@ -883,6 +1394,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 - **Example:** Weekdays average about 7 tickets, weekends about 3.4.
 
 <span class="pill">W1D3</span>
+
+### 🕵🏾 "Where did that number come from?"
+- **Plain English:** The question to ask of every alarm limit. A good limit has a reason you can write down.
+- **Naija analogy:** "Who told you the price is ₦5,000?" before you pay at the market.
+- **Example:** 20 A was a guess; mean − 3σ of sunlit data (about 26.4 A) has a reason.
+
+<span class="pill">W3D1</span>
 
 ### ↔️ Wide format
 - **Plain English:** One row per time, one column per group. What charts want.
@@ -904,3 +1422,10 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 - **Example:** Availability on 96–100%; tickets per weekday from 0.
 
 <span class="pill">W1D2</span>
+
+### 🚦 Yellow and red limits
+- **Plain English:** Two levels: yellow = warning, red = act now.
+- **Naija analogy:** The fuel light comes on (yellow), then the car stops on Third Mainland Bridge (red).
+- **Example:** Ground-station software often has a yellow and a red limit on each telemetry channel.
+
+<span class="pill">W3D1</span>

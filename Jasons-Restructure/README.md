@@ -45,10 +45,10 @@ Jasons-Restructure/
 | 2 | 1 | [Take It Apart: Trend, Season and Noise](week-2/day-1-trend-season-noise/) | Week 3 · 3.4 Decomposition | ✅ ready |
 | 2 | 2 | [Does Today Remember Yesterday?](week-2/day-2-does-today-remember-yesterday/) | Week 3 · 3.5 Autocorrelation | ✅ ready |
 | 2 | 3 | [Lab Day + Quiz 1 + Pick Your Project](week-2/day-3-lab-day-quiz-1-and-project-kickoff/) | Week 3 review + capstone kickoff | ✅ ready |
-| 3 | 1 | [Alarms That Cry Wolf](week-3/day-1-alarms-that-cry-wolf/) | Week 4 · 4.1 What your alarm software already does | 🚧 Step 3 |
-| 3 | 2 | [Control Charts and Residuals](week-3/day-2-control-charts-and-residuals/) | Week 4 · 4.2 SPC, 4.3 Residual-based detection | 🚧 Step 3 |
-| 3 | 3 | [The Slow Creep: Drift and CUSUM](week-3/day-3-drift-and-cusum/) | Week 4 · 4.4 Change points and drift | 🚧 Step 3 |
-| 4 | 1 | [Scoring a Detector + Quiz 2](week-4/day-1-scoring-detectors-and-quiz-2/) | Week 4 · 4.5 Evaluating a detector | 🚧 Step 3 |
+| 3 | 1 | [Alarms That Cry Wolf](week-3/day-1-alarms-that-cry-wolf/) | Week 4 · 4.1 What your alarm software already does | ✅ ready |
+| 3 | 2 | [Control Charts and Residuals](week-3/day-2-control-charts-and-residuals/) | Week 4 · 4.2 SPC, 4.3 Residual-based detection | ✅ ready |
+| 3 | 3 | [The Slow Creep: Drift and CUSUM](week-3/day-3-drift-and-cusum/) | Week 4 · 4.4 Change points and drift | ✅ ready |
+| 4 | 1 | [Scoring a Detector + Quiz 2](week-4/day-1-scoring-detectors-and-quiz-2/) | Week 4 · 4.5 Evaluating a detector | ✅ ready |
 | 4 | 2 | [Meet scikit-learn + Isolation Forest](week-4/day-2-scikit-learn-and-isolation-forest/) | Week 5 · 5.1 scikit-learn workflow, 5.2 Isolation forest | 🚧 Step 4 |
 | 4 | 3 | [Give the Model Eyes: Feature Engineering](week-4/day-3-feature-engineering/) | Week 5 · 5.3 Feature engineering | 🚧 Step 4 |
 | 5 | 1 | [No Expo! Honest Train/Test Splits + Quiz 3](week-5/day-1-honest-splits-and-quiz-3/) | Week 5 · 5.4 Temporal train/test discipline | 🚧 Step 4 |

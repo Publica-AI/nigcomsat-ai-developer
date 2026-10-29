@@ -61,6 +61,10 @@ The originals were made by someone who really knows the subject. The synthetic d
 | 12 | Week 6, throughout | — | **38 lines of garbled characters** (`â€"` instead of `—`), an encoding accident |
 | 12a | Week 3, *B6. VSAT uptime* | South South "starts lowest **and** falls furthest" | South South does start lowest, but indexed to week 1 **South East** falls furthest (98.2 vs South West 98.3, South South 98.5) |
 | 12b | Week 3, *B1. Ka-band daily* | trend ≈ +0.05 points a year | about **+0.08** a year |
+| 12c | Week 4, *1. Bus power* + Week 4 quiz Q2 | an SoC floor of 82% "fires on all 46 eclipse hours" | it fires on **18** (eclipse SoC ranges 77.3–99.6%). It's an array-current floor, or a 3σ chart on all hours, that fires on all 46 |
+| 12d | Week 4 quiz Q23 | battery fade rate "roughly doubles" in April 2025 | −2.24 → −3.68 Ah/yr: about **1.6×** |
+| 12e | Week 4, *2. TWTA* | the 12 May level shift is "invisible to a single-point 3σ rule" | true on the raw temperature and for rolling detectors, but a fixed-recipe residual (temperature vs drive + season, fitted on 2024) flags every day after the shift |
+| 12f | `bus_power_telemetry_hourly` | — | **Data quirk:** 1 Sep 00:00 reads 29.48 A (a recharge-sized value) with no eclipse flagged before it. It's the one false alarm of a well-tuned control chart; W3D2's notes explain it |
 
 ### Traps in the data files
 
