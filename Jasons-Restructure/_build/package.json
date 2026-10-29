@@ -1,0 +1,8 @@
+{
+  "name": "nigcomsat-ts-course-build",
+  "private": true,
+  "description": "Builds the PowerPoint decks for the course",
+  "dependencies": {
+    "pptxgenjs": "^3.12.0"
+  }
+}
