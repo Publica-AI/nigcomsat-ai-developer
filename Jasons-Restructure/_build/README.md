@@ -32,6 +32,16 @@ python build.py project    # final-project PDF
 
 Needs Google Chrome (for PDFs) and Node.js. To move the course to another GitHub repo or branch, change `GITHUB_REPO` / `GITHUB_BRANCH` in `common.py` and rebuild: every “Open in Colab” link updates.
 
+## Test (run before every commit)
+
+```bash
+_build/test/setup_test_envs.sh /some/scratch/folder            # once: pandas 2.2 + pandas 3 environments
+export TS_TEST_DIR=/some/scratch/folder
+_build/test/run_day.sh W1D1 week-1/day-1-*/4-instructor-only/W1D1-solution.ipynb
+```
+
+Every solution notebook must say "You have N of N tasks correct" with `ERRORS: []` on **both** pandas versions. The runner works offline (it pre-fills the download cache from `Time-series/`).
+
 ## Credits
 
 Icons in the PowerPoint decks: [Noto Emoji](https://github.com/googlefonts/noto-emoji) by Google, Apache License 2.0. Logos belong to NIGCOMSAT and Publica Academy.
