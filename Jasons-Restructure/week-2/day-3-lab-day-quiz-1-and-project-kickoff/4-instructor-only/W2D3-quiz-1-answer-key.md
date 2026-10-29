@@ -1,6 +1,6 @@
 # Quiz 1 Answer Key
 
-> 🧑🏾‍🏫 **Instructor only.** Built from the original `Time-series/MCQ/week-03-mcq.csv` (unchanged). Options were reshuffled with a fixed seed (2603) so the correct letters are spread out: multiple-choice answers sit at A ×6, B ×7, C ×7, D ×6 (in the original, 74% of all answers were option B). The 4 True/False questions keep their original order.
+> 🧑🏾‍🏫 **Instructor only.** Built from the original `Time-series/MCQ/week-03-mcq.csv` (unchanged). Options were reshuffled with a fixed seed (2603) so the correct letters are spread out: multiple-choice answers sit at A ×6, B ×7, C ×7, D ×6 (in the original, most answers were option B). The 4 True/False questions keep their original order.
 
 | # | Answer | Correct option | What it tests | Level |
 |---|---|---|---|---|

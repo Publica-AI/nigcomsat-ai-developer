@@ -164,3 +164,15 @@ SUB = {
     "glossary": "3-glossary",
     "instructor": "4-instructor-only",
 }
+
+
+def read_labels(path):
+    """Build-side twin of the notebooks' load_labels(): survives the stray comma in the original labels file."""
+    import pandas as pd
+    lines = Path(path).read_text(encoding="utf-8").splitlines()
+    cols = lines[0].split(",")
+    df = pd.DataFrame([ln.split(",", len(cols) - 1) for ln in lines[1:] if ln.strip()], columns=cols)
+    for c in ("start", "end"):
+        if c in df:
+            df[c] = pd.to_datetime(df[c], format="mixed")
+    return df

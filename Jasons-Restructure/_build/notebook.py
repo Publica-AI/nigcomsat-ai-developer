@@ -53,6 +53,18 @@ def data_path(name, week=None):
         urlretrieve(f"{RAW}/{week}/data/{name}.csv", local)
     return local
 
+def load_labels(name="telemetry_anomaly_labels", week=None):
+    """Read an answer-key (labels) file. The original telemetry_anomaly_labels.csv has a stray comma
+    inside one description, which makes pd.read_csv crash, so the last column is read as free text."""
+    lines = Path(data_path(name, week)).read_text(encoding="utf-8").splitlines()
+    cols = lines[0].split(",")
+    rows = [ln.split(",", len(cols) - 1) for ln in lines[1:] if ln.strip()]
+    df = pd.DataFrame(rows, columns=cols)
+    for c in ("start", "end"):
+        if c in df:
+            df[c] = pd.to_datetime(df[c], format="mixed")
+    return df
+
 ___ = None          # this is "the blank". Replace every ___ with your answer.
 SCORE = {}
 

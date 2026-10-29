@@ -7,6 +7,7 @@ import random
 import numpy as np
 import pandas as pd
 
+import quizkit
 from common import BRAND as B, ORIGINALS, SUB
 from svgcharts import line_svg
 from webdeck import logos_title_block
@@ -669,92 +670,18 @@ Load the **week-04** version of the same file. On what **date** does its `est_ca
 # EXTRAS: Quiz 1 (shuffled), answer key, project-kickoff worksheet
 # =============================================================================
 QUIZ_SEED = 2603
-LETTERS = "ABCD"
 
 
 def shuffled_quiz():
-    """Week-3 MCQ with answer positions spread evenly. True/False stay True/False (original order)."""
-    src = list(csv.DictReader(open(ORIGINALS / "MCQ" / "week-03-mcq.csv", encoding="utf-8")))
-    rng = random.Random(QUIZ_SEED)
-    mc = [i for i, r in enumerate(src) if len(r["options"].split("|")) == 4]
-    targets = [0, 1, 2, 3] * (len(mc) // 4) + rng.sample([0, 1, 2, 3], len(mc) % 4)
-    rng.shuffle(targets)
-    tgt = dict(zip(mc, targets))
-    out = []
-    for i, r in enumerate(src):
-        opts = r["options"].split("|")
-        ans = r["answer"]
-        assert ans in opts, r["question"]
-        if i in tgt:
-            others = [o for o in opts if o != ans]
-            rng.shuffle(others)
-            others.insert(tgt[i], ans)
-            opts = others
-        out.append({"number": i + 1, "topic": r["title"], "tests": r["description"], "type": r["type"],
-                    "difficulty": r["difficulty"], "question": r["question"], "options": opts, "answer": ans,
-                    "letter": LETTERS[opts.index(ans)]})
-    return out
+    return quizkit.shuffled_quiz("week-03-mcq.csv", QUIZ_SEED)
 
 
 def extra(d, foot):
     import pdfdoc
 
-    quiz = shuffled_quiz()
-    qdir = d.folder / SUB["exercise"] / "quiz"
-    qdir.mkdir(parents=True, exist_ok=True)
-
-    # 1) CSV for Google Forms / quiz tools
-    with open(qdir / f"{CODE}-quiz-1-google-forms.csv", "w", newline="", encoding="utf-8") as f:
-        w = csv.writer(f)
-        w.writerow(["number", "question", "options", "answer", "topic", "type"])
-        for q in quiz:
-            w.writerow([q["number"], q["question"], "|".join(q["options"]), q["answer"], q["topic"], q["type"]])
-
-    # 2) printable quiz (no answers)
-    lines = ["# Quiz 1: Weeks 1–2", "",
-             "**30 questions · 20 minutes · just you.** Phones face down, notebooks closed, no AI tools. "
-             "Circle **one** letter per question. True/False questions have two options.", "",
-             "Name: ______________________________ &nbsp;&nbsp; Unit: ______________________", ""]
-    topic = None
-    for q in quiz:
-        if q["topic"] != topic:
-            topic = q["topic"]
-            lines += ["", f"## {topic[0].upper() + topic[1:]}", ""]
-        lines.append(f"**{q['number']}.** {q['question']}")
-        lines.append("")
-        for k, o in enumerate(q["options"]):
-            lines.append(f"- **{LETTERS[k]}.** {o}")
-        lines.append("")
-    qmd = qdir / f"{CODE}-quiz-1.md"
-    qmd.write_text("\n".join(lines) + "\n", encoding="utf-8")
-    pdfdoc.md_to_pdf(qmd, qmd.with_suffix(".pdf"), kicker="Week 2 · Day 3 · Quiz 1", title="Quiz 1: Weeks 1–2",
-                     subtitle="30 questions · 20 minutes · just you", foot=foot)
-
-    # 3) answer key (instructor only)
-    counts = {L: sum(q["letter"] == L for q in quiz if len(q["options"]) == 4) for L in LETTERS}
-    tf = sum(len(q["options"]) == 2 for q in quiz)
-    key = ["# Quiz 1 Answer Key", "",
-           "> 🧑🏾‍🏫 **Instructor only.** Built from the original `Time-series/MCQ/week-03-mcq.csv` (unchanged). "
-           f"Options were reshuffled with a fixed seed ({QUIZ_SEED}) so the correct letters are spread out: "
-           f"multiple-choice answers sit at A ×{counts['A']}, B ×{counts['B']}, C ×{counts['C']}, D ×{counts['D']} "
-           f"(in the original, 74% of all answers were option B). The {tf} True/False questions keep their original order.", "",
-           "| # | Answer | Correct option | What it tests | Level |", "|---|---|---|---|---|"]
-    for q in quiz:
-        key.append(f"| {q['number']} | **{q['letter']}** | {q['answer']} | {q['tests']} | {q['difficulty']} |")
-    key += ["", "## Marking it together (10 minutes)", "",
-            "1. Read out the letters; everyone marks their own paper.",
-            "2. Ask for hands up on each question. Any question that more than a third of the room got wrong, explain it again with the matching day's slide.",
-            "3. Map each topic back to its day: structure → W1D1 · charts → W1D2 · rolling windows → W1D3 · decomposition → W2D1 · autocorrelation → W2D2.",
-            "", "## Quick topic tally", "", "| Topic | Questions |", "|---|---|"]
-    topics = {}
-    for q in quiz:
-        topics.setdefault(q["topic"], []).append(str(q["number"]))
-    for t, nums in topics.items():
-        key.append(f"| {t} | {', '.join(nums)} |")
-    kmd = d.folder / SUB["instructor"] / f"{CODE}-quiz-1-answer-key.md"
-    kmd.write_text("\n".join(key) + "\n", encoding="utf-8")
-    pdfdoc.md_to_pdf(kmd, kmd.with_suffix(".pdf"), kicker="Week 2 · Day 3 · Instructor only", title="Quiz 1 Answer Key",
-                     subtitle="Weeks 1–2 · shuffled version", foot=foot)
+    quizkit.write_quiz(d, foot, n=1, mcq_file="week-03-mcq.csv", seed=QUIZ_SEED, covers="Weeks 1–2",
+                       topic_map="structure → W1D1 · charts → W1D2 · rolling windows → W1D3 · "
+                                 "decomposition → W2D1 · autocorrelation → W2D2")
 
     # 4) project-kickoff worksheet
     wmd = d.folder / SUB["exercise"] / "project-kickoff" / f"{CODE}-project-kickoff-worksheet.md"
