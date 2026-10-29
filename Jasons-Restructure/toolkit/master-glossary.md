@@ -23,6 +23,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W2D2</span>
 
+### 1️⃣ One-step-ahead forecast
+- **Plain English:** A forecast for just the next period, made with the real value of the period before it.
+- **Naija analogy:** Predicting tomorrow's bus fare when you already know today's.
+- **Example:** The regression used last week's real count every week: a one-step forecast. One-step naive scored 6.75 on the same weeks.
+
+<span class="pill">W5D3</span> <span class="pill">W6D1</span>
+
 ### 3️⃣ 3-sigma rule
 - **Plain English:** On normal data, only about 0.27% of readings fall outside ±3σ by chance.
 - **Naija analogy:** Someone who is never more than 15 minutes late suddenly arriving 2 hours late: that's not chance, something happened.
@@ -72,6 +79,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W1D1</span>
 
+### 🤖 AI-use note
+- **Plain English:** One paragraph in your report saying what you used an AI assistant for, how you checked its output, and how you kept restricted data out of it.
+- **Naija analogy:** Declaring what's in your luggage at the airport: honest and short, and everyone relaxes.
+- **Example:** "I described the column names and the shape of the export; I never pasted rows. I tested every function on the course data first."
+
+<span class="pill">W6D3</span>
+
 ### 😴 Alarm fatigue
 - **Plain English:** When there are so many false alarms that people stop paying attention, even to the real ones.
 - **Naija analogy:** After the 10th "thief!" shout from the mai-guard, nobody comes out anymore.
@@ -98,7 +112,7 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 - **Naija analogy:** High alpha believes every WhatsApp broadcast immediately. Low alpha waits for three people to confirm.
 - **Example:** alpha 0.5 hugs the daily line; alpha 0.05 is very calm.
 
-<span class="pill">W1D3</span>
+<span class="pill">W1D3</span> <span class="pill">W5D2</span>
 
 ### 🚨 Anomaly
 - **Plain English:** A reading that doesn't fit what normally happens.
@@ -135,6 +149,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W2D2</span>
 
+### 🙈 Automatic leak test
+- **Plain English:** A computer check of "could I have known this feature in time?": hide this week's answer and the whole future, rebuild the feature, and see if it changes. If it changes, it leaked.
+- **Naija analogy:** Collecting the phones before the exam starts. If your answer changes when the phones are gone, it wasn't your answer.
+- **Example:** `shift(1)` passes; `shift(-1)`, a centred window and `rolling(4).mean()` without a shift all fail.
+
+<span class="pill">W6D3</span>
+
 ### ✅ Availability
 - **Plain English:** The percentage of time a link worked properly.
 - **Naija analogy:** Out of 24 hours, how many did your network actually give you full bars?
@@ -142,12 +163,26 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W1D1</span>
 
+### 🔁 Backtesting
+- **Plain English:** Replaying a forecasting method on the past, many times, using only what was known at each moment, and scoring it against what really happened next.
+- **Naija analogy:** Before you pay Oga Tipster for VIP tips, your cousin checks his tips against every match from last season.
+- **Example:** The Week 5 Day 3 regression replayed on six 4-week stretches of 2025, refitted each time.
+
+<span class="pill">W6D1</span>
+
+### 🔁 Backtesting the method
+- **Plain English:** Repeating the whole forecasting recipe as if you stood at several earlier dates, with only the data you had then, and checking each call against what happened.
+- **Naija analogy:** Testing your football-prediction system on the last four seasons, not just last Saturday.
+- **Example:** Battery calls made from 1, 2, 3 and 4 years of data: −74, −37, −13 and +4 days against the first dip.
+
+<span class="pill">W6D2</span>
+
 ### 📏 Baseline
 - **Plain English:** The simplest reasonable method, the one every fancier method must beat on the same test.
 - **Naija analogy:** Grandma's weather forecast: “tomorrow will be like today”. Beat her or go home. 👵🏾
 - **Example:** “Same weekday last week” as a forecast for throughput.
 
-<span class="pill">W2D3</span> <span class="pill">W5D1</span>
+<span class="pill">W2D3</span> <span class="pill">W5D1</span> <span class="pill">W5D2</span>
 
 ### 👵🏾 Baseline forecast
 - **Plain English:** The simplest possible forecast. Any clever model must beat it, or it's not worth using.
@@ -155,6 +190,20 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 - **Example:** "Same as yesterday" and "same weekday last week".
 
 <span class="pill">W2D2</span>
+
+### 🙈 Blind forecast
+- **Plain English:** Every week of the horizon is forecast from the origin, without using any real value that arrives later.
+- **Naija analogy:** Writing your full betting slip before the first match kicks off. No changing it at half-time.
+- **Example:** The forecast for 22 December can't use the real count from 15 December.
+
+<span class="pill">W5D2</span>
+
+### 🙈 Blind (multi-step) forecast
+- **Plain English:** Forecasting several periods ahead from one starting point, without seeing any of the real values in between.
+- **Naija analogy:** Planning the whole month's foodstuff on the first of the month.
+- **Example:** Naive, seasonal naive and the rate seasonal naive all forecast 3 Nov – 22 Dec blind, standing on 27 Oct.
+
+<span class="pill">W5D3</span> <span class="pill">W6D1</span>
 
 ### 🎯 Brief
 - **Plain English:** One of the five project types you can choose (A–E), each with its own operational question.
@@ -176,6 +225,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 - **Example:** `bus_power_telemetry` is hourly; `ka_band_availability` is daily.
 
 <span class="pill">W1D1</span>
+
+### 🌧️ Calibration weeks
+- **Plain English:** The past weeks whose misses you use to size a band. They must include the kind of trouble you'll be forecasting.
+- **Naija analogy:** Testing a new umbrella in harmattan and declaring it rain-proof.
+- **Example:** Misses from summer only (from 19 May) gave ± 3.33 and covered just 2 of 8 November–December weeks.
+
+<span class="pill">W5D3</span>
 
 ### 🔋 Capacity (amp-hours, Ah)
 - **Plain English:** How much charge a battery can still hold. It shrinks as the battery ages.
@@ -239,6 +295,20 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 - **Example:** k-means put every eclipse hour (92 of 92) in one cluster and every recharge hour (276 of 276) in another.
 
 <span class="pill">W4D2</span>
+
+### ⚖️ Coefficient
+- **Plain English:** The weight a regression gives one column: how much the forecast moves when that column goes up by one, with the others held still.
+- **Naija analogy:** The price per derica of garri: buy one more, pay that much more.
+- **Example:** `terminals` +0.0231 per terminal, about +23 tickets a week per 1,000 terminals. Positive, as it should be.
+
+<span class="pill">W5D3</span>
+
+### 🚨 Coefficient sanity check
+- **Plain English:** Reading each coefficient's sign (+ or −) and asking whether it makes physical sense. A sign that makes no sense means something is broken until proven otherwise.
+- **Naija analogy:** If the receipt says the more fuel you buy, the less you pay, check the receipt before celebrating.
+- **Example:** A negative terminals coefficient would say "bigger network, fewer tickets": investigate.
+
+<span class="pill">W5D3</span>
 
 ### 🌊 Common-cause variation
 - **Plain English:** The everyday, built-in wobble of a stable process. Nothing to fix.
@@ -331,6 +401,27 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W2D2</span>
 
+### 🎯 Coverage
+- **Plain English:** The share of held-out periods whose real value actually landed inside the band. It's how you check a band's promise.
+- **Naija analogy:** The weatherman who says "90% chance of rain": count how often it actually rained.
+- **Example:** The code book's band covered 5 of 8 weeks (62.5%): too narrow for a "90%" claim.
+
+<span class="pill">W5D3</span>
+
+### ⏰ Cron
+- **Plain English:** The Linux timetable for scheduled jobs. A line has five time fields (minute, hour, day of month, month, day of week) and then the command. `*` means "every".
+- **Naija analogy:** The church bell that rings at 6 a.m. every day. Nobody presses it; it's on the timetable.
+- **Example:** `0 7 * * *` = 07:00, every day.
+
+<span class="pill">W6D3</span>
+
+### 🪟 Crossing window
+- **Plain English:** For a noisy reading, "the day it crossed" isn't one day: readings bounce either side of the limit for a while. Report the window.
+- **Naija analogy:** "When did harmattan start?" Some mornings are dusty in November, but you only stop arguing in December.
+- **Example:** The battery's first daily dip below 80% was 14 May 2025; it was last at or above 80% on 24 Jul 2025. 49 of the 72 days in between were below.
+
+<span class="pill">W6D2</span>
+
 ### 📄 CSV file
 - **Plain English:** A plain-text table where commas separate the columns.
 - **Naija analogy:** A list written in a jotter with commas instead of lines.
@@ -380,6 +471,20 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W1D2</span>
 
+### 🧰 De-orbit reserve
+- **Plain English:** Propellant kept back so that at end of life the satellite can be moved out of the busy geostationary ring. It's a limit, not spare fuel.
+- **Naija analogy:** The transport fare you never spend at the party, so you can get home.
+- **Example:** 5 kg, from `degradation_thresholds.csv`.
+
+<span class="pill">W6D2</span>
+
+### 🐢 Decelerating fade
+- **Plain English:** The loss rate itself gets smaller over time, so the trend is a gentle curve. A straight line fitted on early years then overstates the later fade and calls the crossing early.
+- **Naija analogy:** A new car loses value fast in the first years, then more slowly.
+- **Example:** Battery fade per year: −4.81, −4.69, −4.55, −4.45, −4.34%.
+
+<span class="pill">W6D2</span>
+
 ### 📉 decision_function (anomaly score)
 - **Plain English:** A number for every row saying how odd it is. **Lower = more odd.** `predict` is just this score compared with a line.
 - **Naija analogy:** Instead of "pass/fail", the full exam mark. You can rank everyone by it.
@@ -401,12 +506,40 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W2D1</span>
 
+### 📉 Degradation
+- **Plain English:** The slow, one-way loss of performance as equipment ages: capacity, gain or fuel that won't come back.
+- **Naija analogy:** Your phone battery: brand new it lasts two days, after three years it begs for the charger by afternoon.
+- **Example:** Battery capacity fell from 99.86% to 77.84% over five years.
+
+<span class="pill">W6D2</span>
+
+### 🎤 Demo
+- **Plain English:** A short, live showing of your tool to the people who will use it: what problem, what data, what method, how you tested it, the tool running, and what to do next.
+- **Naija analogy:** The owambe MC gives the groom's friends five minutes. When the time is up, the DJ takes over, ready or not.
+- **Example:** Six beats in 5:00: problem 0:45, data 0:45, method 0:45, honest test 1:00, the tool live 1:00, recommendation 0:45.
+
+<span class="pill">W6D3</span>
+
+### 🚀 Deployment
+- **Plain English:** Putting your tool where its users can actually use it, every day, without you. For this course: on the **training server**, as a dashboard or a scheduled report.
+- **Naija analogy:** Building the borehole is one thing. Deployment is when the whole street can fetch water without calling you.
+- **Example:** A tool that only runs on your laptop earns at most half of the deployment marks.
+
+<span class="pill">W6D3</span>
+
 ### 🪫 Depth of discharge
 - **Plain English:** How far the battery was drained, as a percentage of what it holds.
 - **Naija analogy:** How low your inverter battery went during last night's blackout.
 - **Example:** Under 1% on normal days, up to about 22% on the deepest eclipse days.
 
 <span class="pill">W2D3</span>
+
+### ⏲️ Design life
+- **Plain English:** How long the manufacturer built a satellite to operate. Real satellites can outlive it or fall short; remaining-useful-life analysis tells you which way it's going.
+- **Naija analogy:** "This generator is rated for 10 years", but how you use it decides the real answer.
+- **Example:** NigComSat-1R, launched December 2011, has a 15-year design life.
+
+<span class="pill">W6D2</span>
 
 ### ⏳ Detection delay
 - **Plain English:** How many days pass between the onset and the alarm.
@@ -435,6 +568,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 - **Example:** Battery capacity fading from 103 to 95.4 Ah over three years.
 
 <span class="pill">W3D1</span>
+
+### 📡 Driver (exogenous variable)
+- **Plain English:** A second series that pushes the one you forecast, and that you know at the moment you forecast.
+- **Naija analogy:** The number of guests drives how much rice you cook.
+- **Example:** Active VSAT terminals drive the number of tickets.
+
+<span class="pill">W5D2</span>
 
 ### ☝🏾 Dual axis (avoid it)
 - **Plain English:** Two different y-axes on one chart, one on each side. It lets you make any two lines look related.
@@ -469,7 +609,7 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 - **Naija analogy:** NEPA's scheduled load-shedding season, but for the satellite. It switches to battery.
 - **Example:** Eclipse hours sit at 21:00 UTC from 1 September to 16 October in the bus-power file.
 
-<span class="pill">W2D1</span> <span class="pill">W2D3</span>
+<span class="pill">W2D1</span> <span class="pill">W2D3</span> <span class="pill">W6D2</span>
 
 ### 🪑 Embargo
 - **Plain English:** A gap left out between training and test, at least as long as your longest feature window, so no feature on the first test hour can reach back into training.
@@ -520,12 +660,26 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W5D1</span>
 
+### 🫖 Exponential smoothing
+- **Plain English:** A running "level" that each new value pulls part of the way towards itself. Recent weeks count most, old weeks fade away.
+- **Naija analogy:** How your opinion of a bus driver updates: today's ride counts a lot, last year's ride a little.
+- **Example:** With α = 0.3 the final level is 75.6. MAE 12.80.
+
+<span class="pill">W5D2</span>
+
 ### 📰 Exponential smoothing (`.ewm`)
 - **Plain English:** A smoother that gives the newest values the most weight and older values less and less.
 - **Naija analogy:** How you rate a footballer: last week's match counts most, matches from last season count a little.
 - **Example:** `s.ewm(alpha=0.3).mean()`
 
 <span class="pill">W1D3</span>
+
+### 🔭 Extrapolation
+- **Plain English:** Using a trend beyond the range of data it was fitted on. The further you reach, the less you should trust it.
+- **Naija analogy:** "He scored in his first two matches, so he'll score 38 this season." Maybe. Maybe not.
+- **Example:** The amplifier call reaches 9.3 years past the three years it was fitted on.
+
+<span class="pill">W6D2</span>
 
 ### 📉 Fade rate
 - **Plain English:** How much capacity a battery loses per year.
@@ -597,12 +751,75 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W4D3</span>
 
+### 💧 First dip
+- **Plain English:** The first single reading below the limit. Early warning, but noise can trigger it.
+- **Naija analogy:** The first raindrop of the season: real, but not yet the rainy season.
+- **Example:** 14 May 2025. The 3-year call (1 May) is 13 days early against it.
+
+<span class="pill">W6D2</span>
+
 ### 🏋🏾 fit
 - **Plain English:** Training: the model studies the rows you give it and learns what is normal.
 - **Naija analogy:** The new apprentice spends his first month just watching the master mechanic.
 - **Example:** `model.fit(X[train])` learns from January–August only.
 
 <span class="pill">W4D2</span>
+
+### 🧩 Fold
+- **Plain English:** One round of a backtest: one training block and the test weeks scored after it.
+- **Naija analogy:** One match day in the season. A season has many.
+- **Example:** Fold 5 trains on 42 weeks and tests 20 Oct – 10 Nov 2025.
+
+<span class="pill">W6D1</span>
+
+### 🔮 Forecast
+- **Plain English:** A guess about a value that hasn't happened yet, made **only** from what was known at the time.
+- **Naija analogy:** Mama Put deciding how much rice to cook tomorrow from how many plates she sold this week.
+- **Example:** Standing on 27 Oct 2025, guess the NOC tickets for each of the next 8 weeks.
+
+<span class="pill">W5D2</span>
+
+### ❌ Forecast error
+- **Plain English:** Actual minus forecast for one step. Positive = forecast too low, negative = too high.
+- **Naija analogy:** You budgeted ₦5,000 for fuel and spent ₦7,000: an error of ₦2,000.
+- **Example:** Week of 3 Nov: actual 53, naive 74, error −21.
+
+<span class="pill">W5D2</span>
+
+### 🔭 Forecast horizon
+- **Plain English:** How far ahead a forecast reaches, here in weeks. Different questions need different horizons.
+- **Naija analogy:** "Will it rain this evening?" and "Will it rain at my December wedding?" are different forecasts.
+- **Example:** Next week's shift = 1 week; the month-ahead roster = 4 weeks.
+
+<span class="pill">W6D1</span>
+
+### 📍 Forecast origin
+- **Plain English:** The moment you stand at when you make the forecast. Everything after it is unknown.
+- **Naija analogy:** The day you buy your ticket at the motor park: you don't yet know how the road will be.
+- **Example:** Today's origin is the last training week, 27 Oct 2025.
+
+<span class="pill">W5D2</span>
+
+### 🧍🏾 Forecast origin (rolling origin)
+- **Plain English:** The week you are standing in when you make the forecast. Everything before it may be used; nothing after it. A rolling-origin backtest makes a forecast from every week in turn.
+- **Naija analogy:** Standing at the bus stop: you can see the danfos that have passed, not the ones still coming.
+- **Example:** `rolling_origin(tickets, forecasters, h=8)` stands at 45 origins, from 30 Dec 2024 to 3 Nov 2025.
+
+<span class="pill">W6D1</span>
+
+### 📝 Four-sentence recommendation
+- **Plain English:** The plain-language verdict for a manager: what to use, for which question, what not to use, and when to be careful.
+- **Naija analogy:** What your mechanic tells you after the test drive: "Use the car for town, not for Abuja. Don't trust the spare tyre. The brakes go soft in the rain."
+- **Example:** Naive for next week; the rate forecast for the month-ahead roster; not the regression; expect misses when the rains start or stop.
+
+<span class="pill">W6D1</span>
+
+### 🧾 Fuel-gauge sum (sanity check)
+- **Plain English:** The no-model version of the answer: what's left above the limit ÷ what's used per year. If it disagrees with the model, look for a bug.
+- **Naija analogy:** Counting the money in your pocket before trusting the bank app.
+- **Example:** (101.93 − 5) kg ÷ 9.62 kg a year = 10.1 years: about January 2036. The line said December 2035.
+
+<span class="pill">W6D2</span>
 
 ### 🕵🏾 Gap
 - **Plain English:** A period with no reading at all, e.g. a missing day.
@@ -646,12 +863,40 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W4D3</span>
 
+### 🔒 Hold-out (test weeks)
+- **Plain English:** The last stretch of the series, locked away until the forecasts are made, then used to score them.
+- **Naija analogy:** The sealed exam envelope that only opens in the hall (Week 5 · Day 1's "no expo").
+- **Example:** The last 8 of the 104 weeks.
+
+<span class="pill">W5D2</span>
+
+### ⚖️ Honest test (Checkpoint 4)
+- **Plain English:** The final-project checkpoint where you bring a split by time and a table comparing your method with a simple baseline on the same period, with the same scorer.
+- **Naija analogy:** A football friendly on neutral ground, same referee for both teams.
+- **Example:** Today's table: each method, how far ahead, MAE, 90% band, coverage. The rate seasonal naive wins: say so.
+
+<span class="pill">W5D3</span>
+
+### 🔭 Horizon
+- **Plain English:** How far ahead you forecast, counted in steps (here, weeks).
+- **Naija analogy:** "I'll pay you back in 8 weeks." The horizon is 8 weeks.
+- **Example:** `H = 8`: forecast the 8 weeks from 3 Nov to 22 Dec 2025.
+
+<span class="pill">W5D2</span>
+
 ### ↕️ Hysteresis
 - **Plain English:** Switching the alarm ON at one level and OFF at a different level, so it doesn't flicker on and off.
 - **Naija analogy:** The air-conditioner that starts at 26 °C but only stops at 23 °C, instead of clicking on and off all night.
 - **Example:** Alarm on when margin drops below 2 dB, cleared only when it rises above 3 dB.
 
 <span class="pill">W3D1</span>
+
+### 🏠 In-sample error (marking your own homework)
+- **Plain English:** Misses measured on the same weeks the model was fitted to. They are always flattering.
+- **Naija analogy:** Grading your own exam script with the marking guide on your desk.
+- **Example:** Training misses had a spread of 2.84; misses on weeks it never saw had 6.99.
+
+<span class="pill">W5D3</span>
 
 ### 🧷 Index (DatetimeIndex)
 - **Plain English:** The row labels of a table. When they're dates, pandas can do time tricks with them.
@@ -666,6 +911,20 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 - **Example:** `wide / wide.iloc[0] * 100`: South East fell furthest from its own start.
 
 <span class="pill">W1D2</span>
+
+### 🔢 Intercept
+- **Plain English:** The starting number a regression adds before the weighted columns. It often has no meaning on its own.
+- **Naija analogy:** The "call-out fee" a mechanic charges before he even touches the car.
+- **Example:** −22.1 in today's model. Never read it alone.
+
+<span class="pill">W5D3</span>
+
+### 🧹 Interpolation (filling a gap)
+- **Plain English:** Filling a missing value with something between its neighbours, usually the straight-line average. It's an assumption, so you must say you did it.
+- **Naija analogy:** You missed Tuesday's class, so you copy the notes from Monday and Wednesday and guess what came in between.
+- **Example:** Ada's lost week (10 Mar 2025) became 50 tickets, between 48 and 52. Filling it with 0 would invent a week with no faults.
+
+<span class="pill">W6D3</span>
 
 ### 🔎 Investigation
 - **Plain English:** Answering one question with data, from loading the file to writing the conclusion.
@@ -737,6 +996,20 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W3D1</span> <span class="pill">W3D2</span>
 
+### ⚖️ Like with like
+- **Plain English:** Only compare two forecasts on the same weeks, the same horizon and the same information.
+- **Naija analogy:** Don't compare a student who wrote WAEC with one who wrote a class test.
+- **Example:** "Half of naive's error" (5.85 vs 11.25) was unfair; like with like it's 5.85 vs 6.75. And the best baseline (2.24) beats both.
+
+<span class="pill">W5D3</span>
+
+### 🧭 Limitation
+- **Plain English:** An honest statement of where your tool stops working: what it will miss, how late it is (or how far ahead it can see), and what you assumed was normal.
+- **Naija analogy:** The mechanic who says "this one go hold till December, but no carry am go Kano." You trust him more, not less.
+- **Example:** "Its 90% band is about ±7 tickets a week, and it assumes the rainy-season pattern repeats."
+
+<span class="pill">W6D3</span>
+
 ### ⛽ Link margin (dB)
 - **Plain English:** How much signal is left above the minimum the receiver needs. Below 0 dB the link is down.
 - **Naija analogy:** Fuel above the reserve line. Positive: you can still drive. Zero: you're pushing the car. 🚗
@@ -765,6 +1038,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W4D2</span> <span class="pill">W5D1</span>
 
+### 🎰 Lucky split
+- **Plain English:** One test period on which a method scores well by chance, not by skill.
+- **Naija analogy:** The man who won one bet and now calls himself a tipster.
+- **Example:** The flat training average (57.9 every week) scored 7.77 here and "beat" four baselines. Week 6 · Day 1 tests it on many periods.
+
+<span class="pill">W5D2</span> <span class="pill">W6D1</span>
+
 ### 🤖 Machine learning (ML)
 - **Plain English:** Instead of writing the rule yourself ("alarm below 20 A"), you show the computer lots of examples and it works out the pattern.
 - **Naija analogy:** Nobody gave the Lagos danfo conductor a rule book. He has watched ten thousand passengers, and he knows who will not pay before they climb in.
@@ -784,7 +1064,7 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 - **Naija analogy:** How many minutes late your friend usually is, on average. 😅
 - **Example:** `(s - s.shift(7)).abs().mean()`
 
-<span class="pill">W2D2</span>
+<span class="pill">W2D2</span> <span class="pill">W5D2</span>
 
 ### 🎯 Median
 - **Plain English:** The middle value when you sort the numbers. Wild values can't drag it.
@@ -814,6 +1094,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W2D1</span>
 
+### 🧮 Moving average forecast
+- **Plain English:** The average of the last few values (the window), held flat for the whole horizon.
+- **Naija analogy:** Averaging your last 8 weeks of transport money to plan next week.
+- **Example:** The mean of the last 8 training weeks: 77 tickets. MAE 14.25.
+
+<span class="pill">W5D2</span>
+
 ### 🧮 Moving (rolling) average
 - **Plain English:** The average of the last N values, recalculated every day as the window moves forward.
 - **Naija analogy:** Your average fuel spend over the last 7 days. One big fill-up on Monday doesn't make you panic.
@@ -841,6 +1128,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 - **Example:** `n_estimators=200`.
 
 <span class="pill">W4D2</span>
+
+### 👵🏾 Naive forecast
+- **Plain English:** Repeat the last value you saw for every future step.
+- **Naija analogy:** Grandma: "Tomorrow go be like today."
+- **Example:** 74 tickets for all 8 weeks (the count on 27 Oct 2025). MAE 11.25.
+
+<span class="pill">W5D2</span>
 
 ### 🏭 Named process
 - **Plain English:** A specific, real task your unit does regularly, with an owner. Not a general topic.
@@ -889,7 +1183,7 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 - **Naija analogy:** Weighing yourself after eating amala: 2 kg up doesn't mean you're getting fat. 😄
 - **Example:** NOC tickets 38 one week, 41 the next = the same week twice.
 
-<span class="pill">W1D1</span>
+<span class="pill">W1D1</span> <span class="pill">W5D2</span>
 
 ### ☕ Noise (again)
 - **Plain English:** Random week-to-week wobble with no meaning. Don't react to it.
@@ -898,12 +1192,33 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W1D3</span>
 
+### 🚫 None ("no crossing")
+- **Plain English:** Python's way of saying "there is no answer". Our `day_of_threshold` returns `None` instead of a fake day 0.
+- **Naija analogy:** "No light" is an answer. Pretending NEPA brought light at midnight is not.
+- **Example:** `day, line = day_of_threshold(known["propellant_kg"], 5.0)` gives `day = None`.
+
+<span class="pill">W6D2</span>
+
 ### 📓 Notebook
 - **Plain English:** A document that mixes reading (text) and code you can run, in one page.
 - **Naija analogy:** A recipe book where you can cook each step right on the page and taste it immediately.
 - **Example:** Files ending in `.ipynb` are notebooks.
 
 <span class="pill">W1D1</span>
+
+### 🐞 np.argmax on True/False
+- **Plain English:** `np.argmax` returns the position of the largest value. On True/False it finds the **first True**. If there is **no** True, it quietly returns **0**.
+- **Naija analogy:** Asking the gateman "who was the first visitor?" on a day nobody came, and he answers "the first name on the list" anyway.
+- **Example:** The original code book printed 1 Jan 2021 (day 0) as the propellant's crossing date.
+
+<span class="pill">W6D2</span>
+
+### 🧮 np.polyfit (slope and intercept)
+- **Plain English:** `np.polyfit(x, y, 1)` finds the best straight line through the points and returns two numbers: the **slope** (change per step) and the **intercept** (the value at step 0).
+- **Naija analogy:** Slope = how much the price of a bag of rice goes up each month; intercept = what it cost when you started counting.
+- **Example:** Battery slope −0.0126% per day, which is −4.59% a year; intercept 99.88%.
+
+<span class="pill">W6D2</span>
 
 ### 🏁 Onset (start date)
 - **Plain English:** The day a change really began, as opposed to the day the alarm rang.
@@ -918,6 +1233,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 - **Example:** eclipse (~0 A), recharge (~29.6 A), sunlit (~28.1 A).
 
 <span class="pill">W3D2</span>
+
+### 🚧 Operational limit (threshold)
+- **Plain English:** The agreed value a reading must not cross, set by engineering, known up front. You forecast *when* it's reached, not what it is.
+- **Naija analogy:** The red line on the fuel gauge: nobody forecasts where the red line is.
+- **Example:** `degradation_thresholds.csv`: battery 80%, amplifier −2 dB, propellant 5 kg.
+
+<span class="pill">W6D2</span>
 
 ### ❌ Outage
 - **Plain English:** The link is actually down: link margin below 0 dB.
@@ -954,6 +1276,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W2D1</span> <span class="pill">W2D2</span>
 
+### 📐 Period (season length)
+- **Plain English:** How many steps until the pattern repeats.
+- **Naija analogy:** Harmattan comes back every 12 months, not every 7 days.
+- **Example:** Weekly data with a yearly season: `period = 52`. There's no weekday pattern in a weekly series.
+
+<span class="pill">W5D2</span>
+
 ### 🧩 Persistence (memory)
 - **Plain English:** A series "has memory" when its past values help you guess its next values.
 - **Naija analogy:** A neighbour who has been borrowing sugar every week will likely knock again next week. 😅
@@ -982,12 +1311,26 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W1D2</span>
 
+### 🎯 Planning figure
+- **Plain English:** A forecast stated as a range, with how far it reaches and when it will be re-checked. Built for decisions, not for showing off precision.
+- **Naija analogy:** "We'll travel for Christmas sometime in mid-December, I'll confirm by November."
+- **Example:** "Amplifier: around 2033 (calls span March to November), more than 7 years past our data; we re-estimate every year."
+
+<span class="pill">W6D2</span>
+
 ### 📐 plot_acf / statsmodels
 - **Plain English:** `statsmodels` is a Python library for statistics; `plot_acf` is its correlogram function. Colab already has it.
 - **Naija analogy:** A specialist mechanic: pandas is the general workshop, statsmodels is the one who knows engines.
 - **Example:** `from statsmodels.graphics.tsaplots import plot_acf`
 
 <span class="pill">W2D2</span>
+
+### 〰️ Polynomial fit (degree 2)
+- **Plain English:** A curve with one bend instead of a straight line: `np.polyfit(x, y, 2)`. It can follow a slowing fade, but it can go wild when stretched far into the future.
+- **Naija analogy:** A road that bends with the hill. Great on this hill; don't assume it keeps bending the same way to Abuja.
+- **Example:** On the same three years, a degree-2 curve calls the battery crossing on 14 Jun 2025, inside the real window.
+
+<span class="pill">W6D2</span>
 
 ### 🧪 Practice (injected) fault
 - **Plain English:** A small fault you add to clean data on purpose, so you know the right answer and can test your detector.
@@ -1010,6 +1353,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W4D2</span>
 
+### ↔️ Prediction interval (90% band)
+- **Plain English:** A range around a forecast that the real value should land inside a stated share of the time. A 90% band should be right about 9 times in 10.
+- **Naija analogy:** "30 to 90 minutes, Third Mainland permitting" instead of "I'm on my way".
+- **Example:** The rate forecast for the week of 3 Nov: 56, band 49 to 63. Actual: 53.
+
+<span class="pill">W5D3</span>
+
 ### 🚨 Priority-1 ticket
 - **Plain English:** The most urgent kind of fault ticket. Rare, but serious.
 - **Naija analogy:** A call from your MD at 11pm: it doesn't happen often, but when it does, everybody moves.
@@ -1030,6 +1380,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 - **Example:** `len(ka)`, `ka.index.min()`, `ka.isna().sum()`.
 
 <span class="pill">W1D1</span>
+
+### 📊 Quantile (90th percentile)
+- **Plain English:** The value that a given share of the numbers falls below. The 90th percentile of the misses: 90% of misses were smaller than this.
+- **Naija analogy:** In a class of 10, the score that only the top student beats.
+- **Example:** `np.quantile(np.abs(misses), 0.9)` = 8.20, so the honest band is forecast ± 8.20, and it covered 7 of 8.
+
+<span class="pill">W5D3</span>
 
 ### 🌧️ Rain fade
 - **Plain English:** Heavy rain absorbs the satellite signal, so quality drops or the link goes down.
@@ -1080,12 +1437,33 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W4D2</span>
 
+### ➗ Rate (per-size number)
+- **Plain English:** A count divided by the size of what produces it. Rates repeat when counts don't, because the growth is divided out.
+- **Naija analogy:** NEPA bill **per room**, fuel **per kilometre**, jollof **per guest**.
+- **Example:** Tickets per 1,000 terminals: January 25.6 in 2024, 25.9 in 2025.
+
+<span class="pill">W5D2</span>
+
+### 🎯 Rate seasonal naive
+- **Plain English:** Seasonal naive on the rate: last year's tickets per terminal × today's terminals.
+- **Naija analogy:** Grandma, adjusted for the bigger family: "Last Christmas each guest ate two plates. This year we have 35% more guests."
+- **Example:** 42 tickets ÷ 1,588 terminals × 2,131 terminals = 56.4 for the week of 3 Nov (actual 53). MAE 2.24 over the 8 weeks.
+
+<span class="pill">W5D2</span>
+
 ### 📦 Raw data
 - **Plain English:** The original export from a system, before you clean or summarise it.
 - **Naija analogy:** Unpeeled yam straight from the market.
 - **Example:** Never commit raw NIGCOMSAT exports to GitHub: commit only your code.
 
 <span class="pill">W2D3</span>
+
+### 📘 README and requirements.txt
+- **Plain English:** Two files every project repository needs. `README.md` says what the tool does and how to run it; `requirements.txt` lists the Python packages it needs.
+- **Naija analogy:** The manual and the parts list that come with the new generator. Without them, only the person who installed it can start it.
+- **Example:** The README states where the tool runs on the training server and its URL or schedule.
+
+<span class="pill">W6D3</span>
 
 ### 🕸️ Recall
 - **Plain English:** Of all the real events, the fraction the detector caught. "Did we miss anything?"
@@ -1122,12 +1500,33 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W5D1</span>
 
+### 🗣️ Recommendation (the 4 sentences)
+- **Plain English:** The ending of your report and demo: **S**ituation, **O**bservation (with one number), **I**mplication, **R**ecommendation (what to do, with which tool).
+- **Naija analogy:** The uncle in the front row: "Tell us in one sentence: what does it do, and why should we care?" Four sentences is your allowance.
+- **Example:** "Use the rate forecast for the monthly roster, keep 'same as last week' for next week, and re-run the backtest every quarter."
+
+<span class="pill">W6D3</span>
+
 ### 🗓️ Reference period
 - **Plain English:** A calm, known-good stretch of data used to learn what normal looks like.
 - **Naija analogy:** Judging your new neighbour by a quiet fortnight, not by the night of their wedding party.
 - **Example:** 1–15 August 2025: sunlit, no eclipse yet, nothing strange.
 
 <span class="pill">W3D2</span> <span class="pill">W5D1</span>
+
+### 🔄 Refit
+- **Plain English:** Training the model again from scratch at each fold, on only the data before that fold's cut.
+- **Naija analogy:** A coach who picks the team fresh each week from the latest form, not from last season's line-up.
+- **Example:** The code book refits every 4 weeks. Refitting every week instead moves the regression from losing to naive (5 of 6 folds) to a near tie (2.96 vs 3.16).
+
+<span class="pill">W6D1</span>
+
+### 📈 Regression forecast
+- **Plain English:** A regression that predicts next week's value from columns that are all known before the week starts.
+- **Naija analogy:** A danfo conductor guessing today's passengers from yesterday's crowd, last December's crowd and how many new estates opened on the route.
+- **Example:** `LinearRegression` on lag1, lag52, terminals, sin52 and cos52 forecast the 8 held-out weeks with MAE 5.85.
+
+<span class="pill">W5D3</span>
 
 ### 📈 Regression (line of best fit)
 - **Plain English:** A way to learn a recipe like "temp ≈ base + k × drive" from past data.
@@ -1142,6 +1541,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 - **Example:** `temp_per_drive`, and the steady-sun state for state of charge.
 
 <span class="pill">W4D3</span>
+
+### ⛽ Remaining useful life (RUL)
+- **Plain English:** How long a part has left before its reading crosses an operational limit. Usually: (what's left above the limit) ÷ (how fast it's going).
+- **Naija analogy:** The danfo driver: 20 litres left, 4 litres a trip, so 5 more trips before he's pushing the bus.
+- **Example:** On 1 Jan 2024, the battery's line reaches 80% on 1 May 2025: a remaining useful life of 486 days.
+
+<span class="pill">W6D2</span>
 
 ### 🗂️ Repository (repo)
 - **Plain English:** A project folder tracked by Git, often stored on GitHub, holding your code and its history.
@@ -1206,6 +1612,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W3D2</span>
 
+### 📊 Rolling-mean crossing
+- **Plain English:** The first day the average of the last N days (here 30) is below the limit. Slower, but noise can't fool it.
+- **Naija analogy:** Judging a footballer by his last 30 matches, not his worst one.
+- **Example:** 20 Jun 2025. The 3-year call is 50 days early against it.
+
+<span class="pill">W6D2</span>
+
 ### 🔁 Rolling origin (TimeSeriesSplit)
 - **Plain English:** Testing several times: each fold trains on everything before a block and tests on that block. Training only ever grows **forwards**. You get a spread of scores, not one lucky number.
 - **Naija analogy:** Judging a striker on a whole season, not on one match.
@@ -1240,6 +1653,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 - **Example:** The 32-column builder turns 8,760 rows into 8,736.
 
 <span class="pill">W4D3</span>
+
+### 📋 Rubric
+- **Plain English:** The marking scheme: the list of what earns points and how many. Ours has six lines adding up to 100.
+- **Naija analogy:** The WAEC marking scheme: the examiner isn't guessing, every mark has a reason.
+- **Example:** Honest evaluation is the biggest line: 25 of 100 points.
+
+<span class="pill">W6D3</span>
 
 ### 🪜 Run rules
 - **Plain English:** Extra alarm rules that look at patterns, not just single points. Rule 1: one point beyond 3σ. Rule 2: nine in a row on one side of the centre.
@@ -1283,6 +1703,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W4D2</span>
 
+### 🗓️ Scheduled report
+- **Plain English:** A script the server runs on a timetable, which saves a dated chart and a short summary to a shared folder.
+- **Naija analogy:** The newspaper vendor who drops the paper at your gate every morning at 7, whether you remember to ask or not.
+- **Example:** `ticket-report-2025-12-22.png` and `ticket-report-2025-12-22.txt`: "about 65 tickets, plausibly 58 to 71".
+
+<span class="pill">W6D3</span>
+
 ### 🧰 scikit-learn (sklearn)
 - **Plain English:** The free Python library of ready-made machine-learning models. Colab already has it.
 - **Naija analogy:** Alaba market for models: whatever you need, someone has a stall, and every stall uses the same POS machine.
@@ -1296,6 +1723,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 - **Example:** One flag inside an event = caught; many flags inside one event = one catch.
 
 <span class="pill">W4D1</span>
+
+### 🔎 Search window
+- **Plain English:** How far into the future the code looks for a crossing. If the trend crosses after the window ends, the honest answer is "no crossing inside the window".
+- **Naija analogy:** Looking for your friend's car only on your own street: not finding it doesn't mean it doesn't exist.
+- **Example:** The 4,000-day search ended on 13 Dec 2034; the propellant line reaches 5 kg on 6 Dec 2035.
+
+<span class="pill">W6D2</span>
 
 ### 🔁 Seasonal component
 - **Plain English:** The pattern that repeats exactly every period: the same 12 numbers every year, or the same 7 numbers every week.
@@ -1311,6 +1745,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W2D1</span>
 
+### 📅 Seasonal naive
+- **Plain English:** Copy the value from exactly one season ago: for weekly data with a yearly pattern, 52 weeks back.
+- **Naija analogy:** "Last December the market was full, so this December will be full too."
+- **Example:** It copied 42–54 tickets from Nov–Dec 2024, when the network was 35% smaller. MAE 15.25, last place.
+
+<span class="pill">W5D2</span>
+
 ### 🗓️ Seasonal naive ("same weekday last week")
 - **Plain English:** Forecast each day with the value from one period ago.
 - **Naija analogy:** Expecting this Friday's traffic to be like last Friday's traffic.
@@ -1324,6 +1765,20 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 - **Example:** Ka-band availability dips every August.
 
 <span class="pill">W1D1</span>
+
+### 🌧️ Seasonality in steps
+- **Plain English:** A pattern that repeats every year but switches on and off suddenly, instead of rising and falling smoothly.
+- **Naija analogy:** The rainy season doesn't creep in: one week it's dry, the next week the gutters are full.
+- **Example:** Tickets jumped +17 in the first week of April 2024 and +16 in April 2025, and dropped −15 in the first week of November 2024.
+
+<span class="pill">W5D2</span>
+
+### 🧼 Series hygiene
+- **Plain English:** The basic health check of a time series before any analysis: a time index, sorted, no repeated timestamps, no holes (or holes explained), a declared frequency, and a known time zone.
+- **Naija analogy:** Washing your hands before you cook: nobody claps for it, but skip it and everybody gets sick.
+- **Example:** Ada's export had one week exported twice and one week that never arrived.
+
+<span class="pill">W6D3</span>
 
 ### 📈 Shared trend
 - **Plain English:** Two series both rising (or falling) over time for their own reasons, which makes them look linked.
@@ -1458,6 +1913,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W1D1</span>
 
+### 📊 Spread across folds
+- **Plain English:** The range of scores from best fold to worst fold, and when the bad ones happened. It tells the user how much to trust the forecast, and when not to.
+- **Naija analogy:** A striker who "averages a goal a game" but scored five in one match and none in the other nine.
+- **Example:** The regression's fold MAEs run from 1.27 to 7.67 (mean 4.01); the worst fold contains 3 November, when tickets fell from 74 to 53.
+
+<span class="pill">W6D1</span>
+
 ### 🎭 Spurious correlation
 - **Plain English:** A strong correlation between two things that are NOT really linked.
 - **Naija analogy:** Suya sales and generator sales both rise toward December. Suya doesn't sell generators. 😄
@@ -1486,6 +1948,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W3D1</span>
 
+### 🚀 Station-keeping burn
+- **Plain English:** A short thruster firing that pushes a geostationary satellite back into its assigned box. Each burn uses a little propellant.
+- **Naija analogy:** The danfo driver nudging back into his lane every few minutes on Third Mainland Bridge.
+- **Example:** About one every 14 days, roughly 0.39 kg each, about 26 a year.
+
+<span class="pill">W6D2</span>
+
 ### 📦 statsmodels
 - **Plain English:** A Python library for statistics and time-series models. Already installed in Colab.
 - **Naija analogy:** The big toolbox in the mechanic's shop. pandas is the spanner; statsmodels has the special tools.
@@ -1506,6 +1975,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 - **Example:** `STL(series, period=24, robust=True).fit()`
 
 <span class="pill">W2D1</span>
+
+### 📊 Streamlit dashboard
+- **Plain English:** A small web page written in Python (`streamlit run app.py`) that your unit opens in a browser to see the series, the threshold, the flags or forecast with its range, and a plain-language summary.
+- **Naija analogy:** The scoreboard at the stadium: everybody looks at the same screen, nobody needs to read the referee's notebook.
+- **Example:** Today's notebook writes a starter `app.py` for you to finish on the server.
+
+<span class="pill">W6D3</span>
 
 ### 🌞 Sun-angle wave (sin / cos)
 - **Plain English:** A smooth yearly up-and-down added to the recipe so it knows the time of year.
@@ -1562,6 +2038,20 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 - **Example:** The code book's regression feature puts EV04 at 28.9σ but flags all 2,208 hours of October to December.
 
 <span class="pill">W4D3</span>
+
+### 🗣️ The honest forecast sentence
+- **Plain English:** Most likely value, a range, and the thing that could blow it up, in one sentence.
+- **Naija analogy:** Amaka on the phone from the Island.
+- **Example:** "Week of 3 Nov: most likely around 56, plausibly 49 to 63; expect bigger misses at season changes."
+
+<span class="pill">W5D3</span>
+
+### 🔒 The leak rule (Monday-morning test)
+- **Plain English:** Every feature must be something you could compute **before** the week you're forecasting begins. If not, it leaks the future and the score is fake.
+- **Naija analogy:** Predicting Saturday's match result on Friday with Sunday's newspaper in your bag.
+- **Example:** `shift(1)` puts 27 Oct's 74 on 3 Nov's row (fine). `shift(-1)` puts 10 Nov's 54 there (a leak).
+
+<span class="pill">W5D3</span>
 
 ### ⏰ "The model cannot tell time"
 - **Plain English:** A model like the isolation forest judges each row on its own. It doesn't know what happened an hour ago unless a column tells it.
@@ -1638,7 +2128,7 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 - **Naija analogy:** Lagos population: more people every year.
 - **Example:** Transponder utilisation climbing from about 50% to about 78%.
 
-<span class="pill">W1D1</span>
+<span class="pill">W1D1</span> <span class="pill">W5D2</span>
 
 ### 📈 Trend component
 - **Plain English:** The slow, long-term direction once the seasonal ups and downs are averaged away.
@@ -1647,12 +2137,26 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W2D1</span>
 
+### 📏 Trend-to-threshold
+- **Plain English:** Fit a trend to the past, extend it into the future, and read off the day it crosses the limit.
+- **Naija analogy:** "At this rate, my landlord's rent will pass my salary by 2030."
+- **Example:** A straight line through three years of battery data hits 80% on 1 May 2025.
+
+<span class="pill">W6D2</span>
+
 ### 🔑 Tuning on the answer key
 - **Plain English:** Choosing a setting (a threshold, `k`, `contamination`) because it scores best on the **test** answers. The test stops being a test.
 - **Naija analogy:** Adjusting your answers after the teacher reads out the marking scheme.
 - **Example:** A forest budget of 0.30% gives 0 false alarms on Sep–Dec, but you'd only know that by peeking, and it misses EV03 in the past.
 
 <span class="pill">W5D1</span>
+
+### 🎛️ Turning the knob (tuning on the test)
+- **Plain English:** Changing a setting (like z or the band width) until the test result looks good. It uses the answers, so the score is fake: expo.
+- **Naija analogy:** Moving the goalpost after the ball has been kicked.
+- **Example:** Raising z until all 8 test weeks fit is not a fix. The width must come from misses before the test.
+
+<span class="pill">W5D3</span>
 
 ### 👯 Twin files
 - **Plain English:** Two data files with the **same name** but different contents, in different folders.
@@ -1667,6 +2171,13 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 - **Example:** `soc_gap` is exactly `100 − battery_soc_pct` (correlation 1.000). The builder has 18 such pairs.
 
 <span class="pill">W4D3</span>
+
+### ⭐ Two stars and a wish
+- **Plain English:** A way to give feedback on someone's demo: two things that were good, one thing that would make it better.
+- **Naija analogy:** How a good aunty corrects you at a party: praise first, then "but next time, my dear…".
+- **Example:** The peer scoring sheet has a box for each star and the wish.
+
+<span class="pill">W6D3</span>
 
 ### 🌡️ TWTA and RF drive
 - **Plain English:** The TWTA (travelling-wave tube amplifier) boosts the signal before it's sent down. RF drive is how hard it's being pushed.
@@ -1731,6 +2242,20 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W1D1</span>
 
+### 🚶🏾 Walk-forward backtest (expanding window)
+- **Plain English:** Cut the data at a point, train on everything before it, forecast the next few weeks, score them; then move the cut forward and do it again. The training block only grows.
+- **Naija analogy:** Pretend it's June, make your call, check it; pretend it's July, make your call, check it. No time travel allowed.
+- **Example:** `walk_forward_mae(tickets, make_features, X_COLS, step=4, h=4)` gives six fold MAEs: 2.46, 4.67, 2.81, 1.27, 7.67, 5.15.
+
+<span class="pill">W6D1</span>
+
+### 🚶🏾 Walk-forward misses (honest past errors)
+- **Plain English:** For each past week, fit only on the weeks before it, forecast that week, and write down the miss. These are the misses the model really made before knowing the answer.
+- **Naija analogy:** Checking a tipster's record on matches he predicted **before** kick-off, not after.
+- **Example:** 32 walk-forward misses from 24 Mar 2025; the biggest, +15.1 on 7 Apr, is the week the rains arrived.
+
+<span class="pill">W5D3</span>
+
 ### 🕳️ Warm-up NaN
 - **Plain English:** The empty values at the start of a rolling result, before the window has enough rows.
 - **Naija analogy:** You can't average 7 days of salary when you only started work 3 days ago.
@@ -1745,12 +2270,26 @@ Every new word from every day, A to Z. The tag (e.g. `W1D1`) shows the day it wa
 
 <span class="pill">W3D3</span>
 
+### ⏳ Warning time (lead time)
+- **Plain English:** How long you have to act between making the call and the crossing. More data gives a closer call but less time to act.
+- **Naija analogy:** Knowing about the exam a month ahead versus the night before.
+- **Example:** 1,229 days of warning with 1 year of data; only 134 with 4.
+
+<span class="pill">W6D2</span>
+
 ### 🇳🇬 WAT
 - **Plain English:** West Africa Time, Nigeria's clock. Always **UTC + 1**, with no daylight saving.
 - **Naija analogy:** Lagos time is UTC time plus one hour. (“African time” is another matter 😄)
 - **Example:** 21:00 UTC = 22:00 WAT.
 
 <span class="pill">W1D1</span>
+
+### 🕰️ Week-of-year clock (`sin52`, `cos52`)
+- **Plain English:** Two columns that place each week on a circle, so the model sees the yearly cycle and week 52 sits next to week 1.
+- **Naija analogy:** The hour hand: 11 o'clock and 1 o'clock are close, even though 11 and 1 are far apart as numbers.
+- **Example:** `np.sin(2 * np.pi * woy / 52)` and `np.cos(...)`. A circle is smooth, so it can't make the rainy season's sudden on/off step.
+
+<span class="pill">W5D3</span>
 
 ### 🎶 Weekly rhythm (day-of-week effect)
 - **Plain English:** A pattern that repeats every 7 days because people work Monday to Friday.

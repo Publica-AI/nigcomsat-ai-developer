@@ -52,11 +52,11 @@ Jasons-Restructure/
 | 4 | 2 | [Meet scikit-learn + Isolation Forest](week-4/day-2-scikit-learn-and-isolation-forest/) | Week 5 · 5.1 scikit-learn workflow, 5.2 Isolation forest | ✅ ready |
 | 4 | 3 | [Give the Model Eyes: Feature Engineering](week-4/day-3-feature-engineering/) | Week 5 · 5.3 Feature engineering | ✅ ready |
 | 5 | 1 | [No Expo! Honest Train/Test Splits + Quiz 3](week-5/day-1-honest-splits-and-quiz-3/) | Week 5 · 5.4 Temporal train/test discipline | ✅ ready |
-| 5 | 2 | [Forecasting Baselines](week-5/day-2-forecasting-baselines/) | Week 6 · 6.1 Forecasting baselines | 🚧 Step 5 |
-| 5 | 3 | [Regression Forecasts + Honest Ranges](week-5/day-3-regression-forecasts-and-intervals/) | Week 6 · 6.2 Regression forecasting, 6.3 Prediction intervals | 🚧 Step 5 |
-| 6 | 1 | [Backtesting: Test It on the Past First](week-6/day-1-backtesting/) | Week 6 · 6.5 Backtesting | 🚧 Step 5 |
-| 6 | 2 | [When Will It Break? Remaining Useful Life + Quiz 4](week-6/day-2-remaining-useful-life-and-quiz-4/) | Week 6 · 6.4 Trend-to-threshold and RUL | 🚧 Step 5 |
-| 6 | 3 | [Project Clinic and Demo Day](week-6/day-3-project-clinic-and-demo-day/) | Capstone | 🚧 Step 5 |
+| 5 | 2 | [Forecasting Baselines](week-5/day-2-forecasting-baselines/) | Week 6 · 6.1 Forecasting baselines | ✅ ready |
+| 5 | 3 | [Regression Forecasts + Honest Ranges](week-5/day-3-regression-forecasts-and-intervals/) | Week 6 · 6.2 Regression forecasting, 6.3 Prediction intervals | ✅ ready |
+| 6 | 1 | [Backtesting: Test It on the Past First](week-6/day-1-backtesting/) | Week 6 · 6.5 Backtesting | ✅ ready |
+| 6 | 2 | [When Will It Break? Remaining Useful Life + Quiz 4](week-6/day-2-remaining-useful-life-and-quiz-4/) | Week 6 · 6.4 Trend-to-threshold and RUL | ✅ ready |
+| 6 | 3 | [Project Clinic and Demo Day](week-6/day-3-project-clinic-and-demo-day/) | Capstone | ✅ ready |
 
 ## 🚀 How to run a day
 

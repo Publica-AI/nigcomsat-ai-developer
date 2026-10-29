@@ -109,7 +109,7 @@ Plus a shared **toolkit** for the whole course:
 | **2** ✅ | Days 2–6 (Weeks 1–2: understanding a series), incl. Quiz 1 with shuffled answers and the final-project kickoff worksheet | Kits + test run |
 | **3** ✅ | Days 7–10 (Weeks 3–4: anomaly detection), incl. Quiz 2 with shuffled answers and final-project Checkpoint 2 | Kits + test run |
 | **4** ✅ | Sessions 11–13 (Weeks 4–5: machine learning), incl. Quiz 3 and final-project Checkpoint 3. The Week 5 detector was rebuilt and checked on the data first (the original's result doesn't reproduce, see review): one relationship feature catches the hidden faults, and the honest test recommends the simpler detector | Kits + test run |
-| **5** | Sessions 14–18 (Weeks 5–6: forecasting, RUL, capstone) | Kits + test run |
+| **5** ✅ | Sessions 14–18 (Weeks 5–6: forecasting, RUL, capstone), incl. Quiz 4, Checkpoint 4 and demo day (peer scoring sheet + report template). The original's numbers were checked on the data first (they reproduce, bar the propellant bug). One idea it misses carries the forecasting days: tickets **per terminal** repeat every year, so a simple rate forecast beats every model, and the backtest recommends it. Remaining life is taught as a window, not a day | Kits + test run |
 | **6** | Master rulebook, shuffled quiz versions, PDF exports of slides, final full test, commit & push | Final sign-off |
 
 Each step ends with every notebook test-run and a commit under your name only.
