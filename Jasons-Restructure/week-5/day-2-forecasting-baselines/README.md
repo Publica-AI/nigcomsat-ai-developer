@@ -14,7 +14,7 @@
 | `1-slides/web-animated/` | `W5D2-slides-animated.html` | Presenter | Double-click to open in Chrome. **→ / Space** next, **←** back, **F** full screen, **N** speaker notes |
 | `1-slides/powerpoint/` | `W5D2-slides.pptx` | Presenter | Static, simpler version. Opens in PowerPoint or Keynote. **Google Slides:** upload to Drive → *Open with Google Slides* |
 | `1-slides/pdf/` | `W5D2-slides.pdf` | Everyone | Printable handout of the animated deck |
-| `2-exercise/` | `W5D2-exercise.ipynb` | Participants | [Open in Colab](https://colab.research.google.com/github/Publica-AI/nigcomsat-ai-developer/blob/jasons-restructure/Jasons-Restructure/week-5/day-2-forecasting-baselines/2-exercise/W5D2-exercise.ipynb), then **File → Save a copy in Drive** |
+| `2-exercise/` | `W5D2-exercise.ipynb` | Participants | [Open in Colab](https://colab.research.google.com/github/Publica-AI/nigcomsat-ai-developer/blob/main/Jasons-Restructure/week-5/day-2-forecasting-baselines/2-exercise/W5D2-exercise.ipynb), then **File → Save a copy in Drive** |
 | `2-exercise/rulebook/` | `W5D2-rulebook.pdf` / `.md` | Participants | One page of steps, rules and error fixes for the exercise |
 | `3-glossary/` | `W5D2-glossary.pdf` / `.md` | Participants | Today's new words, made easy with Naija analogies |
 | `4-instructor-only/` | `W5D2-instructor-notes.pdf` / `.md`, `W5D2-solution.ipynb` | **You only** | Run of show, what to say, answers, and the filled-in notebook |
