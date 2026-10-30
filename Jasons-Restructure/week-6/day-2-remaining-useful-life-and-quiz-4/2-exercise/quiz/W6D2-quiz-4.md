@@ -100,7 +100,7 @@ Name: ______________________________ &nbsp;&nbsp; Unit: ______________________
 - **C.** The time between forecasts
 - **D.** The training period
 
-**14.** How does the code book build the 90% band?
+**14.** How was the first 90% band in Week 5 built?
 
 - **A.** the minimum and maximum of the training data
 - **B.** forecast times 0.9
@@ -207,7 +207,7 @@ Name: ______________________________ &nbsp;&nbsp; Unit: ______________________
 - **C.** Seasonal naive won
 - **D.** Regression won all six folds
 
-**29.** The three-year battery call was 1 May 2025. The real crossing was 14 May 2025. How far off was it?
+**29.** The three-year battery call was 1 May 2025. Daily capacity first dipped below 80% on 14 May 2025. Measured against that first dip, how far off was the call?
 
 - **A.** 13 days early
 - **B.** 13 days late

@@ -419,7 +419,7 @@ soc.rolling(24, center=True).mean()</pre><p class="muted" style="margin-top:12px
   <div class="card anim a-left" style="--d:2.4s;padding:14px 24px"><p style="font-size:24px">🧮 <b>Code book residual:</b> EV04 = <b class="hl">{F['resid_ev04_sigma']:.1f}σ</b><br><span class="muted">but {oct_flag:,} of {oct_n:,} Oct–Dec hours flagged · <b class="bad">{resid_y['false_alarms']:,} false alarms</b></span></p></div>
   <div class="card anim a-right glow" style="--d:2.7s;padding:14px 24px"><p style="font-size:24px">➗ <b>Humble ratio:</b> EV04 = <b class="hl">{F['tpd_ev04_z']:.1f}σ</b><br><span class="muted">and <b class="good">{tpc['false_alarms']} false alarms</b> all year</span></p></div>
 </div>""",
-          f"The code book promises about 22 sigma (quiz question 18); its own recipe gives {F['resid_ev04_sigma']:.1f}. Impressive, until you carry it to months it never saw: from June it drifts, and from October every single hour is flagged. "
+          f"The code book promises about 22 sigma; its own recipe gives {F['resid_ev04_sigma']:.1f}. Impressive, until you carry it to months it never saw: from June it drifts, and from October every single hour is flagged. "
           "Five months of data can't tell the amplifier's slow yearly warming from the season. Lesson: a big sigma on the fault is not the test. The test is: does it stay quiet on normal months it never saw?"),
 
         # 14 ─ section
@@ -604,7 +604,7 @@ def pptx_spec():
             {"type": "compare", "title": f"The {F['resid_ev04_sigma']:.0f}σ trap: check features on months they never saw",
              "left": ["🧮", f"Code book residual: {F['resid_ev04_sigma']:.1f}σ", f"Fitted Jan–May. Flags {F['resid_octdec'][0]:,} of {F['resid_octdec'][1]:,} Oct–Dec hours: {F['resid_year']['false_alarms']:,} false alarms"],
              "right": ["➗", f"Humble ratio: {F['tpd_ev04_z']:.1f}σ", f"{tpc['false_alarms']} false alarms all year. Stable on months it never saw"],
-             "notes": "Quiz 3 Q18 says about 22σ; the recipe gives 28.9σ. Five months can't tell the yearly warming from the season."},
+             "notes": "The code book says about 22σ; the recipe gives 28.9σ (Quiz 3 Q18 uses the real number). Five months can't tell the yearly warming from the season."},
             {"type": "section", "kicker": "Part 3", "title": "More features ≠ better eyes", "sub": "32 columns against 5", "notes": "Section break."},
             {"type": "table", "title": f"The code book's {F['sink_cols']} columns: {F['sink_n_dupes']} pairs of near-twins",
              "header": ["Column", "Its twin", "Correlation"],

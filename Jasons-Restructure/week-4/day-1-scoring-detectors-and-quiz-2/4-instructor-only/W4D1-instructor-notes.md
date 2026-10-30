@@ -99,11 +99,11 @@ Supporting numbers: sunlit array current mean 28.21 A, sd 0.594 A, band 26.43–
 ## Quiz 2
 
 - **Files:** `2-exercise/quiz/W4D1-quiz-2.pdf` (printable, no answers), `W4D1-quiz-2-google-forms.csv` (import), `4-instructor-only/W4D1-quiz-2-answer-key.pdf`.
-- **Source:** the original `Time-series/MCQ/week-04-mcq.csv`, unchanged wording. Options reshuffled with a fixed seed (4104) so the correct letters are spread: multiple choice A ×7, B ×7, C ×6, D ×6; True/False A ×2, B ×2. (In the original file, most answers were option B.)
+- **Source:** the original `Time-series/MCQ/week-04-mcq.csv` (that file is unchanged), with three questions edited: Q2 and Q23 corrected to match the data, Q4 renumbered to our Week 3. The answer key lists them. Options reshuffled with a fixed seed (4104) so the correct letters are spread: multiple choice A ×7, B ×7, C ×6, D ×6; True/False A ×2, B ×2. (In the original file, most answers were option B.)
 - **Topic → day:** alarm software → W3D1 · SPC and residuals → W3D2 · change points and drift → W3D3 · evaluating a detector → today.
-- **Two question premises don't match the data** (the correct answers still stand, so mark them as written):
-  - **Q2** says the SoC < 82% floor "fires on all 46 eclipse hours". In the data it fires **18** times, all on eclipse hours. The detector that fires on all 46 eclipse hours is the all-hours control chart (slide 11). If someone asks, say exactly that.
-  - **Q23** says the battery fade rate "roughly doubled" in April 2025. The data shows about **−2.2 → −3.7 Ah/year** (×1.6). "Clearly sped up" is the honest phrasing.
+- **Two questions are corrected to match the data** (their answers are unchanged):
+  - **Q2**: the original said the SoC < 82% floor "fires on all 46 eclipse hours". It fires **18** times, all on eclipse hours, and the question now says so. The detector that fires on all 46 eclipse hours is the all-hours control chart (slide 11).
+  - **Q23**: the original said the fade rate "roughly doubled". The question now gives the real numbers: about **−2.2 → −3.7 Ah/year** (×1.6).
 
 ## Troubleshooting
 

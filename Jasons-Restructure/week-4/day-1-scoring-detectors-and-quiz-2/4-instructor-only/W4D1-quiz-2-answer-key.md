@@ -1,6 +1,6 @@
 # Quiz 2 Answer Key
 
-> 🧑🏾‍🏫 **Instructor only.** Built from the original `Time-series/MCQ/week-04-mcq.csv` (unchanged). Options were reshuffled with a fixed seed (4104) so the correct letters are spread out: multiple-choice answers sit at A ×7, B ×7, C ×6, D ×6 (in the original, most answers were option B). The 4 True/False questions keep their original order.
+> 🧑🏾‍🏫 **Instructor only.** Built from the original `Time-series/MCQ/week-04-mcq.csv` (that file is unchanged), with 3 questions edited: see *Changes from the original* below. Options were reshuffled with a fixed seed (4104) so the correct letters are spread out: multiple-choice answers sit at A ×7, B ×7, C ×6, D ×6 (in the original, most answers were option B). The 4 True/False questions keep their original order.
 
 | # | Answer | Correct option | What it tests | Level |
 |---|---|---|---|---|
@@ -34,6 +34,14 @@
 | 28 | **D** | As one catch | Event-level scoring | intermediate |
 | 29 | **B** | It turns a statistical choice into a decision an operations manager can make | Pricing false alarms | intermediate |
 | 30 | **B** | False | Unusual is not wrong | advanced |
+
+## Changes from the original
+
+The same fixes are in the weekly question banks (`week-N/MCQ/`).
+
+- **Q2** (corrected): It said the floor fires on "all 46 eclipse hours". On the data it fires 18 times, all during eclipses.
+- **Q4** (reworded): Week 4 of the original course is Week 3 here.
+- **Q23** (corrected): It said the fade rate "roughly doubled". The data shows -2.24 to -3.68 Ah a year: 1.6x faster.
 
 ## Marking it together (10 minutes)
 

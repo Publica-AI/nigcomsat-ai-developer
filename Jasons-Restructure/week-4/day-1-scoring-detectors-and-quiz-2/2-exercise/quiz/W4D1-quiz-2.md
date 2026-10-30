@@ -12,7 +12,7 @@ Name: ______________________________ &nbsp;&nbsp; Unit: ______________________
 - **A.** True
 - **B.** False
 
-**2.** A fixed floor on battery state of charge (SoC < 82%) fires on all 46 eclipse hours. Why is this a problem?
+**2.** A fixed floor on battery state of charge (SoC < 82%) fires 18 times, every one of them during an eclipse. Why is this a problem?
 
 - **A.** Those hours are real faults that were missed
 - **B.** The threshold is too low to fire
@@ -26,7 +26,7 @@ Name: ______________________________ &nbsp;&nbsp; Unit: ______________________
 - **C.** 46
 - **D.** Hundreds
 
-**4.** Which three anomaly shapes appear in the Week 4 data?
+**4.** Which three anomaly shapes appear in the Week 3 data?
 
 - **A.** Trend, season and noise
 - **B.** Spike, outage and gap
@@ -164,7 +164,7 @@ Name: ______________________________ &nbsp;&nbsp; Unit: ______________________
 - **A.** True
 - **B.** False
 
-**23.** In April 2025 the battery fade rate roughly doubled. What should you monitor to detect this?
+**23.** From April 2025 the battery's capacity fade speeds up from about -2.2 to -3.7 Ah a year. What should you monitor to detect this?
 
 - **A.** Eclipse minutes
 - **B.** The rolling slope of capacity

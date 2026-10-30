@@ -1,6 +1,6 @@
 # Quiz 1 Answer Key
 
-> 🧑🏾‍🏫 **Instructor only.** Built from the original `Time-series/MCQ/week-03-mcq.csv` (unchanged). Options were reshuffled with a fixed seed (2603) so the correct letters are spread out: multiple-choice answers sit at A ×6, B ×7, C ×7, D ×6 (in the original, most answers were option B). The 4 True/False questions keep their original order.
+> 🧑🏾‍🏫 **Instructor only.** Built from the original `Time-series/MCQ/week-03-mcq.csv` (that file is unchanged), with 2 questions edited: see *Changes from the original* below. Options were reshuffled with a fixed seed (2603) so the correct letters are spread out: multiple-choice answers sit at A ×6, B ×7, C ×7, D ×6 (in the original, most answers were option B). The 4 True/False questions keep their original order.
 
 | # | Answer | Correct option | What it tests | Level |
 |---|---|---|---|---|
@@ -34,6 +34,13 @@
 | 28 | **A** | True | Lag 0 | beginner |
 | 29 | **B** | Neighbouring rows are near-copies, so the test set leaks into training | Random splits | intermediate |
 | 30 | **D** | Mostly shared trend | Two trending series | advanced |
+
+## Changes from the original
+
+The same fixes are in the weekly question banks (`week-N/MCQ/`).
+
+- **Q5** (reworded): It said "the code book", which participants never see.
+- **Q30** (corrected): On the real amplifier file the correlation only drops from 0.59 to 0.40 after differencing, which is not a collapse. Replaced with the made-up suya example taught in W2D2 (0.97 to 0.06).
 
 ## Marking it together (10 minutes)
 

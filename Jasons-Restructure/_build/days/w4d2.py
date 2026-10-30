@@ -576,7 +576,7 @@ model.<span class="f">decision_function</span>(X)           <span class="c"># a 
 km = make_pipeline(StandardScaler(), KMeans(<span class="n">4</span>, n_init=<span class="n">10</span>, random_state=<span class="n">42</span>))</pre>""",
           "Quiz questions 4 and 5. A pipeline glues the scaler to the model, so the scaler fitted on the training rows is the very one "
           "used at prediction time. Honest note: the original code book says the different channel ranges are 'why we insist on scaling' "
-          "for the forest. For the forest it makes no difference (quiz Q4's option 'it does not matter for isolation forest' is also true). "
+          "for the forest. For the forest it makes no difference. "
           "It matters for distance methods like k-means."),
 
         # 20 ─ explain a flag

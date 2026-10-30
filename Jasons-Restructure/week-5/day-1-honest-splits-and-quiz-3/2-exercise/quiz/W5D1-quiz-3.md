@@ -7,7 +7,7 @@ Name: ______________________________ &nbsp;&nbsp; Unit: ______________________
 
 ## The scikit-learn workflow
 
-**1.** According to the course, what does machine learning add over Week 4's per-channel methods?
+**1.** According to the course, what does machine learning add over Week 3's per-channel methods?
 
 - **A.** It can notice when the relationship between channels breaks
 - **B.** It explains every alarm automatically
@@ -28,12 +28,12 @@ Name: ______________________________ &nbsp;&nbsp; Unit: ______________________
 - **C.** Rows are days, columns are months
 - **D.** Rows are hours, columns are channels
 
-**4.** State of charge spans 77 to 100 while array current spans 0 to 29.8. Why does this matter?
+**4.** State of charge spans 77 to 100 while array current spans 0 to 29.8. Why does this matter for a distance-based method such as k-means?
 
 - **A.** Without scaling, channels with large ranges dominate distance-based methods
 - **B.** It breaks the timestamp index
 - **C.** The values must be integers
-- **D.** It does not matter for isolation forest
+- **D.** k-means rescales the columns itself, so it does not matter
 
 **5.** Why bind the scaler and model into one pipeline?
 
@@ -42,7 +42,7 @@ Name: ______________________________ &nbsp;&nbsp; Unit: ______________________
 - **C.** Pipelines are required by pandas
 - **D.** It makes the code shorter only
 
-**6.** The isolation forest in Week 5 is trained using the anomaly labels.
+**6.** The isolation forest in Week 4 is trained using the anomaly labels.
 
 - **A.** True
 - **B.** False
@@ -57,12 +57,12 @@ Name: ______________________________ &nbsp;&nbsp; Unit: ______________________
 
 ## Isolation forest and clustering
 
-**8.** How many of the five Week 5 labelled events are detectable by a single-channel method?
+**8.** On steady-sun hours, a 3-sigma chart on each raw channel catches how many of the five labelled events (EV01 to EV05)?
 
 - **A.** None
 - **B.** All five
-- **C.** Two
-- **D.** Three
+- **C.** Four
+- **D.** Two
 
 **9.** How does an isolation forest decide that a point is anomalous?
 
@@ -78,7 +78,7 @@ Name: ______________________________ &nbsp;&nbsp; Unit: ______________________
 - **C.** A gap in the data
 - **D.** A point spike
 
-**11.** In the code book, what does a lower decision_function score mean?
+**11.** For an isolation forest, what does a lower decision_function score mean?
 
 - **A.** A missing value
 - **B.** Higher battery charge
@@ -106,7 +106,7 @@ Name: ______________________________ &nbsp;&nbsp; Unit: ______________________
 - **C.** Show the decision tree
 - **D.** Lower the contamination
 
-**15.** For simple single-channel spikes, a Week 4 control chart can still be the better tool than an isolation forest.
+**15.** For simple single-channel spikes, a Week 3 control chart can still be the better tool than an isolation forest.
 
 - **A.** True
 - **B.** False
@@ -128,12 +128,12 @@ Name: ______________________________ &nbsp;&nbsp; Unit: ______________________
 - **C.** Battery temperature per hour
 - **D.** Amplifier temperature relative to its RF drive level
 
-**18.** Raw amplifier temperature during EV04 never breaches its 3-sigma limit. Modelled against drive level, roughly how far out does it sit?
+**18.** Raw amplifier temperature during EV04 never breaches its 3-sigma limit. A model of temperature against drive level puts EV04 about 29 sigma out, yet the course uses the plain temp_per_drive ratio instead. Why?
 
-- **A.** It is still inside
-- **B.** 3 sigma
-- **C.** 1 sigma
-- **D.** About 22 sigma
+- **A.** The ratio puts EV04 even further out
+- **B.** The model needs the anomaly labels to fit
+- **C.** 29 sigma is too small to notice
+- **D.** The model also flags every hour from October to December, so it is useless in service
 
 **19.** Which feature leaks future information?
 
@@ -199,7 +199,7 @@ Name: ______________________________ &nbsp;&nbsp; Unit: ______________________
 - **A.** True
 - **B.** False
 
-**28.** What makes the Week 4 versus Week 5 comparison honest?
+**28.** What makes the comparison between the control chart and the isolation forest honest?
 
 - **A.** Using accuracy for both
 - **B.** Same held-out period and the same scorer for both detectors

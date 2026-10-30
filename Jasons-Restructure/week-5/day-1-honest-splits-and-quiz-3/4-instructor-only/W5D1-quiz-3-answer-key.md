@@ -1,6 +1,6 @@
 # Quiz 3 Answer Key
 
-> 🧑🏾‍🏫 **Instructor only.** Built from the original `Time-series/MCQ/week-05-mcq.csv` (unchanged). Options were reshuffled with a fixed seed (5103) so the correct letters are spread out: multiple-choice answers sit at A ×7, B ×6, C ×6, D ×7 (in the original, most answers were option B). The 4 True/False questions keep their original order.
+> 🧑🏾‍🏫 **Instructor only.** Built from the original `Time-series/MCQ/week-05-mcq.csv` (that file is unchanged), with 8 questions edited: see *Changes from the original* below. Options were reshuffled with a fixed seed (5103) so the correct letters are spread out: multiple-choice answers sit at A ×7, B ×6, C ×6, D ×7 (in the original, most answers were option B). The 4 True/False questions keep their original order.
 
 | # | Answer | Correct option | What it tests | Level |
 |---|---|---|---|---|
@@ -11,7 +11,7 @@
 | 5 | **B** | The scaler fitted on training rows is the one applied at prediction time | Pipelines | intermediate |
 | 6 | **B** | False | Unsupervised | beginner |
 | 7 | **C** | Something in the code is wrong and needs checking | Verifying generated code | intermediate |
-| 8 | **C** | Two | Invisible faults | beginner |
+| 8 | **C** | Four | Faults one channel can see | beginner |
 | 9 | **C** | It needs few random cuts to isolate it | Isolation intuition | intermediate |
 | 10 | **A** | A correlation break | EV02 | intermediate |
 | 11 | **D** | More anomalous | Decision function | beginner |
@@ -21,7 +21,7 @@
 | 15 | **A** | True | When the baseline wins | advanced |
 | 16 | **B** | Each row is judged on its own unless features carry history such as lags and rolling stats | Why engineer features | intermediate |
 | 17 | **D** | Amplifier temperature relative to its RF drive level | temp_per_drive | beginner |
-| 18 | **D** | About 22 sigma | EV04 in sigma | advanced |
+| 18 | **D** | The model also flags every hour from October to December, so it is useless in service | EV04 in sigma | advanced |
 | 19 | **C** | df[c].shift(-1) | Features that cheat | intermediate |
 | 20 | **C** | Could I compute this at 14:00 using only what I knew at 14:00? | The feature test | beginner |
 | 21 | **B** | Duplicates double-weight that channel because split dimensions are chosen at random | Redundant features | advanced |
@@ -34,6 +34,19 @@
 | 28 | **B** | Same held-out period and the same scorer for both detectors | Fair comparison | beginner |
 | 29 | **A** | From a period operations independently believe was quiet, stated in the write-up | Anomaly-specific trap | advanced |
 | 30 | **A** | True | Recommending against your model | intermediate |
+
+## Changes from the original
+
+The same fixes are in the weekly question banks (`week-N/MCQ/`).
+
+- **Q1** (reworded): Week 4 of the original course is Week 3 here.
+- **Q4** (corrected): The option "It does not matter for isolation forest" was also true (the forest's scores with and without scaling correlate 0.99999999), so the question had two right answers.
+- **Q6** (reworded): Week 5 of the original course is Week 4 here.
+- **Q8** (corrected): The original answer "Two" follows the label file, which only checks array current. A 3-sigma chart on each raw channel, on steady-sun hours, catches four; only EV04 needs two channels.
+- **Q11** (reworded): It said "in the code book", which participants never see.
+- **Q15** (reworded): Week 4 of the original course is Week 3 here.
+- **Q18** (corrected): The original answer "About 22 sigma" does not reproduce: the recipe gives 28.9 sigma, and the same feature flags all 2,208 hours of October to December. The question now asks the lesson the course teaches.
+- **Q28** (reworded): It named the original course's Weeks 4 and 5.
 
 ## Marking it together (10 minutes)
 

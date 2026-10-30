@@ -59,7 +59,7 @@
 | 9 | Quiz Q19, Q20, Q22. Read the test aloud and get the room to repeat it. | "Which of these could you compute at 14:00?" |
 | 11 | The ceiling sits above the fault because σ is swollen by the seasons and the load. | — |
 | 12 | Quiz Q17. Generator running hot on one bulb: the radiator is blocked. | "What else in your unit is only abnormal *for its load*?" |
-| 13 | The quiz (Q18) says about 22σ; the code book's recipe gives 28.9σ. Either way it's huge, and either way it fails from October. | "Would you put this on the console?" |
+| 13 | The code book says about 22σ; its own recipe gives 28.9σ (Quiz 3 Q18 uses the real number). Either way it's huge, and either way it fails from October. | "Would you put this on the console?" |
 | 15 | Quiz Q21. Two copies of SoC = SoC votes twice. | — |
 | 16 | The sink misses the two **easiest** faults. Fewer, sharper eyes. | — |
 | 17 | Quiz Q14. Point at EV04: one feature, the right one. | "What sentence do you give the duty engineer?" |
@@ -118,6 +118,6 @@ A first version that runs beats a perfect plan. Anyone still on synthetic data n
 
 - **The EV02 date.** The code book's *Proving EV02 is univariately invisible* checks **1 May** (SoC a normal 100% all day). The label file and the data put EV02 on **2 May 01:00–12:00**: array current 26.93–27.14 A, SoC 92.5–93.4%. The slides and the notebook use 2 May.
 - **"Univariately invisible."** True only for array current, the one channel the proof checks. Bus voltage sags to 50.12–50.24 V (normal 50.40 ± 0.04 V), so a sunlit-only 3σ chart on voltage catches EV02 and EV05 with no false alarms. Slide 17 shows the voltage z-scores. Only EV04 truly needs two sensors. (Review file, 12g.)
-- **The 22σ claim.** The code book says residual σ ≈ 0.18 °C and EV04 ≈ 22σ. Its own recipe gives σ **0.162 °C** and **28.9σ**, and the same feature flags all 2,208 hours of Oct–Dec. Quiz 3 Q18's official answer is "about 22 sigma": mark it as written, and tell the room the real number and the trap. (Review file, 12h.)
+- **The 22σ claim.** The code book says residual σ ≈ 0.18 °C and EV04 ≈ 22σ. Its own recipe gives σ **0.162 °C** and **28.9σ**, and the same feature flags all 2,208 hours of Oct–Dec. Quiz 3 Q18 is corrected: it gives the real number and asks why the course uses `temp_per_drive` instead. (Review file, 12h.)
 - **The 32 columns.** `soc_gap` duplicates `battery_soc_pct` exactly and 18 pairs sit above 0.98, the code book's own pruning line, yet it fits on all of them. On steady-sun hours that forest misses EV01 and EV03 and raises about 70 false alarms. (Review file, 12j.)
 - **Why we judge steady-sun hours only.** Eclipse and recharge hours are known operating states; judged as faults, they swamp every detector (W4D2). We state this limit openly: a fault during an eclipse hour is left to the eclipse procedures.

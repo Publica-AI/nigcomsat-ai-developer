@@ -144,10 +144,10 @@ The amplifier calls span about **8 months**; even the 5-year call reaches **7.2 
 ## Quiz 4
 
 - **Files:** `2-exercise/quiz/W6D2-quiz-4.pdf` (printable, no answers), `W6D2-quiz-4-google-forms.csv` (import), `4-instructor-only/W6D2-quiz-4-answer-key.pdf`.
-- **Source:** the original `Time-series/MCQ/week-06-mcq.csv`, unchanged wording. Options reshuffled with a fixed seed (6203) so the correct letters are spread: multiple choice A ×6, B ×7, C ×6, D ×7; True/False A ×2, B ×2. (In the original file, most answers were option B.)
+- **Source:** the original `Time-series/MCQ/week-06-mcq.csv` (that file is unchanged), with two questions reworded: Q14 no longer mentions "the code book", and Q29 now names the crossing definition it scores against. The answer key lists both. Options reshuffled with a fixed seed (6203) so the correct letters are spread: multiple choice A ×6, B ×7, C ×6, D ×7; True/False A ×2, B ×2. (In the original file, most answers were option B.)
 - **Topic → day:** forecasting baselines → W5D2 · regression-based forecasting → W5D3 · uncertainty and prediction intervals → W5D3 · backtesting → W6D1 (Q29–30 → today) · trend-to-threshold and remaining useful life → today.
 - **All 30 answers match the data** (we re-ran every number: MAE 11.25 and 15.25, one-step naive 6.75, residual sd 2.84, held-out error sd about 7, coverage 5 of 8, battery call 1 May 2025, 13 days early, fold MAEs 1.27–7.67 with mean 4.01, naive wins 5 of 6 folds). No contested questions this time. Two notes for marking:
-  - **Q29** ("the real crossing was 14 May 2025… how far off?", answer **13 days early**) uses the **first-dip** definition of "crossed". The answer stands. Use it to repeat today's point: against the 30-day mean the same call is 50 days early, so always say which definition you used.
+  - **Q29** (answer **13 days early**) now says it scores the call against the **first dip** below 80% (14 May 2025). Use it to repeat today's point: against the 30-day mean the same call is 50 days early, so always say which definition you used.
   - **Q22** ("the amplifier call reaches about 9 years past the data") means past the **three years it was fitted on**: 1 Jan 2024 to 5 May 2033 is 9.3 years. From the end of the whole file (30 Dec 2025) it's about 7 years. Either way: a planning figure with a range.
 
 ## Troubleshooting

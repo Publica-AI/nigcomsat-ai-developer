@@ -80,7 +80,7 @@
 
 Original Week 3 quiz (`Time-series/MCQ/week-03-mcq.csv`), topic **"autocorrelation in operational data"**, questions 25–30 (rows 26–31 of the CSV): lag-1 definition (slide 7), spikes at 7/14/21 (slide 11), slow decay = trend (slide 12), lag 0 = 1 (slide 11), random splits (slide 15), two trending series (slides 17–18).
 
-> ⚠️ **Heads-up on quiz Q6** ("…after differencing the correlation largely collapses. What explains the raw correlation?" → *mostly shared trend*): on the real TWTA file the drop is 0.59 → 0.40, which is not a collapse. The concept is still right, and the suya example shows a true collapse. If someone challenges it, praise them: they checked the data.
+> ✅ **Quiz 1 Q30** (what explains a correlation that collapses after differencing? → *mostly shared trend*) uses today's suya example (0.97 → 0.06). The original quiz used the TWTA file, where the drop is only 0.59 → 0.40: not a collapse. If someone brings up TWTA, praise them: there it's part shared trend, part a real link.
 
 ## Troubleshooting
 

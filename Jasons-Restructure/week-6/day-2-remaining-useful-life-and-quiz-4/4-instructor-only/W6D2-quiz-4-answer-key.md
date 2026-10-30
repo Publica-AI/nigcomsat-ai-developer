@@ -1,6 +1,6 @@
 # Quiz 4 Answer Key
 
-> 🧑🏾‍🏫 **Instructor only.** Built from the original `Time-series/MCQ/week-06-mcq.csv` (unchanged). Options were reshuffled with a fixed seed (6203) so the correct letters are spread out: multiple-choice answers sit at A ×6, B ×7, C ×6, D ×7 (in the original, most answers were option B). The 4 True/False questions keep their original order.
+> 🧑🏾‍🏫 **Instructor only.** Built from the original `Time-series/MCQ/week-06-mcq.csv` (that file is unchanged), with 2 questions edited: see *Changes from the original* below. Options were reshuffled with a fixed seed (6203) so the correct letters are spread out: multiple-choice answers sit at A ×6, B ×7, C ×6, D ×7 (in the original, most answers were option B). The 4 True/False questions keep their original order.
 
 | # | Answer | Correct option | What it tests | Level |
 |---|---|---|---|---|
@@ -34,6 +34,13 @@
 | 28 | **B** | Naive won five of six folds with lower mean error | Baseline backtest | advanced |
 | 29 | **A** | 13 days early | Battery check | beginner |
 | 30 | **D** | The warning time left to act shrinks | Accuracy versus lead time | intermediate |
+
+## Changes from the original
+
+The same fixes are in the weekly question banks (`week-N/MCQ/`).
+
+- **Q14** (reworded): It said "the code book", which participants never see.
+- **Q29** (reworded): W6D2 teaches a crossing as a window, so the question now says which definition it scores against.
 
 ## Marking it together (10 minutes)
 

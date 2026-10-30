@@ -66,7 +66,7 @@ These are in the label file that participants see on W4D1. Today they find them 
 | EV03 | 31 Oct 2025 03:00 | Solar-array dropout (minor) | array 15.54 A |
 | EV04 | 3–4 Sep 2024 | TWTA transient spike | 68.15 °C, below the 3σ ceiling |
 | EV05 | from 12 May 2025 | TWTA level shift (cooling-loop blockage) | the "level shift" chart in C4 |
-| EV06 | from 1 Apr 2025 | Battery fade rate roughly doubles | the "drift" chart in C4 |
+| EV06 | from 1 Apr 2025 | Battery fade speeds up 1.6× (the label file says "roughly doubles") | the "drift" chart in C4 |
 
 ## Answer key
 
@@ -102,6 +102,6 @@ Week 4 quiz (`Time-series/MCQ/week-04-mcq.csv`), topic **"what your alarm softwa
 
 ## Notes on the original material
 
-- **The SoC example doesn't match the data.** The Week 4 code book and quiz say a SoC < 82% floor "fires on all 46 eclipse hours". It fires **18** times (all in eclipse). Eclipse SoC ranges 77.3–99.6%; only a floor above 99.6% would catch all 46. The lesson (correct but useless) holds, so slides use the honest 18 and the array-current floor for the 46.
+- **The SoC example doesn't match the data.** The Week 4 code book and quiz say a SoC < 82% floor "fires on all 46 eclipse hours". It fires **18** times (all in eclipse). Eclipse SoC ranges 77.3–99.6%; only a floor above 99.6% would catch all 46. The lesson (correct but useless) holds, so slides use the honest 18 and the array-current floor for the 46. Quiz 2 Q2 uses the honest 18 too.
 - **The sunlit standard deviation.** The code book says σ ≈ 0.06 A and a band of 27.6–28.0 A. The data gives σ = **0.594 A** and **26.43–29.99 A**, because the post-eclipse recharge hours (up to 29.8 A) and the dropouts themselves are in "sunlit". Even with both removed, σ is 0.169 A. Monthly σ is 0.07–0.10 A, closest to the original's figure.
 - **RF naive rule.** The code book says a 3σ rule on C/N flags "roughly all 56 rainy hours, 79% false alarms". With σ from all hours it flags **18** (6 false). The original figure matches a *dry-hour* baseline: **49** flags, 76% false. Both are shown on slide 17.

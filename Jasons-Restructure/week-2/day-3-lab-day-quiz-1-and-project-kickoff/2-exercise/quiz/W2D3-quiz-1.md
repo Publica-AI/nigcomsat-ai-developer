@@ -33,7 +33,7 @@ Name: ______________________________ &nbsp;&nbsp; Unit: ______________________
 - **C.** Trend, because it is rising now
 - **D.** Seasonality, because it repeats
 
-**5.** Why does the code book call .asfreq("D") after setting a daily DatetimeIndex?
+**5.** Why do we call .asfreq("D") after setting a daily DatetimeIndex?
 
 - **A.** To sort the rows by date
 - **B.** To make missing days appear as NaN instead of silently disappearing
@@ -214,9 +214,9 @@ Name: ______________________________ &nbsp;&nbsp; Unit: ______________________
 - **C.** It is slower to compute
 - **D.** It removes the seasonal profile
 
-**30.** Amplifier temperature and RF drive correlate strongly, but after differencing the correlation largely collapses. What explains the raw correlation?
+**30.** Suya sales and generator sales both rise steadily over time and correlate at 0.97, but their changes (.diff()) correlate at only 0.06. What explains the raw correlation?
 
-- **A.** A strong physical link
+- **A.** A real link between the two businesses
 - **B.** The weekly roster
 - **C.** Measurement error
 - **D.** Mostly shared trend

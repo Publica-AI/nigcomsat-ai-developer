@@ -70,7 +70,7 @@
 
 ## Quiz 1
 
-- **Source:** the original 30 Week 3 questions (`Time-series/MCQ/week-03-mcq.csv`), unchanged in wording.
+- **Source:** the original 30 Week 3 questions (`Time-series/MCQ/week-03-mcq.csv`; that file is unchanged). Two are edited here: Q5 no longer mentions "the code book", and Q30 uses the suya example because the original's TWTA claim doesn't match the data. The answer key lists both.
 - **Our version:** options reshuffled so the correct answers are spread across A–D. In the original, **74% of correct answers were option B**: anyone who always picks B scores about 74%. Don't mention this to participants.
 - **Files:** `2-exercise/quiz/W2D3-quiz-1.pdf` (printable, no answers), `W2D3-quiz-1-google-forms.csv` (for quiz tools), `4-instructor-only/W2D3-quiz-1-answer-key.pdf`.
 - **Marking:** read out the letters in the wrap-up; re-explain any question more than a third of the room missed, using that day's slides.

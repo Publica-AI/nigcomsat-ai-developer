@@ -646,7 +646,7 @@ Training only ever grows <b class="hl">forwards</b>. You get a spread, not one s
 </div>
 <p class="anim" style="--d:1.2s;margin-top:34px;text-align:center">Covers scikit-learn + forests + clustering (W4D2) · features (W4D3) · honest splits (today).</p>""",
           "Hand out 2-exercise/quiz/W5D1-quiz-3.pdf, or import the Google Forms CSV. Answer key: 4-instructor-only/W5D1-quiz-3-answer-key.pdf. "
-          "Three questions follow the original text where the data disagrees (Q4, Q8, Q18): the notes say what to tell the room."),
+          "Q4, Q8 and Q18 are corrected versions of the original questions: the notes say what changed."),
 
         # 24 ─ your turn
         S("""
@@ -1172,4 +1172,4 @@ def extra(d, foot):
     tf = {L: sum(q["letter"] == L for q in quiz if len(q["options"]) == 2) for L in "AB"}
     print(f"Quiz 3 answer positions: multiple choice {counts}, True/False {tf}")
     flagged = {q["number"]: q["letter"] for q in quiz if q["number"] in (4, 8, 18)}
-    print(f"Quiz 3 flagged questions (number: letter): {flagged}")
+    print(f"Quiz 3 corrected questions (number: letter): {flagged}")

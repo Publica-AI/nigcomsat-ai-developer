@@ -18,7 +18,7 @@
 <li>Run the <b>solution</b> notebook top to bottom: 14 of 14 ✅ (about a minute; Part D fits 8 small models).</li>
 <li>Print <code>2-exercise/quiz/W5D1-quiz-3.pdf</code> (one per person), <b>or</b> import <code>W5D1-quiz-3-google-forms.csv</code> into Google Forms / your LMS.</li>
 <li>Print or open <code>4-instructor-only/W5D1-quiz-3-answer-key.pdf</code>. Don't share it until marking.</li>
-<li>Read the <b>Quiz 3</b> section below: three questions follow the original text where the data disagrees.</li>
+<li>Read the <b>Quiz 3</b> section below: three questions were corrected to match the data.</li>
 <li>Re-read slides 14–18 until you can say the verdict in one breath: <i>"same catches, 1 false alarm instead of 25: the feature won, not the forest."</i></li>
 </ul>
 
@@ -32,7 +32,7 @@
 | 0:25 | **The fair fight** | Lucky catch; the alarm barcode; report card; verdict; "can't we tune it?"; seeds; rolling origin; clean reference; when the forest earns its place | 13–22 |
 | 0:40 | **Hands-on** | Parts A–D (45 min). Walk the room. | 24 |
 | 1:25 | **Quiz 3** | 20 minutes, phones down, no AI | 23 |
-| 1:45 | **Mark + wrap** | Swap and mark, discuss Q4, Q8 and Q18, recap, Checkpoint 4 reminder | 25 |
+| 1:45 | **Mark + wrap** | Swap and mark, discuss the corrected Q8 and Q18, recap, Checkpoint 4 reminder | 25 |
 
 If time is tight, skip slides 19 and 21 (seeds, dirty reference): the notebook covers both in Part D.
 
@@ -139,12 +139,12 @@ The forest's numbers (C4, the pepper task) were identical on scikit-learn 1.6.1 
 ## Quiz 3
 
 - **Files:** `2-exercise/quiz/W5D1-quiz-3.pdf` (printable, no answers), `W5D1-quiz-3-google-forms.csv` (import), `4-instructor-only/W5D1-quiz-3-answer-key.pdf`.
-- **Source:** the original `Time-series/MCQ/week-05-mcq.csv`, unchanged wording. Options reshuffled with a fixed seed (5103) so the correct letters are spread: multiple choice A ×7, B ×6, C ×6, D ×7; True/False A ×3, B ×1. (In the original file, most answers were option B.)
+- **Source:** the original `Time-series/MCQ/week-05-mcq.csv` (that file is unchanged), with eight questions edited: Q4, Q8 and Q18 corrected to match the data, and Q1, Q6, Q11, Q15 and Q28 reworded to our week numbers (no "code book"). The answer key lists them all. Options reshuffled with a fixed seed (5103) so the correct letters are spread: multiple choice A ×7, B ×6, C ×6, D ×7; True/False A ×3, B ×1. (In the original file, most answers were option B.)
 - **Topic → day:** the scikit-learn workflow → W4D2 · isolation forest and clustering → W4D2 · feature engineering → W4D3 · temporal train-test discipline → today.
-- **Three questions follow the original text where the data disagrees.** Mark them as below, then use them as a 3-minute discussion: "the answer key can be wrong too, so check it against the data."
-  - **Q4** (scaling, official answer **A**: "Without scaling, channels with large ranges dominate distance-based methods"). Option **D**, "It does not matter for isolation forest", is **also true**: in W4D2 the forest's scores with and without `StandardScaler` correlated 0.99999999. Scaling matters for distance methods such as k-means and the copycat. **Accept A or D.**
-  - **Q8** (how many events are single-channel detectable, official answer **C**, "Two", from the label file). On the data, a steady-sun chart on single channels catches **four**: EV02 and EV05 show plainly in bus voltage (50.12–50.24 V against a normal 50.40 ± 0.04 V; a sunlit bus-voltage chart catches both with 0 false alarms). Today's Contender 2 caught EV05 with raw single channels. Only **EV04** truly needs two channels. "Four" isn't an option, so **mark C as correct**, then tell the room.
-  - **Q18** (EV04 modelled against drive, official answer **D**, "About 22 sigma"). Running the code book's own recipe gives **28.9σ**, and the same feature flags all 2,208 hours of Oct–Dec because five months can't separate the amplifier's yearly warming from the season (W4D3). "Far outside" is the idea. **Mark D as correct**; praise anyone who remembers W4D3's warning.
+- **Three questions are corrected to match the data.** Use one of them as a 3-minute discussion: "the original answer key was wrong, and checking against the data caught it."
+  - **Q4** (scaling, answer **A**) now asks about **k-means**. The original's option "It does not matter for isolation forest" was also true (in W4D2 the forest's scores with and without `StandardScaler` correlated 0.99999999), so it was replaced. Scaling matters for distance methods such as k-means and the copycat.
+  - **Q8** (answer **C**, "Four"): on steady-sun hours a 3-sigma chart on each raw channel catches **four** of the five events. EV02 and EV05 show plainly in bus voltage (50.12–50.24 V against a normal 50.40 ± 0.04 V). Only **EV04** truly needs two channels. The original said "Two", following the label file, which only checks array current.
+  - **Q18** (answer **D**) now asks why the course uses `temp_per_drive` rather than the model of temperature against drive: that model puts EV04 about **29σ** out (the original said "about 22 sigma", which doesn't reproduce) but flags all 2,208 hours of Oct–Dec, because five months can't separate the amplifier's yearly warming from the season (W4D3).
 - Q30 ("recommending the simpler detector is legitimate", **True**) is today's verdict. If anyone got it wrong, re-show slide 17.
 
 ## Troubleshooting
@@ -176,4 +176,4 @@ The forest's numbers (C4, the pepper task) were identical on scikit-learn 1.6.1 
 - The original says "expect about 48 embargoed rows". Its code embargoes 47 (31 Aug 01:00 to 1 Sep 23:00). Ours embargoes exactly 1 Sep: 24 hours.
 - The original says a random split "will report a better score" but never shows it. For the unsupervised forest there are no labels to copy, so we show it with the supervised copycat.
 - Rolling-origin validation (quiz Q26, Q27) has no code in the original. Part D adds it.
-- Quiz Q4, Q8 and Q18: see the Quiz 3 section above and review rows 12g, 12h, 12i, 16b.
+- Quiz Q4, Q8 and Q18 are corrected versions of the original questions: see the Quiz 3 section above and review rows 12g, 12h, 12i, 16b.

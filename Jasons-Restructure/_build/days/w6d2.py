@@ -690,7 +690,7 @@ and loses capacity <b class="hl">{F["eclipse_fade_ratio"]:.1f}× faster</b> per 
 </div>
 <p class="anim" style="--d:1.2s;margin-top:34px;text-align:center">Covers baselines (W5D2) · regression + ranges (W5D3) · backtesting (W6D1) · remaining life (today).</p>""",
           "Hand out 2-exercise/quiz/W6D2-quiz-4.pdf, or import the Google Forms CSV. Answer key: 4-instructor-only/W6D2-quiz-4-answer-key.pdf. "
-          "All 30 answers match the data. Q29 uses the first-dip definition of 'crossed' (13 days early): the answer stands, mention the window."),
+          "All 30 answers match the data. Q29 says it scores against the first dip (13 days early): mention the window."),
 
         # 24 ─ your turn
         S("""
