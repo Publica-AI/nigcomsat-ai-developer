@@ -119,7 +119,7 @@ Each step ends with every notebook test-run and a commit under your name only.
 
 ## 6. Decisions made
 
-1. **Hosting:** write access to the Publica repo comes later, and the branch gets pushed then. The "Open in Colab" links already point at branch `jasons-restructure` and go live once it's pushed. To host somewhere else, change two lines in `_build/common.py` and rebuild.
+1. **Hosting:** the course is merged into `main` of the Publica repo, and the "Open in Colab" links point at `main`. To host somewhere else, change two lines in `_build/common.py` and rebuild.
 2. **Slide formats:** all three. Animated web decks for the wow factor, static PowerPoint (which also opens in Google Slides), and PDF.
 3. **Session length:** planned for ~2 hours. The content can stretch.
 4. **Final project:** requirements PDF in `week-6/final-project/`, including hardware and data-collection recommendations.
