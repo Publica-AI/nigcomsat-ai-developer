@@ -1,0 +1,272 @@
+[
+    {
+        "title": "evaluating a detector",
+        "description": "Why not accuracy",
+        "type": "multiple choice",
+        "question": "With 6 events in about 4,700 observations, what accuracy does a detector that never fires score?",
+        "options": "About 50%|About 0.13%|Exactly 100%|About 99.87%",
+        "answer": "About 99.87%",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "evaluating a detector",
+        "description": "Recall",
+        "type": "multiple choice",
+        "question": "What does recall measure?",
+        "options": "Of our alarms, how many were real|How fast the detector runs|Of the real events, how many we caught|How many hours were scored",
+        "answer": "Of the real events, how many we caught",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "evaluating a detector",
+        "description": "Precision",
+        "type": "multiple choice",
+        "question": "Which metric answers \"when the system pages the duty engineer, how often is something really there?\"",
+        "options": "Recall|Accuracy|Precision|Coverage",
+        "answer": "Precision",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "evaluating a detector",
+        "description": "Event-level scoring",
+        "type": "multiple choice",
+        "question": "Under event-level scoring, how is a seven-month level shift counted if the detector flags it on one day?",
+        "options": "As a miss|As 233 catches|As a false alarm|As one catch",
+        "answer": "As one catch",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "evaluating a detector",
+        "description": "Pricing false alarms",
+        "type": "multiple choice",
+        "question": "Why does the course convert false alarms into shift hours?",
+        "options": "To pay overtime|Because recall is measured in hours|To satisfy the SLA|It turns a statistical choice into a decision an operations manager can make",
+        "answer": "It turns a statistical choice into a decision an operations manager can make",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "evaluating a detector",
+        "description": "Unusual is not wrong",
+        "type": "True or False",
+        "question": "In the RF file, every rain-fade excursion should be raised as an anomaly because it is statistically unusual.",
+        "options": "True|False",
+        "answer": "False",
+        "difficulty": "advanced"
+    },
+    {
+        "title": "evaluating a detector",
+        "description": "Lucky catches",
+        "type": "True or False",
+        "question": "If event_table shows a long event as caught, the detector must have recognised that fault.",
+        "options": "True|False",
+        "answer": "False",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "the scikit-learn workflow",
+        "description": "What ML buys you",
+        "type": "multiple choice",
+        "question": "According to the course, what does machine learning add over Week 3's per-channel methods?",
+        "options": "It can notice when the relationship between channels breaks|It replaces the need for a reference period|It never produces false alarms|It explains every alarm automatically",
+        "answer": "It can notice when the relationship between channels breaks",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "the scikit-learn workflow",
+        "description": "The one pattern",
+        "type": "multiple choice",
+        "question": "Which method names make up the basic scikit-learn pattern?",
+        "options": "fit, predict (or transform), score|load, run, plot|train, test, deploy|open, read, close",
+        "answer": "fit, predict (or transform), score",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "the scikit-learn workflow",
+        "description": "The X matrix",
+        "type": "multiple choice",
+        "question": "In the X matrix for hourly telemetry, what are the rows and columns?",
+        "options": "Rows are channels, columns are hours|Rows are events, columns are labels|Rows are hours, columns are channels|Rows are days, columns are months",
+        "answer": "Rows are hours, columns are channels",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "the scikit-learn workflow",
+        "description": "Why scale",
+        "type": "multiple choice",
+        "question": "State of charge spans 77 to 100 while array current spans 0 to 29.8. Why does this matter for a distance-based method such as k-means?",
+        "options": "Without scaling, channels with large ranges dominate distance-based methods|k-means rescales the columns itself, so it does not matter|The values must be integers|It breaks the timestamp index",
+        "answer": "Without scaling, channels with large ranges dominate distance-based methods",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "the scikit-learn workflow",
+        "description": "Pipelines",
+        "type": "multiple choice",
+        "question": "Why bind the scaler and model into one pipeline?",
+        "options": "It makes the code shorter only|Pipelines are required by pandas|It removes the need for a test set|The scaler fitted on training rows is the one applied at prediction time",
+        "answer": "The scaler fitted on training rows is the one applied at prediction time",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "the scikit-learn workflow",
+        "description": "Unsupervised",
+        "type": "True or False",
+        "question": "The isolation forest in Week 4 is trained using the anomaly labels.",
+        "options": "True|False",
+        "answer": "False",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "the scikit-learn workflow",
+        "description": "Verifying generated code",
+        "type": "multiple choice",
+        "question": "You asked for contamination=0.01 on 8,760 hours and got 4,000 flags. What should you conclude?",
+        "options": "Something in the code is wrong and needs checking|The satellite is failing|Contamination is ignored by the model|That is the expected result",
+        "answer": "Something in the code is wrong and needs checking",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "isolation forest and clustering",
+        "description": "Faults one channel can see",
+        "type": "multiple choice",
+        "question": "On steady-sun hours, a 3-sigma chart on each raw channel catches how many of the five labelled events (EV01 to EV05)?",
+        "options": "Four|All five|Two|None",
+        "answer": "Four",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "isolation forest and clustering",
+        "description": "Isolation intuition",
+        "type": "multiple choice",
+        "question": "How does an isolation forest decide that a point is anomalous?",
+        "options": "It is far from the cluster centre|It needs few random cuts to isolate it|It has the highest value in its column|It matches a label",
+        "answer": "It needs few random cuts to isolate it",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "isolation forest and clustering",
+        "description": "EV02",
+        "type": "multiple choice",
+        "question": "During EV02, array current is normal at about 27 A but state of charge sits near 93%. What kind of fault is this?",
+        "options": "A point spike|A correlation break|A gap in the data|A seasonal effect",
+        "answer": "A correlation break",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "isolation forest and clustering",
+        "description": "Decision function",
+        "type": "multiple choice",
+        "question": "For an isolation forest, what does a lower decision_function score mean?",
+        "options": "More normal|More anomalous|Higher battery charge|A missing value",
+        "answer": "More anomalous",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "isolation forest and clustering",
+        "description": "Contamination",
+        "type": "multiple choice",
+        "question": "With contamination=0.005 on about 8,736 rows, roughly how many hours should be flagged?",
+        "options": "About 44|About 4|About 440|About 4,000",
+        "answer": "About 44",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "isolation forest and clustering",
+        "description": "Clustering use",
+        "type": "multiple choice",
+        "question": "What is clustering most useful for in this week's data?",
+        "options": "Computing recall|Finding the operating modes such as sunlit and eclipse|Replacing the scaler|Choosing the forecast horizon",
+        "answer": "Finding the operating modes such as sunlit and eclipse",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "isolation forest and clustering",
+        "description": "Explaining a flag",
+        "type": "multiple choice",
+        "question": "What is the cheapest way to explain why the detector flagged an hour?",
+        "options": "Show the decision tree|Rerun the model with a new seed|Per-channel z-scores against the training baseline|Lower the contamination",
+        "answer": "Per-channel z-scores against the training baseline",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "isolation forest and clustering",
+        "description": "When the baseline wins",
+        "type": "True or False",
+        "question": "For simple single-channel spikes, a Week 3 control chart can still be the better tool than an isolation forest.",
+        "options": "True|False",
+        "answer": "True",
+        "difficulty": "advanced"
+    },
+    {
+        "title": "isolation forest and clustering",
+        "description": "Steady sun",
+        "type": "multiple choice",
+        "question": "Fitted on every hour of the training months and judged on every hour, the isolation forest flagged 58 hours, all at 21:00 UTC (eclipse), and caught 1 of 5 events. Fitted and judged on steady-sun hours only, it caught 4 of 5. What is the lesson?",
+        "options": "The forest is broken and must be replaced|The eclipse hours are the real faults|Raise contamination until every event is caught|Rare is not broken: give the model context instead of hoping it works it out",
+        "answer": "Rare is not broken: give the model context instead of hoping it works it out",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "feature engineering from time series",
+        "description": "Why engineer features",
+        "type": "multiple choice",
+        "question": "Why does the course say \"the model cannot tell time\"?",
+        "options": "It cannot read datetime columns|It runs too slowly on hourly data|Each row is judged on its own unless features carry history such as lags and rolling stats|It ignores the eclipse flag",
+        "answer": "Each row is judged on its own unless features carry history such as lags and rolling stats",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "feature engineering from time series",
+        "description": "temp_per_drive",
+        "type": "multiple choice",
+        "question": "What does the temp_per_drive feature capture?",
+        "options": "Amplifier temperature relative to its RF drive level|Battery temperature per hour|The daily mean temperature|The eclipse duration",
+        "answer": "Amplifier temperature relative to its RF drive level",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "feature engineering from time series",
+        "description": "EV04 in sigma",
+        "type": "multiple choice",
+        "question": "Raw amplifier temperature during EV04 never breaches its 3-sigma limit. A model of temperature against drive level puts EV04 about 29 sigma out, yet the course uses the plain temp_per_drive ratio instead. Why?",
+        "options": "29 sigma is too small to notice|The model also flags every hour from October to December, so it is useless in service|The model needs the anomaly labels to fit|The ratio puts EV04 even further out",
+        "answer": "The model also flags every hour from October to December, so it is useless in service",
+        "difficulty": "advanced"
+    },
+    {
+        "title": "feature engineering from time series",
+        "description": "Features that cheat",
+        "type": "multiple choice",
+        "question": "Which feature leaks future information?",
+        "options": "df[c].shift(1)|df[c].rolling(24).mean()|df[c].shift(-1)|df.index.hour",
+        "answer": "df[c].shift(-1)",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "feature engineering from time series",
+        "description": "The feature test",
+        "type": "multiple choice",
+        "question": "Which question should you ask of every feature?",
+        "options": "Is it highly correlated with the label?|Could I compute this at 14:00 using only what I knew at 14:00?|Does it improve the score?|Is it a float?",
+        "answer": "Could I compute this at 14:00 using only what I knew at 14:00?",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "feature engineering from time series",
+        "description": "Redundant features",
+        "type": "multiple choice",
+        "question": "Why prune feature pairs with correlation above about 0.98 before fitting an isolation forest?",
+        "options": "They cause errors in pandas|They make the scaler fail|They reduce the number of rows|Duplicates double-weight that channel because split dimensions are chosen at random",
+        "answer": "Duplicates double-weight that channel because split dimensions are chosen at random",
+        "difficulty": "advanced"
+    },
+    {
+        "title": "feature engineering from time series",
+        "description": "Rows lost",
+        "type": "multiple choice",
+        "question": "The feature matrix loses 24 rows at the start. Why?",
+        "options": "Duplicate timestamps|Eclipse hours are removed|The labels start late|The longest window is 24 hours",
+        "answer": "The longest window is 24 hours",
+        "difficulty": "beginner"
+    }
+]

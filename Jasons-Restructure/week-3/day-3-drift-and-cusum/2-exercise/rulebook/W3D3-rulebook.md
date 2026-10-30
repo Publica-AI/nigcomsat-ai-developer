@@ -20,7 +20,7 @@
 | 3 | **CUSUM line:** `S = max(0, S + leftover - k)` | Add today, minus the slack, never below zero |
 | 4 | **Set k and h from σ**: `k = 0.5 * sigma`, `h = 5 * sigma` | σ = the normal wobble of the leftovers in a calm period |
 | 5 | **Alarm date ≠ start date.** Start = the day after S was last 0 | CUSUM needs time to collect evidence |
-| 6 | **Drift? Watch the slope, not the level** | The battery never crosses 95 Ah, but its speed doubles |
+| 6 | **Drift? Watch the slope, not the level** | The battery never crosses 95 Ah, but its fade gets 1.6× faster |
 
 ## The exercise, step by step
 

@@ -1,0 +1,272 @@
+[
+    {
+        "title": "backtesting",
+        "description": "What backtesting is",
+        "type": "multiple choice",
+        "question": "What is backtesting?",
+        "options": "Scoring a model on its training data|Running the code twice|Reversing the time order|Forecasting from past dates using only what was known then, and scoring against what came next",
+        "answer": "Forecasting from past dates using only what was known then, and scoring against what came next",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "backtesting",
+        "description": "Walk-forward",
+        "type": "multiple choice",
+        "question": "In a walk-forward backtest, what happens at each fold?",
+        "options": "The model is refit on everything before the cut and forecasts the next few weeks|The data is shuffled|Only the test set is changed|The oldest data is deleted",
+        "answer": "The model is refit on everything before the cut and forecasts the next few weeks",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "backtesting",
+        "description": "Report the spread",
+        "type": "multiple choice",
+        "question": "Fold MAEs range from 1.27 to 7.67 with mean 4.01. What should you report?",
+        "options": "Only the best fold|The spread across folds and when the bad folds occur|Only the mean|Only the last fold",
+        "answer": "The spread across folds and when the bad folds occur",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "backtesting",
+        "description": "Baseline backtest",
+        "type": "multiple choice",
+        "question": "Backtested on the same six folds, how did one-step naive compare with the regression?",
+        "options": "Naive won five of six folds with lower mean error|Regression won all six folds|They tied every fold|Seasonal naive won",
+        "answer": "Naive won five of six folds with lower mean error",
+        "difficulty": "advanced"
+    },
+    {
+        "title": "backtesting",
+        "description": "Battery check",
+        "type": "multiple choice",
+        "question": "The three-year battery call was 1 May 2025. Daily capacity first dipped below 80% on 14 May 2025. Measured against that first dip, how far off was the call?",
+        "options": "13 days early|13 days late|74 days early|Exactly right",
+        "answer": "13 days early",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "backtesting",
+        "description": "Accuracy versus lead time",
+        "type": "multiple choice",
+        "question": "As more data is used, the battery call gets more accurate. What is the trade-off?",
+        "options": "The model becomes biased late|The warning time left to act shrinks|The data has more gaps|The threshold changes",
+        "answer": "The warning time left to act shrinks",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "backtesting",
+        "description": "Rolling origin",
+        "type": "multiple choice",
+        "question": "In a rolling-origin backtest, what happens at each origin?",
+        "options": "Shuffle the weeks and score a random block|Refit on all 104 weeks and score the last 8|Using only the weeks before it, forecast the next h weeks blind and score them, then move one week on|Score the forecast on the weeks it was trained on",
+        "answer": "Using only the weeks before it, forecast the next h weeks blind and score them, then move one week on",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "backtesting",
+        "description": "The horizon the user needs",
+        "type": "multiple choice",
+        "question": "The NOC needs a month-ahead staff roster. Why can't the one-step regression, which uses last week's real count, make it?",
+        "options": "Regression cannot forecast tickets|It is too accurate|Four weeks ahead, last week's real count is not known yet|Rosters must use seasonal naive",
+        "answer": "Four weeks ahead, last week's real count is not known yet",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "backtesting",
+        "description": "The backtest verdict",
+        "type": "multiple choice",
+        "question": "The backtest from every origin showed naive winning one week ahead and the rate seasonal naive winning four to eight weeks ahead. What does the course recommend?",
+        "options": "Naive for next week, the rate seasonal naive for 4 to 8 weeks ahead|The regression for every horizon|Seasonal naive for every horizon|The rate seasonal naive for next week, naive for later weeks",
+        "answer": "Naive for next week, the rate seasonal naive for 4 to 8 weeks ahead",
+        "difficulty": "advanced"
+    },
+    {
+        "title": "backtesting",
+        "description": "Fix the design first",
+        "type": "True or False",
+        "question": "It is fine to try several fold sizes and report the one that makes your model look best.",
+        "options": "True|False",
+        "answer": "False",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "backtesting",
+        "description": "Comparing methods across folds",
+        "type": "multiple choice",
+        "question": "Over six folds the mean MAEs were: rate seasonal naive 2.65, naive 3.13, regression 4.01 and seasonal naive 17.8. The rate seasonal naive beat naive in 3 of the 6 folds. Which statement is honest?",
+        "options": "The rate seasonal naive wins every fold|The regression is best because it uses the most features|Seasonal naive is best because tickets are seasonal|The rate seasonal naive has the lowest mean, but it wins only half the folds against naive, so report the spread",
+        "answer": "The rate seasonal naive has the lowest mean, but it wins only half the folds against naive, so report the spread",
+        "difficulty": "advanced"
+    },
+    {
+        "title": "trend-to-threshold and remaining useful life",
+        "description": "Framing RUL",
+        "type": "multiple choice",
+        "question": "In trend-to-threshold analysis, what is the remaining useful life?",
+        "options": "The age of the satellite|The value predicted for tomorrow|The slope of the trend|The time until the trend crosses its operational limit",
+        "answer": "The time until the trend crosses its operational limit",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "trend-to-threshold and remaining useful life",
+        "description": "np.polyfit",
+        "type": "multiple choice",
+        "question": "What does np.polyfit(x, y, 1) return?",
+        "options": "The crossing date|A smoothed series|The residuals|The slope and intercept of the best straight line",
+        "answer": "The slope and intercept of the best straight line",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "trend-to-threshold and remaining useful life",
+        "description": "Battery call",
+        "type": "multiple choice",
+        "question": "Using only the first three years of data, when did the straight line predict battery capacity would cross 80%?",
+        "options": "1 March 2025|1 May 2025|14 May 2025|5 May 2033",
+        "answer": "1 May 2025",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "trend-to-threshold and remaining useful life",
+        "description": "Long reach",
+        "type": "multiple choice",
+        "question": "The amplifier call reaches about 9 years past the data. What should be reported?",
+        "options": "A precise date|A planning figure with a range, re-estimated every year|Nothing until it fails|The battery date instead",
+        "answer": "A planning figure with a range, re-estimated every year",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "trend-to-threshold and remaining useful life",
+        "description": "Propellant shape",
+        "type": "multiple choice",
+        "question": "Why is a straight line an approximation for propellant?",
+        "options": "It rises over time|It falls in discrete steps at each station-keeping burn|It has no trend|It is measured in percent",
+        "answer": "It falls in discrete steps at each station-keeping burn",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "trend-to-threshold and remaining useful life",
+        "description": "Time to intervention",
+        "type": "True or False",
+        "question": "Engineers should plan to act before the predicted crossing, not on the crossing date.",
+        "options": "True|False",
+        "answer": "True",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "trend-to-threshold and remaining useful life",
+        "description": "The three limits",
+        "type": "multiple choice",
+        "question": "Which limits does the course use for the battery, the amplifier and the propellant?",
+        "options": "80% capacity, -2 dB gain and 5 kg of propellant|50% capacity, -10 dB gain and 0 kg of propellant|95 Ah, 0 dB and 15 kg|100% capacity, +2 dB and 5% of propellant",
+        "answer": "80% capacity, -2 dB gain and 5 kg of propellant",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "trend-to-threshold and remaining useful life",
+        "description": "Defining the crossing",
+        "type": "multiple choice",
+        "question": "Daily battery capacity first dips below 80% on 14 May 2025, the 30-day mean crosses on 20 Jun, and the last day above 80% is 24 Jul. What should you report?",
+        "options": "14 May 2025, the first time it happened|A window from mid-May to late July, saying which definition you score against|24 Jul 2025, the last possible date|The average of the three dates, as a single day",
+        "answer": "A window from mid-May to late July, saying which definition you score against",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "trend-to-threshold and remaining useful life",
+        "description": "No crossing is an answer",
+        "type": "True or False",
+        "question": "If day_of_threshold returns None, the safe move is to treat it as day 0, in case the limit is already crossed.",
+        "options": "True|False",
+        "answer": "False",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "trend-to-threshold and remaining useful life",
+        "description": "Sanity-check with a simple sum",
+        "type": "multiple choice",
+        "question": "Propellant stands at 101.93 kg, the reserve is 5 kg, and the satellite uses about 9.62 kg a year. Roughly how many years are left?",
+        "options": "About 10 years|About 1 year|About 20 years|About 5 years",
+        "answer": "About 10 years",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "trend-to-threshold and remaining useful life",
+        "description": "Why the calls come early",
+        "type": "multiple choice",
+        "question": "Measured against the 30-day mean crossing (20 Jun 2025), battery calls made from 1, 2, 3 and 4 years of data were all early. Why?",
+        "options": "The data has gaps|The limit changed every year|The fade slows a little every year, so a straight line fitted on the past runs ahead of it|The calls were made in WAT instead of UTC",
+        "answer": "The fade slows a little every year, so a straight line fitted on the past runs ahead of it",
+        "difficulty": "advanced"
+    },
+    {
+        "title": "trend-to-threshold and remaining useful life",
+        "description": "Where the wear happens",
+        "type": "multiple choice",
+        "question": "Eclipse-season days are about a quarter of the battery's days, yet they carry about 43% of its capacity fade. What does that suggest?",
+        "options": "The eclipse data is wrong|The battery only fades at night|Eclipses recharge the battery|Eclipse-season discharge wears the battery faster than ordinary days",
+        "answer": "Eclipse-season discharge wears the battery faster than ordinary days",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "project clinic and demo day",
+        "description": "Demo timing",
+        "type": "multiple choice",
+        "question": "How long is each demo-day presentation?",
+        "options": "20 minutes, with open questions|As long as the slides take|5 minutes, then 1 question|2 minutes, with no questions",
+        "answer": "5 minutes, then 1 question",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "project clinic and demo day",
+        "description": "How to end",
+        "type": "multiple choice",
+        "question": "How should your demo end?",
+        "options": "On \"Any questions?\"|On the code|On the recommendation, in plain words|On the raw data table",
+        "answer": "On the recommendation, in plain words",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "project clinic and demo day",
+        "description": "The honest-test slide",
+        "type": "multiple choice",
+        "question": "What should the honest-test part of your demo show?",
+        "options": "Three tables, one per metric|Only your method's best score|One table: your method against the baseline, on the same period with the same scorer|The accuracy on the training data",
+        "answer": "One table: your method against the baseline, on the same period with the same scorer",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "project clinic and demo day",
+        "description": "Real data on the projector",
+        "type": "True or False",
+        "question": "If people from outside NIGCOMSAT are in the room, show charts and summaries, not raw rows of real data.",
+        "options": "True|False",
+        "answer": "True",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "project clinic and demo day",
+        "description": "Automatic penalties",
+        "type": "multiple choice",
+        "question": "Which of these costs automatic marks in the final project?",
+        "options": "Reporting an accuracy figure for rare-event detection|A model that loses to the baseline in a fair test, with the simpler method recommended|A two-page report|Using pandas instead of plain Python",
+        "answer": "Reporting an accuracy figure for rare-event detection",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "project clinic and demo day",
+        "description": "What deployed means",
+        "type": "multiple choice",
+        "question": "What counts as deployed for the final project?",
+        "options": "A notebook shared in Google Drive|Slides with screenshots|A dashboard or scheduled report running on the training server, with a README that says how to run it|Code emailed to the unit head",
+        "answer": "A dashboard or scheduled report running on the training server, with a README that says how to run it",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "project clinic and demo day",
+        "description": "Saying the limits",
+        "type": "multiple choice",
+        "question": "Why should you say one limitation of your tool out loud on demo day?",
+        "options": "To lower expectations so any result looks good|Because the rubric asks for five limitations|So the judges skip the honest test|Unit heads trust the engineer who knows where the tool stops",
+        "answer": "Unit heads trust the engineer who knows where the tool stops",
+        "difficulty": "beginner"
+    }
+]

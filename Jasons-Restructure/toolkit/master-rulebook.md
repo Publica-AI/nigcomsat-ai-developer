@@ -174,7 +174,7 @@ df = df.asfreq("D")                             # 3. declare the rhythm: "h" hou
 | **The CUSUM line: `S = max(0, S + leftover - k)`** | Add today, minus the slack, never below zero | <span class="pill">W3D3</span> |
 | **Set k and h from σ**: `k = 0.5 * sigma`, `h = 5 * sigma` | σ = the normal wobble of the leftovers in a calm period | <span class="pill">W3D3</span> |
 | **Alarm date ≠ start date.** Start = the day after S was last 0 | CUSUM needs time to collect evidence | <span class="pill">W3D3</span> |
-| **Drift? Watch the slope, not the level** | The battery never crosses 95 Ah, but its speed doubles | <span class="pill">W3D3</span> |
+| **Drift? Watch the slope, not the level** | The battery never crosses 95 Ah, but its fade gets 1.6× faster | <span class="pill">W3D3</span> |
 
 ## 7. Scoring a detector
 

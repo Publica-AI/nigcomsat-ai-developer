@@ -86,6 +86,7 @@ Plus a shared **toolkit** for the whole course:
 | `toolkit/nigcomsat-fact-sheet` (.md + .pdf) | Verified facts about NIGCOMSAT and NigComSat-1R, with sources |
 | `toolkit/master-rulebook` (.md + .pdf) | All the rules from all 18 days, grouped by theme, with the key rules on page one |
 | `week-6/final-project/` | Final-project requirements PDF, with hardware and data-collection recommendations |
+| `week-N/MCQ/` | Each week's 30 questions for the LMS, in the original MCQ format (JSON + CSV): the 120 originals regrouped by week and corrected, plus 60 new ones on what this course adds |
 | `assets/brand/` | NIGCOMSAT and Publica Academy logos |
 
 ---

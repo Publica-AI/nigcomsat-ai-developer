@@ -22,6 +22,7 @@ Jasons-Restructure/
 │   ├── master-rulebook          (.md + .pdf): every rule from all 18 days, by theme
 │   └── nigcomsat-fact-sheet     (.md + .pdf): real facts behind the examples
 ├── week-1/ … week-6/            ← one folder per week, one sub-folder per day
+│   ├── MCQ/                     ← the week's 30 questions for the LMS (JSON + CSV, same format as Time-series/MCQ)
 │   └── day-N-topic/
 │       ├── 1-slides/
 │       │   ├── web-animated/    ← the WOW deck: open in Chrome (→ next, F full screen, N notes)

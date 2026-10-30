@@ -89,10 +89,11 @@ The originals were made by someone who really knows the subject. The synthetic d
 
 | # | Issue | Our fix |
 |---|---|---|
-| 16 | **89 of 120 correct answers are option B (74%).** Anyone who always picks B scores about 74%. | Shuffled-option versions for Google Forms (originals kept) |
-| 16a | **Week 3 quiz, autocorrelation topic, last question**: says the amplifier-temperature vs RF-drive correlation "largely collapses" after differencing | On the real file it only drops from 0.59 to 0.40. The idea is still taught (W2D2 uses a clear made-up example), and the instructor notes flag the question |
-| 16b | **Week 5 quiz, Q4, Q8 and Q18** follow the code book's text: Q4 (scaling) has a second true option, Q8 says two events are single-channel detectable (the data says four, see 12g), Q18 says "about 22 sigma" (the recipe gives 28.9σ and fails on Oct–Dec, see 12h) | The official answers stand; W5D1's instructor notes and Quiz 3 answer key say what to tell the room |
+| 16 | **89 of 120 correct answers are option B (74%).** Anyone who always picks B scores about 74%. | Shuffled-option versions for Google Forms (originals kept). The weekly banks in `week-N/MCQ/` spread the answers evenly too |
+| 16a | **Week 3 quiz, autocorrelation topic, last question**: says the amplifier-temperature vs RF-drive correlation "largely collapses" after differencing | On the real file it only drops from 0.59 to 0.40. The idea is still taught (W2D2 uses a clear made-up example), and the instructor notes flag the question. The Week 2 bank (`week-2/MCQ/`) asks it with the suya example instead |
+| 16b | **Week 5 quiz, Q4, Q8 and Q18** follow the code book's text: Q4 (scaling) has a second true option, Q8 says two events are single-channel detectable (the data says four, see 12g), Q18 says "about 22 sigma" (the recipe gives 28.9σ and fails on Oct–Dec, see 12h) | The in-class Quiz 3 keeps the official answers, and W5D1's instructor notes say what to tell the room. The Week 4 bank (`week-4/MCQ/`) has all three corrected |
 | 16c | **Week 6 quiz** | All 30 answers match the data (11.25, 15.25, 6.75, 2.84, 5 of 8, 1 May 2025, 13 days early, 1.27–7.67, naive 5 of 6). Q29 measures the battery call against the first single-day dip; W6D2 teaches that a crossing is a window |
+| 16d | **Week 4 quiz, Q2 and Q23** repeat the code book's errors 12c and 12d ("all 46 eclipse hours", "roughly doubled") | The in-class Quiz 2 keeps them, flagged in W4D1's instructor notes. The Week 3 bank (`week-3/MCQ/`) has both corrected |
 | 17 | The repo is **public**, and the answer keys (label CSVs, "answer key" notes in the code books) are in it. Participants who browse the repo can see them. | Keep in mind when setting graded exercises |
 
 ---

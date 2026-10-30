@@ -1,0 +1,272 @@
+[
+    {
+        "title": "what your alarm software already does",
+        "description": "A threshold is a model",
+        "type": "True or False",
+        "question": "A fixed alarm threshold on a telemetry channel is already a simple anomaly-detection model.",
+        "options": "True|False",
+        "answer": "True",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "what your alarm software already does",
+        "description": "Seasonal false alarms",
+        "type": "multiple choice",
+        "question": "A fixed floor on battery state of charge (SoC < 82%) fires 18 times, every one of them during an eclipse. Why is this a problem?",
+        "options": "Those hours are real faults that were missed|The battery is failing|The threshold is too low to fire|Every alarm is technically correct but operationally useless",
+        "answer": "Every alarm is technically correct but operationally useless",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "what your alarm software already does",
+        "description": "Silent degradation",
+        "type": "multiple choice",
+        "question": "Battery capacity falls from about 103 Ah to 95.4 Ah over three years. How many times does a 95 Ah threshold fire?",
+        "options": "Hundreds|46|Once|Zero",
+        "answer": "Zero",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "what your alarm software already does",
+        "description": "Three anomaly shapes",
+        "type": "multiple choice",
+        "question": "Which three anomaly shapes appear in the Week 3 data?",
+        "options": "Spike, outage and gap|Trend, season and noise|Spike, level shift and drift|Drift, cycle and duplicate",
+        "answer": "Spike, level shift and drift",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "what your alarm software already does",
+        "description": "Leaking the answer",
+        "type": "multiple choice",
+        "question": "Why should uplink_power_dbm not be fed to the RF link detector as a feature?",
+        "options": "It is measured in the wrong unit|It has missing values|It is a response to rain, so it leaks the answer|It is constant",
+        "answer": "It is a response to rain, so it leaks the answer",
+        "difficulty": "advanced"
+    },
+    {
+        "title": "what your alarm software already does",
+        "description": "Where thresholds come from",
+        "type": "multiple choice",
+        "question": "Which question does the course ask of every existing alarm limit?",
+        "options": "Who installed it?|Where did that number come from?|Is it in volts?|How many sensors use it?",
+        "answer": "Where did that number come from?",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "alarms with context",
+        "description": "Combining conditions in pandas",
+        "type": "multiple choice",
+        "question": "You want hours where array current is below 20 A AND the satellite is sunlit. Which line works?",
+        "options": "(bus[\"solar_array_current_a\"] < 20) & (bus[\"eclipse_flag\"] == 0)|bus[\"solar_array_current_a\"] < 20 and bus[\"eclipse_flag\"] == 0|bus[\"solar_array_current_a\"] < 20 & bus[\"eclipse_flag\"] == 0|(bus[\"solar_array_current_a\"] < 20) & (bus[\"eclipse_flag\"] == \"0\")",
+        "answer": "(bus[\"solar_array_current_a\"] < 20) & (bus[\"eclipse_flag\"] == 0)",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "alarms with context",
+        "description": "The not operator",
+        "type": "multiple choice",
+        "question": "In pandas, what does hot & ~after_eclipse select?",
+        "options": "Hours that are hot OR right after an eclipse|Hours that are hot AND right after an eclipse|Hours that are hot but NOT right after an eclipse|Hours that are roughly hot after an eclipse",
+        "answer": "Hours that are hot but NOT right after an eclipse",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "alarms with context",
+        "description": "The hour after an eclipse",
+        "type": "multiple choice",
+        "question": "Which expression is True for the hour right after an eclipse hour?",
+        "options": "bus[\"eclipse_flag\"].shift(1) == 1|bus[\"eclipse_flag\"].shift(-1) == 1|bus[\"eclipse_flag\"] == 2|bus[\"eclipse_flag\"].diff() == 0",
+        "answer": "bus[\"eclipse_flag\"].shift(1) == 1",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "statistical process control",
+        "description": "Common versus special cause",
+        "type": "multiple choice",
+        "question": "Reacting to common-cause variation as if it were a special cause is called what?",
+        "options": "Detrending|Tampering|Smoothing|Backtesting",
+        "answer": "Tampering",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "statistical process control",
+        "description": "Control chart parts",
+        "type": "multiple choice",
+        "question": "In a control chart, what are the control limits?",
+        "options": "Three standard deviations either side of the reference-period mean|The minimum and maximum ever recorded|The engineering design limits|The 5th and 95th percentiles of all data",
+        "answer": "Three standard deviations either side of the reference-period mean",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "statistical process control",
+        "description": "Three sigma as a budget",
+        "type": "multiple choice",
+        "question": "In 2,880 hourly readings, roughly how many false alarms does a 3-sigma limit produce on normal data?",
+        "options": "About 130|About 8|Exactly 0|About 1,000",
+        "answer": "About 8",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "statistical process control",
+        "description": "Reference period",
+        "type": "multiple choice",
+        "question": "Why are eclipse hours excluded from the reference period for solar array current?",
+        "options": "They contain faults|They are a different operating state and would widen the limits|They are missing data|There are too few of them",
+        "answer": "They are a different operating state and would widen the limits",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "statistical process control",
+        "description": "Run rule 2",
+        "type": "multiple choice",
+        "question": "Run rule 2 (nine consecutive points on one side of the centre line) is most sensitive to which anomaly?",
+        "options": "Single spikes|A frozen sensor|Duplicate timestamps|Level shifts",
+        "answer": "Level shifts",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "statistical process control",
+        "description": "One chart per state",
+        "type": "multiple choice",
+        "question": "What is the right fix when eclipse hours trigger false alarms on a control chart?",
+        "options": "Fit a separate set of limits for each operating state|Widen the limits until eclipse hours fit|Delete eclipse hours from the file|Switch to 2-sigma limits",
+        "answer": "Fit a separate set of limits for each operating state",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "residual-based detection",
+        "description": "Predict, subtract, chart",
+        "type": "multiple choice",
+        "question": "What is a residual in residual-based detection?",
+        "options": "The raw reading|The rolling standard deviation|The control limit|Observed value minus expected value",
+        "answer": "Observed value minus expected value",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "residual-based detection",
+        "description": "Median and MAD",
+        "type": "multiple choice",
+        "question": "Why does the robust detector use a rolling median and MAD instead of mean and standard deviation?",
+        "options": "They are faster to compute|They remove the trend automatically|A few extreme points cannot move them|They work only on hourly data",
+        "answer": "A few extreme points cannot move them",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "residual-based detection",
+        "description": "The 1.4826 factor",
+        "type": "multiple choice",
+        "question": "Why is MAD multiplied by 1.4826?",
+        "options": "To convert Celsius to Kelvin|To account for weekends|To make it comparable to a standard deviation|To widen the limit to 4 sigma",
+        "answer": "To make it comparable to a standard deviation",
+        "difficulty": "advanced"
+    },
+    {
+        "title": "residual-based detection",
+        "description": "The anomaly hides in its baseline",
+        "type": "True or False",
+        "question": "A centred 61-day rolling mean can absorb part of the spike it is meant to detect, because the spike is inside the window.",
+        "options": "True|False",
+        "answer": "True",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "residual-based detection",
+        "description": "What residuals miss",
+        "type": "multiple choice",
+        "question": "On which anomaly shape is a rolling-model residual detector described as useless?",
+        "options": "Slow drift|Spike|Onset of a level shift|Single-hour dropout",
+        "answer": "Slow drift",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "residual-based detection",
+        "description": "Is the residual clean",
+        "type": "multiple choice",
+        "question": "Which is NOT one of the checks for a clean residual?",
+        "options": "Values all above zero|Mean near zero|No autocorrelation left|Constant spread over time",
+        "answer": "Values all above zero",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "change points and drift",
+        "description": "Shift versus drift",
+        "type": "multiple choice",
+        "question": "A step to a new level that then holds is called what?",
+        "options": "A drift|A level shift|A spike|A cycle",
+        "answer": "A level shift",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "change points and drift",
+        "description": "CUSUM idea",
+        "type": "multiple choice",
+        "question": "What does CUSUM accumulate?",
+        "options": "The raw readings|Small deviations from target, so a sustained change becomes a clear slope|The number of alarms|The squared errors of a forecast",
+        "answer": "Small deviations from target, so a sustained change becomes a clear slope",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "change points and drift",
+        "description": "The slack k",
+        "type": "multiple choice",
+        "question": "In the CUSUM code, what is the role of k = 0.5 x sigma?",
+        "options": "It is the decision threshold|It is the reset value|It is slack, so ordinary noise does not accumulate|It sets the reference period",
+        "answer": "It is slack, so ordinary noise does not accumulate",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "change points and drift",
+        "description": "Alarm date versus onset",
+        "type": "True or False",
+        "question": "The date CUSUM first alarms is the date the change actually began.",
+        "options": "True|False",
+        "answer": "False",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "change points and drift",
+        "description": "Battery fade knee",
+        "type": "multiple choice",
+        "question": "From April 2025 the battery's capacity fade speeds up from about -2.2 to -3.7 Ah a year. What should you monitor to detect this?",
+        "options": "The daily capacity level against 95 Ah|Eclipse minutes|The rolling slope of capacity|The cycle count",
+        "answer": "The rolling slope of capacity",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "change points and drift",
+        "description": "TWTA level shift",
+        "type": "multiple choice",
+        "question": "The May 2025 TWTA shift is about 6.9 sigma against local spread. Why does a single-point 3-sigma rule miss it?",
+        "options": "It happened at night|The data has gaps|The rule only works on hourly data|No single reading looks extreme against the whole series",
+        "answer": "No single reading looks extreme against the whole series",
+        "difficulty": "advanced"
+    },
+    {
+        "title": "change points and drift",
+        "description": "Dating the start of a change",
+        "type": "multiple choice",
+        "question": "CUSUM first crosses h on 20 May. S was last at zero on 9 May. What is the best estimate of when the change began?",
+        "options": "9 May|20 May|21 May|10 May",
+        "answer": "10 May",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "change points and drift",
+        "description": "Take away what you already know",
+        "type": "multiple choice",
+        "question": "Before running CUSUM on amplifier temperature, why do you subtract the expected temperature for the season and drive level?",
+        "options": "To make the numbers smaller|Because CUSUM cannot handle decimals|To remove the faults from the data|So the normal yearly swing does not look like a fault; only the leftovers are watched",
+        "answer": "So the normal yearly swing does not look like a fault; only the leftovers are watched",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "change points and drift",
+        "description": "Name the shape first",
+        "type": "True or False",
+        "question": "One detector works equally well on spikes, level shifts and drifts, so there is no need to name the shape first.",
+        "options": "True|False",
+        "answer": "False",
+        "difficulty": "beginner"
+    }
+]

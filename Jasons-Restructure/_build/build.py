@@ -3,6 +3,7 @@
     python build.py W1D1            # one day
     python build.py toolkit         # toolkit PDFs + master glossary
     python build.py project         # final-project PDF
+    python build.py mcq             # weekly question banks for the LMS (week-N/MCQ/)
 """
 from __future__ import annotations
 
@@ -19,6 +20,7 @@ import nbformat
 sys.path.insert(0, str(Path(__file__).parent))
 from common import (BUILD, DAYS, ROOT, SUB, WEEK_TITLES, colab_url)  # noqa: E402
 import emoji  # noqa: E402
+import mcq  # noqa: E402
 import notebook  # noqa: E402
 import pdfdoc  # noqa: E402
 import webdeck  # noqa: E402
@@ -199,8 +201,11 @@ if __name__ == "__main__":
             build_toolkit()
         elif a == "project":
             build_project()
+        elif a == "mcq":
+            mcq.write_all()
         elif a == "all":
             for c in BUILT:
                 build_day(c)
             build_toolkit()
             build_project()
+            mcq.write_all()
