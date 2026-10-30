@@ -1,0 +1,272 @@
+[
+    {
+        "title": "working in Google Colab",
+        "description": "Saving your work",
+        "type": "multiple choice",
+        "question": "You open the exercise with the Open in Colab button. What must you do first so your work is not lost?",
+        "options": "File > Save a copy in Drive, then work in the new tab|Nothing, Colab saves the original automatically|Download the notebook as a PDF|Run every cell twice",
+        "answer": "File > Save a copy in Drive, then work in the new tab",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "working in Google Colab",
+        "description": "Run order",
+        "type": "multiple choice",
+        "question": "A cell fails with NameError: name 'ka' is not defined, although the cell that creates ka is further up. What is the most likely cause?",
+        "options": "The data file is corrupt|pandas is not installed in Colab|That cell was skipped or Colab was restarted, so ka was never created in this session|Variable names cannot be two letters long",
+        "answer": "That cell was skipped or Colab was restarted, so ka was never created in this session",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "working in Google Colab",
+        "description": "Restarting the session",
+        "type": "True or False",
+        "question": "After Runtime > Restart session, the variables you created are still in memory, so you can carry on from the next cell.",
+        "options": "True|False",
+        "answer": "False",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "working in Google Colab",
+        "description": "Text versus names",
+        "type": "multiple choice",
+        "question": "Which argument correctly tells pd.read_csv that the time column is called timestamp?",
+        "options": "index_col=timestamp|index_col=[timestamp]|index_col=time_stamp|index_col=\"timestamp\"",
+        "answer": "index_col=\"timestamp\"",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "working in Google Colab",
+        "description": "The AI button and real data",
+        "type": "multiple choice",
+        "question": "You are stuck on an error while working with a real NIGCOMSAT telemetry export. What may you share with Colab's AI (Gemini) button?",
+        "options": "Your code and the error message, never the real data|The full export, so it can see the problem|The first 100 rows only|Nothing at all: the AI button is banned",
+        "answer": "Your code and the error message, never the real data",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "working in Google Colab",
+        "description": "Fill-in-the-blank checks",
+        "type": "multiple choice",
+        "question": "A check cell says: Fill in the blank first. What does it mean?",
+        "options": "A ___ placeholder above is still there: replace it and run the cell again|The notebook is broken and must be reopened|Your answer is wrong|Colab has run out of memory",
+        "answer": "A ___ placeholder above is still there: replace it and run the cell again",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "structure of time-series data",
+        "description": "What makes data a time series",
+        "type": "multiple choice",
+        "question": "Which property most clearly separates a time series from an ordinary table of records?",
+        "options": "The order of the rows carries information|It has more than one numeric column|Every row has a unique ID|It was exported from a database",
+        "answer": "The order of the rows carries information",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "structure of time-series data",
+        "description": "The four components",
+        "type": "multiple choice",
+        "question": "Ka-band availability drops every August during the rainy season. Which component is this?",
+        "options": "Trend|Cycle|Noise|Seasonality",
+        "answer": "Seasonality",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "structure of time-series data",
+        "description": "Noise versus change",
+        "type": "True or False",
+        "question": "NOC tickets moving from 38 last week to 41 this week is a change the shift lead should investigate.",
+        "options": "True|False",
+        "answer": "False",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "structure of time-series data",
+        "description": "Seasonality versus cycle",
+        "type": "multiple choice",
+        "question": "Capacity demand was strong for two years, weak for three, and is now rising again. Which component best describes this?",
+        "options": "Seasonality, because it repeats|Noise, because it is irregular|Trend, because it is rising now|A cycle, because the length is not fixed in advance",
+        "answer": "A cycle, because the length is not fixed in advance",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "structure of time-series data",
+        "description": "Declaring the frequency",
+        "type": "multiple choice",
+        "question": "Why do we call .asfreq(\"D\") after setting a daily DatetimeIndex?",
+        "options": "To sort the rows by date|To convert the timestamps to UTC|To average duplicate readings|To make missing days appear as NaN instead of silently disappearing",
+        "answer": "To make missing days appear as NaN instead of silently disappearing",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "structure of time-series data",
+        "description": "Mixed time zones",
+        "type": "multiple choice",
+        "question": "Telemetry is logged in UTC and the ticket system in WAT. What is the correct approach before joining them?",
+        "options": "Ignore it, since the offset is only one hour|Convert both to the same time zone first|Drop the time part and join on date only|Shift the tickets back by one day",
+        "answer": "Convert both to the same time zone first",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "loading a time series with pandas",
+        "description": "Reading dates as dates",
+        "type": "multiple choice",
+        "question": "What does parse_dates=[\"timestamp\"] do in pd.read_csv?",
+        "options": "Deletes rows with missing dates|Converts the times from UTC to WAT|Turns the timestamp text into real dates that pandas can sort, slice and resample|Sorts the file by its first column",
+        "answer": "Turns the timestamp text into real dates that pandas can sort, slice and resample",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "loading a time series with pandas",
+        "description": "Frequency codes in pandas 3",
+        "type": "multiple choice",
+        "question": "Old code runs .asfreq(\"H\") and fails with ValueError: Invalid frequency: H. What is the fix?",
+        "options": "Use \"HOUR\"|Delete the .asfreq line|Use \"D\" instead|Use lowercase \"h\"",
+        "answer": "Use lowercase \"h\"",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "loading a time series with pandas",
+        "description": "Finding when, not just what",
+        "type": "multiple choice",
+        "question": "You want the DATE of the worst Ka-band availability day, not the value. Which call gives it?",
+        "options": "ka[\"availability_pct\"].min()|ka[\"availability_pct\"].idxmin()|ka[\"availability_pct\"].argmax()|ka.index.min()",
+        "answer": "ka[\"availability_pct\"].idxmin()",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "loading a time series with pandas",
+        "description": "Lagos time",
+        "type": "multiple choice",
+        "question": "An eclipse is logged at 21:00 UTC. What time is that on a Lagos clock (WAT)?",
+        "options": "20:00|21:00|22:00|09:00",
+        "answer": "22:00",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "loading a time series with pandas",
+        "description": "Resample versus rolling",
+        "type": "multiple choice",
+        "question": "What is the difference between s.resample(\"W\").sum() and s.rolling(7).sum() on daily tickets?",
+        "options": "resample gives one value per calendar week; rolling gives a value every day, for the last 7 days|They give identical results|resample uses future days and rolling does not|rolling only works on weekly data",
+        "answer": "resample gives one value per calendar week; rolling gives a value every day, for the last 7 days",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "loading a time series with pandas",
+        "description": "Window size on hourly data",
+        "type": "multiple choice",
+        "question": "Battery charge is logged every hour. Which rolling window covers exactly one day?",
+        "options": "rolling(24)|rolling(1)|rolling(7)|rolling(60)",
+        "answer": "rolling(24)",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "visualising time-series and data storytelling",
+        "description": "Honest y-axis",
+        "type": "multiple choice",
+        "question": "When is a tight y-axis range (for example 97 to 100) the right choice?",
+        "options": "For quantities you can add up, such as tickets|For bounded measures that live near the top, with the range stated on the chart|Never, the axis must always start at zero|Only for bar charts",
+        "answer": "For bounded measures that live near the top, with the range stated on the chart",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "visualising time-series and data storytelling",
+        "description": "Mean hides the outage",
+        "type": "multiple choice",
+        "question": "To answer \"did the link breach its SLA this month?\", which daily summary of hourly link margin should you plot?",
+        "options": "The daily mean|The daily median|The daily minimum|The monthly mean",
+        "answer": "The daily minimum",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "visualising time-series and data storytelling",
+        "description": "Comparing six regions",
+        "type": "multiple choice",
+        "question": "What is the recommended way to compare weekly uptime across six regions?",
+        "options": "Six lines on one axis in different colours|A pie chart of average uptime|Two y-axes with three regions on each|Small multiples on a shared y-axis",
+        "answer": "Small multiples on a shared y-axis",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "visualising time-series and data storytelling",
+        "description": "Indexing to a baseline",
+        "type": "multiple choice",
+        "question": "Dividing each region's uptime by its week-1 value and multiplying by 100 lets you answer which question?",
+        "options": "Which region has the highest uptime|Which region has the most terminals|Which region fell furthest from its own starting point|Which week had the most rain",
+        "answer": "Which region fell furthest from its own starting point",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "visualising time-series and data storytelling",
+        "description": "Chart titles",
+        "type": "True or False",
+        "question": "A report-ready chart title should state the finding, not just the variable name.",
+        "options": "True|False",
+        "answer": "True",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "visualising time-series and data storytelling",
+        "description": "Four-sentence finding",
+        "type": "multiple choice",
+        "question": "In the four-sentence finding, which sentence comes last?",
+        "options": "Situation|Observation|Implication|Recommendation",
+        "answer": "Recommendation",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "rolling windows and smoothing",
+        "description": "Why seven days",
+        "type": "multiple choice",
+        "question": "Why is a seven-day window the natural first choice for daily NOC tickets?",
+        "options": "It is the pandas default|It contains every weekday exactly once, so the weekend effect cancels|It is the shortest window allowed|Tickets are only counted weekly",
+        "answer": "It contains every weekday exactly once, so the weekend effect cancels",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "rolling windows and smoothing",
+        "description": "Trailing windows",
+        "type": "multiple choice",
+        "question": "A trailing 30-day rolling mean is safe for live monitoring. What is its main cost?",
+        "options": "It uses future data|It reacts late, roughly half a window behind the event|It cannot handle missing days|It removes the trend",
+        "answer": "It reacts late, roughly half a window behind the event",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "rolling windows and smoothing",
+        "description": "Centred windows",
+        "type": "True or False",
+        "question": "A centred rolling window is a good input for a forecast because it lines up exactly with events.",
+        "options": "True|False",
+        "answer": "False",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "rolling windows and smoothing",
+        "description": "First rows are NaN",
+        "type": "multiple choice",
+        "question": "s.rolling(7).mean() returns NaN for the first six days. What does that mean?",
+        "options": "A seven-day mean genuinely does not exist until day seven|The data has gaps|The function failed|The series needs sorting",
+        "answer": "A seven-day mean genuinely does not exist until day seven",
+        "difficulty": "beginner"
+    },
+    {
+        "title": "rolling windows and smoothing",
+        "description": "Exponential smoothing alpha",
+        "type": "multiple choice",
+        "question": "In .ewm(alpha=...).mean(), what does a high alpha do?",
+        "options": "Smooths heavily and reacts slowly|Follows the data closely and reacts fast|Removes the weekly cycle|Ignores the most recent day",
+        "answer": "Follows the data closely and reacts fast",
+        "difficulty": "intermediate"
+    },
+    {
+        "title": "rolling windows and smoothing",
+        "description": "Cost of smoothing",
+        "type": "multiple choice",
+        "question": "Why should SLA breaches never be reported from a smoothed line?",
+        "options": "Smoothed lines are harder to plot|Smoothing changes the units|Short outages vanish inside the average|Smoothing adds noise",
+        "answer": "Short outages vanish inside the average",
+        "difficulty": "beginner"
+    }
+]
