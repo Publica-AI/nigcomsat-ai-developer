@@ -19,6 +19,7 @@ Jasons-Restructure/
 ├── toolkit/                     ← for everyone, all six weeks
 │   ├── colab-survival-guide     (.md + .pdf)
 │   ├── master-glossary          (.md + .pdf): every new word, A to Z
+│   ├── master-rulebook          (.md + .pdf): every rule from all 18 days, by theme
 │   └── nigcomsat-fact-sheet     (.md + .pdf): real facts behind the examples
 ├── week-1/ … week-6/            ← one folder per week, one sub-folder per day
 │   └── day-N-topic/

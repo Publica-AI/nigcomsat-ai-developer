@@ -58,7 +58,7 @@ bus.index[alarm].tolist()                                 # WHEN did it fire?
 
 | You see | It means | Fix |
 |---|---|---|
-| `ValueError: The truth value of a Series is ambiguous` | You used `and` / `or` between columns | Use `&` / `\|` and brackets: `(a < 20) & (b == 0)` |
+| `ValueError: The truth value of a Series is ambiguous` | You used `and` / `or` between columns | Use `&` / <code>&#124;</code> and brackets: `(a < 20) & (b == 0)` |
 | `TypeError: unsupported operand type(s) for &` | Missing brackets around a comparison | `(bus["eclipse_flag"] == 0)` in brackets |
 | A count of `0` that should not be 0 | Compared a number with text (`== "0"`) | Use `== 0` |
 | `NameError: name 'floor_alarm' is not defined` | You skipped A2, or restarted | Run STEP 0 and the cells above |

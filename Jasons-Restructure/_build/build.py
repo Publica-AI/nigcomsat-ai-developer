@@ -172,6 +172,7 @@ def build_toolkit():
         ("colab-survival-guide", "Colab Survival Guide", "Everything you need to use Google Colab in this course.", False),
         ("nigcomsat-fact-sheet", "NIGCOMSAT Fact Sheet", "Verified facts for real examples, with sources.", False),
         ("master-glossary", "Master Glossary", "Every new word from every day, A to Z.", True),
+        ("master-rulebook", "Master Rule Book", "Every rule from all 18 days, grouped by theme.", False),
     ):
         md = ROOT / "toolkit" / f"{name}.md"
         if md.exists():

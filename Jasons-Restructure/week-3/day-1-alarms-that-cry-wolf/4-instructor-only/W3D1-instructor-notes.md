@@ -95,7 +95,7 @@ Week 4 quiz (`Time-series/MCQ/week-04-mcq.csv`), topic **"what your alarm softwa
 
 | Problem | Fix |
 |---|---|
-| "The truth value of a Series is ambiguous" | They used `and`/`or`. Use `&`/`\|` with brackets around each comparison |
+| "The truth value of a Series is ambiguous" | They used `and`/`or`. Use `&`/<code>&#124;</code> with brackets around each comparison |
 | A5 gives 0 alarms | They wrote `SUNLIT = 1` or `"0"`. Sunlit is the number `0` |
 | The C4 charts look empty | `tw`/`bat` didn't load. Re-run the C4 code cell |
 | Someone asks "can we see the real answer key?" | "On Week 4 Day 1. First you build detectors without peeking, just like real life" |

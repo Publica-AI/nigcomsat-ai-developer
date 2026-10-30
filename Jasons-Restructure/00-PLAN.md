@@ -84,7 +84,7 @@ Plus a shared **toolkit** for the whole course:
 | `toolkit/colab-survival-guide` (.md + .pdf) | Everything Colab: open, *save a copy to Drive*, run, restart, upload, the AI-button data rule |
 | `toolkit/master-glossary` (.md + .pdf) | Every word from every daily glossary, A to Z (rebuilt automatically) |
 | `toolkit/nigcomsat-fact-sheet` (.md + .pdf) | Verified facts about NIGCOMSAT and NigComSat-1R, with sources |
-| `toolkit/master-rulebook` | All the rules from all 18 days on one page (Step 6) |
+| `toolkit/master-rulebook` (.md + .pdf) | All the rules from all 18 days, grouped by theme, with the key rules on page one |
 | `week-6/final-project/` | Final-project requirements PDF, with hardware and data-collection recommendations |
 | `assets/brand/` | NIGCOMSAT and Publica Academy logos |
 
@@ -110,7 +110,7 @@ Plus a shared **toolkit** for the whole course:
 | **3** ✅ | Days 7–10 (Weeks 3–4: anomaly detection), incl. Quiz 2 with shuffled answers and final-project Checkpoint 2 | Kits + test run |
 | **4** ✅ | Sessions 11–13 (Weeks 4–5: machine learning), incl. Quiz 3 and final-project Checkpoint 3. The Week 5 detector was rebuilt and checked on the data first (the original's result doesn't reproduce, see review): one relationship feature catches the hidden faults, and the honest test recommends the simpler detector | Kits + test run |
 | **5** ✅ | Sessions 14–18 (Weeks 5–6: forecasting, RUL, capstone), incl. Quiz 4, Checkpoint 4 and demo day (peer scoring sheet + report template). The original's numbers were checked on the data first (they reproduce, bar the propellant bug). One idea it misses carries the forecasting days: tickets **per terminal** repeat every year, so a simple rate forecast beats every model, and the backtest recommends it. Remaining life is taught as a window, not a day | Kits + test run |
-| **6** | Master rulebook, shuffled quiz versions, PDF exports of slides, final full test, commit & push | Final sign-off |
+| **6** ✅ | Master rulebook (`toolkit/master-rulebook`: the key rules on page one, then every rule by theme and one error → fix table), shuffled quiz versions, PDF exports of slides, final full test (all 18 solution notebooks N of N on pandas 2.2 and 3), commit. Push and PR wait for Write access to the repo | Final sign-off |
 
 Each step ends with every notebook test-run and a commit under your name only.
 
